@@ -2,8 +2,14 @@ import React, { useState, useEffect } from 'react'
 import logo from '/@/assets/logo.svg'
 import style from '/@/App.module.css'
 
+import { useAppDispatch, useAppSelector } from '/@/hook'
+import { increment } from '/@/store/counter/counterSlice'
+
 function App() {
   const [count, setCount] = useState(0)
+
+  const reduxCount = useAppSelector(state => state.counterReducer.value)
+  const dispatch = useAppDispatch()
 
   useEffect(() => {
     console.log('componentDidMount!')
@@ -33,6 +39,11 @@ function App() {
         <p>
           <button type="button" className={style.AppButton} onClick={() => setCount(count => count + 1)}>
             count is: {count}
+          </button>
+        </p>
+        <p>
+          <button type="button" className={style.AppButton} onClick={() => dispatch(increment())}>
+            redux count is: {reduxCount}
           </button>
         </p>
         <p>

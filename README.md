@@ -1,6 +1,6 @@
-# Vite + React + TypesCript + WindiCss
+# Vite + React + React-Redux + TypesCript + WindiCss
 
-该模板将帮助您开始在 Vite 中使用 React、Typescript、WindiCSS 进行开发。
+该模板将帮助您开始在 Vite 中使用 React、React-Redux、Typescript、WindiCSS 进行开发。
 
 **编辑器:** [VS Code](https://code.visualstudio.com/)
 

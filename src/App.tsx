@@ -1,70 +1,56 @@
-import React, { useState, useEffect } from 'react'
-import logo from '/@/assets/logo.svg'
-import style from '/@/App.module.css'
+import React from 'react'
+import { Link } from 'react-router-dom'
 
-import { useAppDispatch, useAppSelector } from '/@/hook'
-import { increment } from '/@/store/counter/counterSlice'
+import { RouterView } from '/@/router'
+import Nav from '/@/layout/Nav'
+import Main from '/@/layout/Main'
 
-function App() {
-  const [count, setCount] = useState(0)
+const navbarList = [
+  {
+    id: 1,
+    label: '首页',
+    name: 'Home',
+    path: '/',
+  },
+  {
+    id: 2,
+    label: '关于',
+    name: 'About',
+    path: '/about',
+  },
+  {
+    id: 3,
+    label: '用户',
+    name: 'Users',
+    path: '/users',
+  },
+]
 
-  const reduxCount = useAppSelector(state => state.counterReducer.value)
-  const dispatch = useAppDispatch()
+const App = () => {
+  const navChildren = {
+    title: <span>vite-react-ts</span>,
+    default: (
+      <>
+        {navbarList.map(({ path, name, label }) => (
+          
+          <button
+            key={name}
+            className="hover:bg-gray-700 text-white flex-shrink-0 px-3 py-2 rounded-md text-sm font-medium"
+          >
+            <Link to={path}>{label}</Link>
+          </button>
+        ))}
+      </>
+    ),
+  }
 
-  useEffect(() => {
-    console.log('componentDidMount!')
-  }, [])
-
-  useEffect(() => {
-    console.log('componentDidMount-and-componentDidUpdate!')
-  })
-
-  useEffect(() => {
-    console.log('componentDidMount~')
-
-    return () => {
-      console.log('componentWillUnmount~')
-    }
-  }, [])
-
-  useEffect(() => {
-    console.log('count update~')
-  }, [count])
+  const mainChildren = <RouterView />
 
   return (
-    <div className={style.App}>
-      <header className={`bg-blue-800 ${style.AppHeader}`}>
-        <img src={logo} className={style.AppLogo} alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" className={style.AppButton} onClick={() => setCount(count => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          <button type="button" className={style.AppButton} onClick={() => dispatch(increment())}>
-            redux count is: {reduxCount}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.tsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a className={style.AppLink} href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className={style.AppLink}
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
-    </div>
+    <>
+      <Nav children={navChildren} />
+      <Main children={mainChildren} />
+    </>
   )
 }
 

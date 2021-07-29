@@ -1,9 +1,29 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import logo from '/@/assets/logo.svg'
 import style from '/@/App.module.css'
 
 function App() {
   const [count, setCount] = useState(0)
+
+  useEffect(() => {
+    console.log('componentDidMount!')
+  }, [])
+
+  useEffect(() => {
+    console.log('componentDidMount-and-componentDidUpdate!')
+  })
+
+  useEffect(() => {
+    console.log('componentDidMount~')
+
+    return () => {
+      console.log('componentWillUnmount~')
+    }
+  }, [])
+
+  useEffect(() => {
+    console.log('count update~')
+  }, [count])
 
   return (
     <div className={style.App}>

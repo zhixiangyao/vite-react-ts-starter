@@ -35,7 +35,7 @@ const App = () => {
   }, [pathname])
 
   const navChildren = {
-    title: <span>vite-react-ts</span>,
+    title: 'vite-react-ts',
     default: (
       <>
         {navbarList.map(({ path, name, label }) => (

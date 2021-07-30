@@ -11,13 +11,14 @@ import '/@/assets/index.css'
 import 'virtual:windi.css'
 import 'virtual:windi-devtools'
 
-ReactDOM.render(
+const app = (
   <React.StrictMode>
     <Provider store={store}>
       <Router>
         <App />
       </Router>
     </Provider>
-  </React.StrictMode>,
-  getElementById('root'),
+  </React.StrictMode>
 )
+
+ReactDOM.render(app, getElementById('root'))

@@ -1,0 +1,4 @@
+/dist/*
+/public/*
+/.vscode/*
+/node_modules/*

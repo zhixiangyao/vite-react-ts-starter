@@ -29,3 +29,9 @@ pnpm dev
 ```shell
 pnpm build
 ```
+
+### 检查 Stylelint
+
+```shell
+pnpm lint:stylelint
+```

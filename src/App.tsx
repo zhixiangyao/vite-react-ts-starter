@@ -51,6 +51,7 @@ const App = () => {
         ))}
       </>
     ),
+    info: `当前路由-PATH: "${pathname}"`,
   }
 
   const mainChildren = <RouterView />

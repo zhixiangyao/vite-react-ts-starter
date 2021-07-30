@@ -1,5 +1,5 @@
 import fs from 'fs'
-import dotenv from 'dotenv' // Dotenv 是一个零依赖的模块，它能将环境变量中的变量从 .env 文件加载到 process.env 中
+import dotenv from 'dotenv' // Dotenv 是一个零依赖的模块，它能将 env 变量中的变量从 '.env*' file 提取出来
 
 export const getEnv = (mode: string): any => {
   const envFiles = [`.env.${mode}`]

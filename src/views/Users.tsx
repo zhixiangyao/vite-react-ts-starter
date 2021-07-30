@@ -3,7 +3,7 @@ import { useAppSelector } from '/@/hook'
 import ReactLogo from '/@/components/ReactLogo'
 
 function Users() {
-  const reduxCount = useAppSelector(state => state.counterReducer.value)
+  const reduxCount = useAppSelector((state) => state.counterReducer.value)
 
   return (
     <>

@@ -8,7 +8,7 @@ import style from '/@/views/Home.module.css'
 export default function Home() {
   const [count, setCount] = useState(0)
 
-  const reduxCount = useAppSelector(state => state.counterReducer.value)
+  const reduxCount = useAppSelector((state) => state.counterReducer.value)
   const dispatch = useAppDispatch()
 
   useEffect(() => {
@@ -42,7 +42,11 @@ export default function Home() {
       <ReactLogo />
 
       <p>
-        <button type="button" className={style.HomeButton} onClick={() => setCount(count => count + 1)}>
+        <button
+          type="button"
+          className={style.HomeButton}
+          onClick={() => setCount((count) => count + 1)}
+        >
           count is: {count}
         </button>
       </p>
@@ -55,7 +59,12 @@ export default function Home() {
         Edit <code>Home.tsx</code> and save to test HMR updates.
       </p>
       <p>
-        <a className={style.HomeLink} href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
+        <a
+          className={style.HomeLink}
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Learn React
         </a>
         {' | '}

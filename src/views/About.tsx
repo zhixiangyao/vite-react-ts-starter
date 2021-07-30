@@ -4,7 +4,7 @@ import { useAppSelector } from '/@/hook'
 import ReactLogo from '/@/components/ReactLogo'
 
 function About() {
-  const reduxCount = useAppSelector(state => state.counterReducer.value)
+  const reduxCount = useAppSelector((state) => state.counterReducer.value)
 
   return (
     <>

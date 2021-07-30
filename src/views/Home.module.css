@@ -1,27 +1,7 @@
-.HomeLogo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .HomeLogo {
-    animation: Home-logo-spin infinite 20s linear;
-  }
-}
-
 .HomeLink {
   color: #61dafb;
 }
 
 .HomeButton {
   font-size: calc(10px + 2vmin);
-}
-
-@keyframes Home-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

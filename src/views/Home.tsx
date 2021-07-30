@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import style from '/@/views/Home.module.css'
-import logo from '/@/assets/logo.svg'
 
 import { useAppDispatch, useAppSelector } from '/@/hook'
 import { increment } from '/@/store/counter/counterSlice'
+import ReactLogo from '/@/components/ReactLogo'
+import style from '/@/views/Home.module.css'
 
 export default function Home() {
   const [count, setCount] = useState(0)
@@ -39,8 +39,8 @@ export default function Home() {
     <>
       <h2>Home</h2>
 
-      <img src={logo} className={style.HomeLogo} alt="logo" />
-      <p>Hello Vite + React!</p>
+      <ReactLogo />
+
       <p>
         <button type="button" className={style.HomeButton} onClick={() => setCount(count => count + 1)}>
           count is: {count}

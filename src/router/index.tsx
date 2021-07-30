@@ -1,22 +1,7 @@
-import React from 'react'
-import { Switch, Route } from 'react-router-dom'
+import { renderRoutes } from 'react-router-config'
 
-import Home from '/@/views/Home'
-import About from '/@/views/About'
-import Users from '/@/views/Users'
+import routes from '/@/router/routes'
 
-const RouterView = () => (
-  <Switch>
-    <Route path="/about">
-      <About />
-    </Route>
-    <Route path="/users">
-      <Users />
-    </Route>
-    <Route path="/">
-      <Home />
-    </Route>
-  </Switch>
-)
+const RouterView = () => renderRoutes(routes)
 
 export { RouterView }

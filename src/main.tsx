@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { BrowserRouter as Router } from 'react-router-dom'
 import { Provider } from 'mobx-react'
 
 import App from '/@/App'
@@ -11,14 +10,11 @@ import '/@/assets/index.css'
 import 'virtual:windi.css'
 import 'virtual:windi-devtools'
 
-const app = (
+ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <Router>
-        <App />
-      </Router>
+      <App />
     </Provider>
-  </React.StrictMode>
+  </React.StrictMode>,
+  getElementById('root'),
 )
-
-ReactDOM.render(app, getElementById('root'))

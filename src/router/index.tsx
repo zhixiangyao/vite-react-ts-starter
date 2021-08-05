@@ -1,13 +1,9 @@
-import React from 'react'
-
-import type { RouteConfig } from 'react-router-config'
+import React, { lazy } from 'react'
 import { Redirect } from 'react-router-dom'
 
+import type { RouteConfig } from 'react-router-config'
+
 import Layout from '/@/layout'
-import Home from '/@/views/Home'
-import About from '/@/views/About'
-import Users from '/@/views/Users'
-import Test from '/@/views/Test'
 
 export interface Props {
   route?: {
@@ -20,28 +16,28 @@ export interface CopyRouteConfig extends RouteConfig {
 }
 
 const routes: CopyRouteConfig[] = [
-  { path: '/', exact: true, render: () => <Redirect to={'/defalut'} /> },
+  { path: '/', exact: true, render: () => <Redirect to={'/defalut/home'} /> },
   {
     path: '/defalut',
     component: Layout,
     routes: [
       {
         path: '/defalut/home',
-        component: Home,
+        component: lazy(() => import('/@/views/Home')),
       },
       {
         path: '/defalut/about',
-        component: About,
+        component: lazy(() => import('/@/views/About')),
       },
       {
         path: '/defalut/users',
-        component: Users,
+        component: lazy(() => import('/@/views/Users')),
       },
     ],
   },
   {
-    path: '/test1',
-    component: Test,
+    path: '/test',
+    component: lazy(() => import('/@/views/Test')),
   },
 ]
 

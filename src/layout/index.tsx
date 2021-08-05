@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, Suspense } from 'react'
 import { useHistory, useLocation } from 'react-router-dom'
 import { renderRoutes } from 'react-router-config'
 
@@ -59,7 +59,11 @@ const Default: React.FC<Props> = ({ route }) => {
   return (
     <>
       <Nav children={navChildren} />
-      <Main children={renderRoutes(route?.routes)} />
+      <Main
+        children={
+          <Suspense fallback={<div>Loading...</div>}>{renderRoutes(route?.routes)}</Suspense>
+        }
+      />
     </>
   )
 }

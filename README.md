@@ -1,6 +1,6 @@
-# Vite + React + ReactMobx + TypeScript + StyledComponents + WindiCss
+# Vite + React + ReactRouter + ReactMobx + TypeScript + StyledComponents + WindiCss
 
-该模板将帮助您开始在 Vite 中使用 React ReactMobx TypeScript StyledComponents WindiCSS 进行开发。
+该模板将帮助您开始在 Vite 中使用 React ReactRouter ReactMobx TypeScript StyledComponents WindiCSS 进行开发。
 
 **编辑器:**
 

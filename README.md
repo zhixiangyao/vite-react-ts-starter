@@ -1,6 +1,6 @@
-# Vite + React + React-Mobx + TypeScript + WindiCss
+# Vite + React + ReactMobx + TypeScript + StyledComponents + WindiCss
 
-该模板将帮助您开始在 Vite 中使用 React、React-Mobx、TypeScript、WindiCSS 进行开发。
+该模板将帮助您开始在 Vite 中使用 React ReactMobx TypeScript StyledComponents WindiCSS 进行开发。
 
 **编辑器:** [VS Code](https://code.visualstudio.com/)
 
@@ -11,7 +11,7 @@
 ```shell
 git clone git@github.com:zhixiangyao/vite-react-ts-starter.git
 cd vite-react-ts-starter
-pnpm i # 如果没有安装pnpm，请运行：npm install -g pnpm
+pnpm i # 如果没有安装 pnpm，请运行：npm install -g pnpm
 ```
 
 ## Usage

@@ -2,9 +2,14 @@
 
 该模板将帮助您开始在 Vite 中使用 React ReactMobx TypeScript StyledComponents WindiCSS 进行开发。
 
-**编辑器:** [VS Code](https://code.visualstudio.com/)
+**编辑器:**
 
-**插件:** [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
+- [VS Code](https://code.visualstudio.com/)
+
+**插件:**
+
+- [vscode-styled-components](https://marketplace.visualstudio.com/items?itemName=jpoissonnier.vscode-styled-components)
+- [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
 
 ## 克隆到本地
 

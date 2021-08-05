@@ -1,8 +1,6 @@
-import { useDispatch, useSelector } from 'react-redux'
+import { useLocalObservable as uls } from 'mobx-react'
+import { store } from '/@/store'
 
-import type { TypedUseSelectorHook } from 'react-redux'
-import type { AppDispatch, RootState } from '/@/store'
+const useLocalStore = () => uls(() => store)
 
-// Use throughout your app instead of plain `useDispatch` and `useSelector`
-export const useAppDispatch = (): AppDispatch => useDispatch<AppDispatch>()
-export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector
+export { useLocalStore }

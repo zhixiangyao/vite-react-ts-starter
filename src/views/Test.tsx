@@ -1,19 +1,24 @@
 import React from 'react'
-import { useAppSelector } from '/@/hook'
 import ReactLogo from '/@/components/ReactLogo'
+import { Observer } from 'mobx-react'
+import { useLocalStore } from '/@/hook'
 
 function Test() {
-  const reduxCount = useAppSelector((state) => state.counterReducer.value)
+  const localStore = useLocalStore()
 
   return (
-    <>
-      <h2>Test</h2>
-      <ReactLogo />
-      <h2>
-        <span>reduxCount: </span>
-        <span>{reduxCount}</span>
-      </h2>
-    </>
+    <Observer>
+      {() => (
+        <>
+          <h2>Test</h2>
+          <ReactLogo />
+          <h2>
+            <span>mobxCount: </span>
+            <span>{localStore.count}</span>
+          </h2>
+        </>
+      )}
+    </Observer>
   )
 }
 

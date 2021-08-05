@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import { Observer } from 'mobx-react'
-import { useLocalStore } from '/@/hook'
+import styled from 'styled-components'
 
+import { useLocalStore } from '/@/hook'
 import ReactLogo from '/@/components/ReactLogo'
-import style from '/@/views/Home.module.css'
+
+const Button = styled.button`
+  font-size: calc(10px + 2vmin);
+`
 
 function Home() {
   const [count, setCount] = useState(0)
@@ -29,24 +33,14 @@ function Home() {
 
           <ReactLogo />
 
-          <p>
-            <button
-              type="button"
-              className={style.HomeButton}
-              onClick={() => setCount((count) => count + 1)}
-            >
-              count is: {count}
-            </button>
-          </p>
-          <p>
-            <button
-              type="button"
-              className={style.HomeButton}
-              onClick={() => localStore.setCount()}
-            >
-              mobxCount is: {localStore.count}
-            </button>
-          </p>
+          <Button type="button" onClick={() => setCount((count) => count + 1)}>
+            count is: {count}
+          </Button>
+
+          <Button type="button" onClick={() => localStore.setCount()}>
+            mobxCount is: {localStore.count}
+          </Button>
+
           <p>
             Edit <code>Home.tsx</code> and save to test HMR updates.
           </p>

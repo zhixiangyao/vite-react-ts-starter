@@ -10,11 +10,13 @@ import '/@/assets/index.css'
 import 'virtual:windi.css'
 import 'virtual:windi-devtools'
 
+const rootElement = getElementById('root')
+
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <App />
     </Provider>
   </React.StrictMode>,
-  getElementById('root'),
+  rootElement,
 )

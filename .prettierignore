@@ -1,10 +1,12 @@
-/dist/*
-/dist-ssr/*
-.local
-.output.js
-/node_modules/**
+public
+dist
+dist-ssr
+build
+node_modules
+.husky
 
+package-lock.json
+pnpm-lock.yaml
+tsconfig.json
 **/*.svg
 **/*.sh
-
-/public/*

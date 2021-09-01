@@ -20,7 +20,7 @@
       "npx eslint --fix"
     ],
     "src/**/*.{js,json,tsx,css,less,scss,html,md}": [
-      "npx prettier --write"
+      "npx prettier --write --loglevel warn "
     ],
     "src/**/*.{jsx,tsx,less,postcss,css,scss}": [
       "npx stylelint --fix --cache --cache-location node_modules/.cache/stylelint/"

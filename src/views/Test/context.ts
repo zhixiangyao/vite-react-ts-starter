@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const themes = {
   light: {
@@ -16,4 +16,12 @@ const ThemeContext = React.createContext({
   toggleTheme: () => {},
 })
 
-export { themes, ThemeContext }
+const useTheme = () => {
+  const [theme, setTheme] = useState(themes.light)
+
+  const toggleTheme = () => setTheme(theme === themes.dark ? themes.light : themes.dark)
+
+  return { theme, toggleTheme }
+}
+
+export { themes, ThemeContext, useTheme }

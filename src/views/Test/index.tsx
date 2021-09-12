@@ -1,20 +1,16 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-import { themes, ThemeContext } from './context'
+import { ThemeContext, useTheme } from './context'
 import Content from './component/Content'
 
 const Test = () => {
-  const [theme, setTheme] = useState(themes.light)
-
-  const toggleTheme = () => {
-    setTheme(theme === themes.dark ? themes.light : themes.dark)
-  }
+  const value = useTheme()
 
   return (
     <fieldset>
       <legend>Context.Provider Test</legend>
 
-      <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      <ThemeContext.Provider value={value}>
         <Content />
       </ThemeContext.Provider>
     </fieldset>

@@ -9,7 +9,7 @@ const ThemeTogglerButton = () => {
         <button
           onClick={toggleTheme}
           style={{ backgroundColor: theme.background, color: theme.color }}
-          className="p-2 rounded-sm"
+          className="p-4 rounded-sm"
         >
           Toggle Theme
         </button>

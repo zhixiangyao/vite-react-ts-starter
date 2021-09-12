@@ -26,9 +26,13 @@ const Test = () => {
   }
 
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      <Content />
-    </ThemeContext.Provider>
+    <fieldset>
+      <legend>Context.Provider Test</legend>
+
+      <ThemeContext.Provider value={{ theme, toggleTheme }}>
+        <Content />
+      </ThemeContext.Provider>
+    </fieldset>
   )
 }
 

@@ -1,0 +1,21 @@
+import React from 'react'
+
+import { ThemeContext } from '../index'
+
+const ThemeTogglerButton = () => {
+  return (
+    <ThemeContext.Consumer>
+      {({ theme, toggleTheme }) => (
+        <button
+          onClick={toggleTheme}
+          style={{ backgroundColor: theme.background, color: theme.color }}
+          className="p-2 rounded-sm"
+        >
+          Toggle Theme
+        </button>
+      )}
+    </ThemeContext.Consumer>
+  )
+}
+
+export default ThemeTogglerButton

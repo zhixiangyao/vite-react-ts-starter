@@ -26,6 +26,12 @@ const navbarList = [
     name: 'Users',
     path: '/defalut/users',
   },
+  {
+    id: 4,
+    label: 'Test',
+    name: 'Test',
+    path: '/defalut/test',
+  },
 ]
 
 const Default: React.FC<Props> = ({ route }) => {

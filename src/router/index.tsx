@@ -33,11 +33,11 @@ const routes: CopyRouteConfig[] = [
         path: '/defalut/users',
         component: lazy(() => import('/@/views/Users')),
       },
+      {
+        path: '/defalut/test',
+        component: lazy(() => import('/@/views/Test')),
+      },
     ],
-  },
-  {
-    path: '/test',
-    component: lazy(() => import('/@/views/Test')),
   },
 ]
 

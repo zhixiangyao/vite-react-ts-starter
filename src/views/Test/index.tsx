@@ -1,22 +1,7 @@
 import React, { useState } from 'react'
 
+import { themes, ThemeContext } from './context'
 import Content from './component/Content'
-
-const themes = {
-  light: {
-    color: '#000000',
-    background: '#eeeeee',
-  },
-  dark: {
-    color: '#ffffff',
-    background: '#222222',
-  },
-}
-
-export const ThemeContext = React.createContext({
-  theme: themes.light,
-  toggleTheme: () => {},
-})
 
 const Test = () => {
   const [theme, setTheme] = useState(themes.light)

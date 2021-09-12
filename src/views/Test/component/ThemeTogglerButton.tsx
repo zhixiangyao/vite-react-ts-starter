@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { ThemeContext } from '../index'
+import { ThemeContext } from '../context'
 
 const ThemeTogglerButton = () => {
   return (

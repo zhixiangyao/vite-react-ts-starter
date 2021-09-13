@@ -19,3 +19,5 @@ class Store {
 const store = new Store()
 
 export { store }
+
+export type { Store }

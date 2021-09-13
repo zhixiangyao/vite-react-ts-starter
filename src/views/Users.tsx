@@ -2,9 +2,10 @@ import React, { useState } from 'react'
 import { Observer } from 'mobx-react'
 
 import { useLocalStore, useClickOutSide } from '/@/hook'
+import { store } from '/@/store'
 
 function Users() {
-  const localStore = useLocalStore()
+  const localStore = useLocalStore(store)
 
   const [text, setText] = useState('undefined')
 

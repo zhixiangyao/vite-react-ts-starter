@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState, createContext } from 'react'
 
 const themes = {
   light: {
@@ -11,7 +11,7 @@ const themes = {
   },
 }
 
-const ThemeContext = React.createContext({
+const ThemeContext = createContext({
   theme: themes.light,
   toggleTheme: () => {},
 })

@@ -1,8 +1,7 @@
 import { useCallback, useEffect, useLayoutEffect, useRef } from 'react'
-import { useLocalObservable as uls } from 'mobx-react'
-import { store } from '/@/store'
+import { useLocalObservable } from 'mobx-react'
 
-const useLocalStore = () => uls(() => store)
+const useLocalStore: <T>(store: T) => T = (store) => useLocalObservable(() => store)
 
 function useStateRef<T>(val: T) {
   const result = useRef(val)

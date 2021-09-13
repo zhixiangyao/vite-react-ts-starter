@@ -4,6 +4,7 @@ import styled from 'styled-components'
 
 import { useLocalStore } from '/@/hook'
 import ReactLogo from '/@/components/ReactLogo'
+import { store } from '/@/store'
 
 const Button = styled.button`
   font-size: calc(10px + 2vmin);
@@ -11,7 +12,7 @@ const Button = styled.button`
 
 function Home() {
   const [count, setCount] = useState(0)
-  const localStore = useLocalStore()
+  const localStore = useLocalStore(store)
 
   useEffect(() => console.log('componentDidMount!'), [])
 

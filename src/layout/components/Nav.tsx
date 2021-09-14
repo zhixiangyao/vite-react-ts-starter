@@ -9,7 +9,7 @@ interface NavProps {
 }
 
 const Nav: React.FC<NavProps> = ({ children }) => (
-  <nav className="bg-gray-800 fixed top-0 left-0 right-0 z-10">
+  <nav className="bg-gray-800 fixed top-0 left-0 w-screen z-10">
     <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
       <div className="relative flex items-center justify-between h-16 overflow-x-auto overflow-y-hidden">
         <div className="text-green-600 flex-shrink-0 px-3 py-2 rounded-md text-sm font-medium">

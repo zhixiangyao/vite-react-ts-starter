@@ -14,17 +14,16 @@ function Home() {
   const [count, setCount] = useState(0)
   const localStore = useLocalStore(store)
 
-  useEffect(() => console.log('componentDidMount!'), [])
+  // useEffect(() => console.log('componentDidMount!'), [])
 
-  useEffect(() => console.log('componentDidMount-and-componentDidUpdate!'))
+  // useEffect(() => console.log('componentDidMount-and-componentDidUpdate!'))
 
-  useEffect(() => {
-    console.log('componentDidMount~')
+  // useEffect(() => {
+  //   console.log('componentDidMount~')
+  //   return () => console.log('componentWillUnmount~')
+  // }, [])
 
-    return () => console.log('componentWillUnmount~')
-  }, [])
-
-  useEffect(() => console.log('count update~'), [count])
+  useEffect(() => console.log('componentDidMount and count-Update'), [count])
 
   return (
     <Observer>

@@ -13,7 +13,7 @@ const reducer = (state: { count: number }, action: { type: 'decrement' | 'increm
   }
 }
 
-const Counter = () => {
+const CounterReducer = () => {
   const [state, dispatch] = useReducer(reducer, initialState)
 
   return (
@@ -38,4 +38,4 @@ const Counter = () => {
   )
 }
 
-export default Counter
+export default CounterReducer

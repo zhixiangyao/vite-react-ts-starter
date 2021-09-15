@@ -1,12 +1,12 @@
 import React from 'react'
 
-import Counter from './component/Counter'
+import CounterReducer from './component/CounterReducer'
 import ContextProvider from './component/ContextProvider'
 
 const Test = () => {
   return (
     <>
-      <Counter />
+      <CounterReducer />
 
       <br />
 

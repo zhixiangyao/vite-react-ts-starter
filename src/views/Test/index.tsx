@@ -2,6 +2,8 @@ import React from 'react'
 
 import CounterReducer from './component/CounterReducer'
 import ContextProvider from './component/ContextProvider'
+import SearchRefs from './component/SearchRefs'
+import ButtonRefs from './component/ButtonRefs'
 
 const Test = () => {
   return (
@@ -11,6 +13,14 @@ const Test = () => {
       <br />
 
       <ContextProvider />
+
+      <br />
+
+      <SearchRefs />
+
+      <br />
+
+      <ButtonRefs />
     </>
   )
 }

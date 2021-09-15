@@ -12,25 +12,25 @@ const navbarList = [
     id: 1,
     label: 'Home',
     name: 'Home',
-    path: '/defalut/home',
+    path: '/default/home',
   },
   {
     id: 2,
     label: 'About',
     name: 'About',
-    path: '/defalut/about',
+    path: '/default/about',
   },
   {
     id: 3,
     label: 'Users',
     name: 'Users',
-    path: '/defalut/users',
+    path: '/default/users',
   },
   {
     id: 4,
     label: 'Test',
     name: 'Test',
-    path: '/defalut/test',
+    path: '/default/test',
   },
 ]
 

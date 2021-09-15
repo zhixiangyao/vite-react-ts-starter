@@ -16,25 +16,25 @@ export interface CopyRouteConfig extends RouteConfig {
 }
 
 const routes: CopyRouteConfig[] = [
-  { path: '/', exact: true, render: () => <Redirect to={'/defalut/home'} /> },
+  { path: '/', exact: true, render: () => <Redirect to={'/default/home'} /> },
   {
-    path: '/defalut',
+    path: '/default',
     component: Layout,
     routes: [
       {
-        path: '/defalut/home',
+        path: '/default/home',
         component: lazy(() => import('/@/views/Home')),
       },
       {
-        path: '/defalut/about',
+        path: '/default/about',
         component: lazy(() => import('/@/views/About')),
       },
       {
-        path: '/defalut/users',
+        path: '/default/users',
         component: lazy(() => import('/@/views/Users')),
       },
       {
-        path: '/defalut/test',
+        path: '/default/test',
         component: lazy(() => import('/@/views/Test')),
       },
     ],

@@ -17,24 +17,28 @@ const CounterReducer = () => {
   const [state, dispatch] = useReducer(reducer, initialState)
 
   return (
-    <>
-      <div>Count: {state.count}</div>
-      <div className="flex w-52">
-        <button
-          className="w-1/2 flex items-center justify-center bg-lime-300 text-black border border-black shadow-offset-black"
-          onClick={() => dispatch({ type: 'decrement' })}
-        >
-          -
-        </button>
+    <fieldset>
+      <legend>useReducer</legend>
 
-        <button
-          className="w-1/2 flex items-center justify-center border border-black shadow-offset-black"
-          onClick={() => dispatch({ type: 'increment' })}
-        >
-          +
-        </button>
-      </div>
-    </>
+      <>
+        <div>Count: {state.count}</div>
+        <div className="flex w-52">
+          <button
+            className="w-1/2 flex items-center justify-center bg-lime-300 text-black border border-black shadow-offset-black"
+            onClick={() => dispatch({ type: 'decrement' })}
+          >
+            -
+          </button>
+
+          <button
+            className="w-1/2 flex items-center justify-center border border-black shadow-offset-black"
+            onClick={() => dispatch({ type: 'increment' })}
+          >
+            +
+          </button>
+        </div>
+      </>
+    </fieldset>
   )
 }
 

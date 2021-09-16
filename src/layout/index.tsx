@@ -1,4 +1,4 @@
-import React, { useEffect, Suspense } from 'react'
+import React, { Suspense } from 'react'
 import { useHistory, useLocation } from 'react-router-dom'
 import { renderRoutes } from 'react-router-config'
 
@@ -37,10 +37,6 @@ const navbarList = [
 const Default: React.FC<Props> = ({ route }) => {
   const history = useHistory()
   const { pathname } = useLocation()
-
-  useEffect(() => {
-    console.log('pathname:', pathname)
-  }, [pathname])
 
   const navChildren = {
     title: 'vite-react-ts',

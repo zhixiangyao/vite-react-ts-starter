@@ -19,7 +19,7 @@ class ButtonRefs extends React.Component {
   hhh = () => {}
 
   override componentDidMount() {
-    console.log(button.current)
+    // console.log(button.current)
   }
 
   override render() {

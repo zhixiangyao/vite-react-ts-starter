@@ -3,6 +3,14 @@ import { useLocalObservable } from 'mobx-react'
 
 const useLocalStore: <T>(store: T) => T = (store) => useLocalObservable(() => store)
 
+function usePrevious<T>(val: T) {
+  const ref = useRef<T>()
+  useEffect(() => {
+    ref.current = val
+  })
+  return ref.current
+}
+
 function useStateRef<T>(val: T) {
   const result = useRef(val)
   useEffect(() => {
@@ -41,4 +49,4 @@ function useClickOutSide(inSide?: () => void, outSide?: () => void) {
   return targetRef
 }
 
-export { useLocalStore, useStateRef, useClickOutSide }
+export { useLocalStore, usePrevious, useStateRef, useClickOutSide }

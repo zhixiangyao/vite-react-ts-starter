@@ -4,6 +4,7 @@ import CounterReducer from './component/CounterReducer'
 import ContextProvider from './component/ContextProvider'
 import SearchRefs from './component/SearchRefs'
 import ButtonRefs from './component/ButtonRefs'
+import PrevPropsState from './component/PrevPropsState'
 
 const Test = () => {
   return (
@@ -21,6 +22,10 @@ const Test = () => {
       <br />
 
       <ButtonRefs />
+
+      <br />
+
+      <PrevPropsState />
     </>
   )
 }

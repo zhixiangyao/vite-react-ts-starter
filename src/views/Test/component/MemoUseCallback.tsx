@@ -28,7 +28,7 @@ const Compo = () => {
     <fieldset>
       <legend>MemoUseCallback</legend>
 
-      <div style={{ display: 'flex', flexDirection: 'column' }}>
+      <div className="flex flex-col">
         <input placeholder="Compo" value={a} onChange={(e) => setA(e.target.value)} />
 
         <MemoChild value={b} onChange={onChangeMemoChild} />

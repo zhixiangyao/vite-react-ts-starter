@@ -17,8 +17,8 @@ const CounterReducer = () => {
   const [state, dispatch] = useReducer(reducer, initialState)
 
   return (
-    <fieldset>
-      <legend>useReducer</legend>
+    <fieldset className="w-240px">
+      <legend>CounterReducer(useReducer)</legend>
 
       <>
         <div>Count: {state.count}</div>

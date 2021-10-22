@@ -25,7 +25,7 @@ const Compo = () => {
   )
 
   return (
-    <fieldset>
+    <fieldset className="w-240px">
       <legend>MemoUseCallback</legend>
 
       <div className="flex flex-col">

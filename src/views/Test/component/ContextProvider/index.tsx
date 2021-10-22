@@ -21,12 +21,12 @@ export const ThemeContext = createContext({
   toggleTheme: () => {},
 })
 
-const Test = () => {
+const ContextProvider = () => {
   const value = useTheme(themes)
 
   return (
-    <fieldset>
-      <legend>Context.Provider Test</legend>
+    <fieldset className="w-240px">
+      <legend>ContextProvider</legend>
 
       <ThemeContext.Provider value={value}>
         <Content />
@@ -35,4 +35,4 @@ const Test = () => {
   )
 }
 
-export default Test
+export default ContextProvider

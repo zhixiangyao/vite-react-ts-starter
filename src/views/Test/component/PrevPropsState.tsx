@@ -24,8 +24,8 @@ const PrevPropsState = () => {
   console.log('------2------')
 
   return (
-    <fieldset>
-      <legend>usePrevious</legend>
+    <fieldset className="w-240px">
+      <legend>PrevPropsState</legend>
 
       <h1>
         Now: {count}, Before: {prevCountRef.current}

@@ -1,11 +1,8 @@
 import React from 'react'
 
-import CounterReducer from './component/CounterReducer'
-import ContextProvider from './component/ContextProvider'
-import SearchRefs from './component/SearchRefs'
-import ButtonRefs from './component/ButtonRefs'
-import PrevPropsState from './component/PrevPropsState'
-import MemoUseCallback from './component/MemoUseCallback'
+import { CounterReducer, ContextProvider, PrevPropsState, MemoUseCallback } from './component'
+
+import { SearchRefs, ButtonRefs } from './component'
 
 const Test = () => {
   return (

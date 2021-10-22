@@ -5,6 +5,7 @@ import ContextProvider from './component/ContextProvider'
 import SearchRefs from './component/SearchRefs'
 import ButtonRefs from './component/ButtonRefs'
 import PrevPropsState from './component/PrevPropsState'
+import MemoUseCallback from './component/MemoUseCallback'
 
 const Test = () => {
   return (
@@ -26,6 +27,10 @@ const Test = () => {
       <br />
 
       <PrevPropsState />
+
+      <br />
+
+      <MemoUseCallback />
     </>
   )
 }

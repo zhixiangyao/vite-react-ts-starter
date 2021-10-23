@@ -1,9 +1,9 @@
 import { userConfig } from './vite.config.base'
 import { getEnv, log } from './vite.config.utils'
 
-import type { UserConfigExport } from 'vite'
+import type { ConfigEnv } from 'vite'
 
-export default ({ command, mode }): UserConfigExport => {
+export default ({ mode, command }: ConfigEnv) => {
   /**
    * Such as:
    * import.meta.env.MODE: {string}     app runtime 的模式。

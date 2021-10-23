@@ -1,7 +1,45 @@
-import { userConfig } from './vite.config.base'
-import { getEnv, log } from './vite.config.utils'
+import fs from 'fs'
+import dotenv from 'dotenv' // Dotenv 是一个零依赖的 module, 它能将 env 变量中的变量从 '.env*' file 提取出来
+import { defineConfig } from 'vite'
+import reactRefresh from '@vitejs/plugin-react-refresh'
+import WindiCSS from 'vite-plugin-windicss'
+import { resolve } from 'path'
 
 import type { ConfigEnv } from 'vite'
+
+/**
+ * https://vitejs.dev/config/
+ */
+const userConfig = defineConfig({
+  plugins: [reactRefresh(), WindiCSS()],
+  resolve: {
+    alias: [
+      {
+        find: '/@',
+        replacement: resolve(__dirname, './src'),
+      },
+    ],
+  },
+})
+
+interface ENV {
+  [K: string]: string
+}
+
+const getEnv = (mode: string): ENV => {
+  const envFiles = [`.env.${mode}`]
+
+  for (const envFile of envFiles) {
+    try {
+      const env = Object.create(null)
+      const envConfig = dotenv.parse(fs.readFileSync(envFile))
+      for (const k in envConfig) Object.assign(env, { [k]: envConfig[k] })
+      return env
+    } catch (error) {
+      console.error(error)
+    }
+  }
+}
 
 export default ({ mode, command }: ConfigEnv) => {
   /**
@@ -15,10 +53,10 @@ export default ({ mode, command }: ConfigEnv) => {
   const { VITE_APP_NODE_ENV, VITE_APP_TITLE } = getEnv(mode)
 
   setTimeout(() => {
-    log()
-    log('\x1b[33m%s\x1b[0m', `🏭--NODE 环境 (VITE_APP_NODE_ENV): ${VITE_APP_NODE_ENV}`)
-    log('\x1b[36m%s\x1b[0m', `🏠--APP 标题 (VITE_APP_TITLE): ${VITE_APP_TITLE}`)
-    log()
+    console.log()
+    console.log('\x1b[33m%s\x1b[0m', `🏭--NODE 环境 (VITE_APP_NODE_ENV): ${VITE_APP_NODE_ENV}`)
+    console.log('\x1b[36m%s\x1b[0m', `🏠--APP 标题 (VITE_APP_TITLE): ${VITE_APP_TITLE}`)
+    console.log()
   }, 66)
 
   if (command === 'serve') {

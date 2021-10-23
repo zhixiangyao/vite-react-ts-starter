@@ -10,7 +10,7 @@ import type { ConfigEnv } from 'vite'
 /**
  * https://vitejs.dev/config/
  */
-const userConfig = defineConfig({
+const baseConfig = {
   plugins: [reactRefresh(), WindiCSS()],
   resolve: {
     alias: [
@@ -20,7 +20,7 @@ const userConfig = defineConfig({
       },
     ],
   },
-})
+}
 
 interface ENV {
   [K: string]: string
@@ -60,8 +60,8 @@ export default ({ mode, command }: ConfigEnv) => {
   }, 66)
 
   if (command === 'serve') {
-    return userConfig
+    return defineConfig({ ...baseConfig })
   } else {
-    return userConfig
+    return defineConfig({ ...baseConfig })
   }
 }

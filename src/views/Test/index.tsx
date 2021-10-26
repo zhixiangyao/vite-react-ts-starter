@@ -7,33 +7,21 @@ import { SearchRefs, ButtonRefs } from './components'
 
 const Test = () => {
   return (
-    <>
+    <div className="grid grid-rows-7 lg:grid-rows-3 grid-flow-col gap-4">
       <CounterReducer />
-
-      <br />
 
       <ContextProvider />
 
-      <br />
-
       <SearchRefs />
-
-      <br />
 
       <ButtonRefs />
 
-      <br />
-
       <PrevPropsState />
-
-      <br />
 
       <MemoUseCallback />
 
-      <br />
-
       <Memo />
-    </>
+    </div>
   )
 }
 

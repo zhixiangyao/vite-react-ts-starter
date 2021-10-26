@@ -12,7 +12,12 @@ const Child = (props: ChildProps) => {
   return (
     <>
       <h2>Child: {value}</h2>
-      <input value={value} placeholder="Child" onChange={(e) => onChange(e.target.value)} />
+      <input
+        className="px-2 my-2"
+        value={value}
+        placeholder="Child"
+        onChange={(e) => onChange(e.target.value)}
+      />
     </>
   )
 }
@@ -26,12 +31,17 @@ const Compo = () => {
   const onChangeMemoChild = useCallback((e) => setB(e), [setB])
 
   return (
-    <fieldset className="w-240px">
+    <fieldset className="w-240px p-4 border-4 border-blue-400">
       <legend>MemoUseCallback</legend>
 
       <div className="flex flex-col">
         <h2>Compo: {a}</h2>
-        <input placeholder="Compo" value={a} onChange={(e) => setA(e.target.value)} />
+        <input
+          className="px-2 my-2"
+          placeholder="Compo"
+          value={a}
+          onChange={(e) => setA(e.target.value)}
+        />
 
         <MemoChild value={b} onChange={onChangeMemoChild} />
       </div>

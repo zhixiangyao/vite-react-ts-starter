@@ -14,17 +14,20 @@ const PrevPropsState = () => {
      * 如果想要在 React 绑定或解绑 DOM 节点的 ref 时运行某些代码，则需要使用回调 ref 来实现。
      */
     prevCountRef.current = count
-    console.log('------3------')
-    console.log('useEffect-prevCountRef', prevCountRef.current)
-    console.log('------4------')
+
+    console.log(
+      `%c "count": ${count},  "prevCountRef.current": ${prevCountRef.current}.`,
+      'color: red',
+    )
   })
 
-  console.log('------1------')
-  console.log(count, prevCountRef.current)
-  console.log('------2------')
+  console.log(
+    `%c "count": ${count},  "prevCountRef.current": ${prevCountRef.current}.`,
+    'color: red',
+  )
 
   return (
-    <fieldset className="w-240px">
+    <fieldset className="w-240px p-4 border-4 border-red-400">
       <legend>PrevPropsState</legend>
 
       <h1>

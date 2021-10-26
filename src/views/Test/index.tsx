@@ -1,6 +1,7 @@
 import React from 'react'
 
-import { CounterReducer, ContextProvider, PrevPropsState, MemoUseCallback } from './component'
+import { CounterReducer, ContextProvider, PrevPropsState } from './component'
+import { MemoUseCallback, Memo } from './component'
 
 import { SearchRefs, ButtonRefs } from './component'
 
@@ -28,6 +29,10 @@ const Test = () => {
       <br />
 
       <MemoUseCallback />
+
+      <br />
+
+      <Memo />
     </>
   )
 }

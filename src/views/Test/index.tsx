@@ -1,9 +1,9 @@
 import React from 'react'
 
-import { CounterReducer, ContextProvider, PrevPropsState } from './component'
-import { MemoUseCallback, Memo } from './component'
+import { CounterReducer, ContextProvider, PrevPropsState } from './components'
+import { MemoUseCallback, Memo } from './components'
 
-import { SearchRefs, ButtonRefs } from './component'
+import { SearchRefs, ButtonRefs } from './components'
 
 const Test = () => {
   return (

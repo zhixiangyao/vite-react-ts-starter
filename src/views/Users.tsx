@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Observer } from 'mobx-react'
 
-import { useLocalStore, useClickOutSide } from '/@/hook'
+import { useLocalStore, useClickOutSide } from '../hooks'
 import { store } from '/@/store'
 
 function Users() {

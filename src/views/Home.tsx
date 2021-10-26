@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Observer } from 'mobx-react'
 import styled from 'styled-components'
 
-import { useLocalStore } from '/@/hook'
+import { useLocalStore } from '../hooks'
 import ReactLogo from '/@/components/ReactLogo'
 import { store } from '/@/store'
 

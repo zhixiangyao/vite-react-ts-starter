@@ -1,6 +1,6 @@
 import React from 'react'
 import { Observer } from 'mobx-react'
-import { useLocalStore } from '/@/hook'
+import { useLocalStore } from '../hooks'
 import { store } from '/@/store'
 
 function About() {

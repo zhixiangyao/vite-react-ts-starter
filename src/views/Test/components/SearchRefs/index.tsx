@@ -2,7 +2,7 @@ import React, { forwardRef, useRef, useEffect } from 'react'
 
 const Search = forwardRef<HTMLInputElement, JSX.IntrinsicElements['button']>((props, ref) => {
   return (
-    <fieldset className="w-240px p-4 border-4 border-red-400">
+    <fieldset className="w-240px px-4 py-2 border-4 border-red-400">
       <legend>SearchRefs(Auto focus)</legend>
 
       <input className="px-2 my-2" ref={ref} type="search" defaultValue="test" />

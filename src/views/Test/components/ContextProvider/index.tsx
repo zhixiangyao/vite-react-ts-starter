@@ -25,7 +25,7 @@ const ContextProvider = () => {
   const value = useTheme(themes)
 
   return (
-    <fieldset className="w-240px p-4 border-4 border-blue-400">
+    <fieldset className="w-240px px-4 py-2 border-4 border-blue-400">
       <legend>ContextProvider</legend>
 
       <ThemeContext.Provider value={value}>

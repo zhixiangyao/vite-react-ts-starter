@@ -27,7 +27,7 @@ const PrevPropsState = () => {
   )
 
   return (
-    <fieldset className="w-240px p-4 border-4 border-red-400">
+    <fieldset className="w-240px px-4 py-2 border-4 border-red-400">
       <legend>PrevPropsState</legend>
 
       <h1>

@@ -1,8 +1,5 @@
-import React, { Suspense } from 'react'
-import { useHistory, useLocation } from 'react-router-dom'
-import { renderRoutes } from 'react-router-config'
-
-import type { Props } from '/@/router'
+import React from 'react'
+import { useNavigate, useLocation, Outlet } from 'react-router-dom'
 
 import Nav from './components/Nav'
 import Main from './components/Main'
@@ -34,8 +31,8 @@ const navbarList = [
   },
 ]
 
-const Default: React.FC<Props> = ({ route }) => {
-  const history = useHistory()
+const Default = () => {
+  const navigate = useNavigate()
   const { pathname } = useLocation()
 
   const navChildren = {
@@ -48,7 +45,7 @@ const Default: React.FC<Props> = ({ route }) => {
             className={`hover:bg-gray-700 text-white flex-shrink-0 px-3 py-2 rounded-md text-sm font-medium ${
               path === pathname && 'bg-gray-900'
             } ${path !== pathname && 'text-gray-300'}`}
-            onClick={() => history.push(path)}
+            onClick={() => navigate(path)}
           >
             {label}
           </button>
@@ -61,11 +58,7 @@ const Default: React.FC<Props> = ({ route }) => {
   return (
     <>
       <Nav children={navChildren} />
-      <Main
-        children={
-          <Suspense fallback={<div>Loading...</div>}>{renderRoutes(route?.routes)}</Suspense>
-        }
-      />
+      <Main children={<Outlet />} />
     </>
   )
 }

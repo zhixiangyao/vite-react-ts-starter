@@ -3,6 +3,7 @@
   "plugins": ["stylelint-order"],
   "extends": ["stylelint-config-standard", "stylelint-config-prettier"],
   "rules": {
+    "selector-class-pattern": null,
     "selector-pseudo-class-no-unknown": [
       true,
       {
@@ -18,6 +19,7 @@
     "no-empty-source": null,
     "unicode-bom": "never",
     "no-descending-specificity": null,
+    "font-family-name-quotes": null,
     "font-family-no-missing-generic-family-keyword": null,
     "declaration-colon-space-after": "always-single-line",
     "declaration-colon-space-before": "never",

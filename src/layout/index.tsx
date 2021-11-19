@@ -29,6 +29,12 @@ const navbarList = [
     name: 'Test',
     path: '/default/test',
   },
+  {
+    id: 5,
+    label: 'VirtualRolling',
+    name: 'VirtualRolling',
+    path: '/default/virtual-rolling',
+  },
 ]
 
 const Default = () => {

@@ -15,6 +15,12 @@ declare global {
     VITE_APP_TITLE: string
     // 更多环境变量...
   }
+
+  interface Route {
+    path: string
+    element: JSX.Element
+    children: Route[]
+  }
 }
 
 export {}

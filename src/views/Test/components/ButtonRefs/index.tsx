@@ -22,7 +22,7 @@ const button = createRef<HTMLButtonElement>()
 
 class ButtonRefs extends React.Component {
   override componentDidMount() {
-    console.log(button.current)
+    console.log('componentDidMount:', button.current)
   }
 
   override render() {

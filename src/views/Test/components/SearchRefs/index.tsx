@@ -31,7 +31,7 @@ const Search = forwardRef<HTMLInputElement, JSX.IntrinsicElements['button']>((pr
 Search.displayName = 'Search'
 
 const SearchRefs = () => {
-  const input = useRef<HTMLInputElement>(null)
+  const input = useRef<HTMLInputElement | null>(null)
 
   useEffect(() => {
     if (input.current) {
@@ -39,7 +39,14 @@ const SearchRefs = () => {
     }
   }, [])
 
-  return <Search ref={input} />
+  return (
+    <Search
+      ref={(e: HTMLInputElement) => {
+        console.log(e)
+        input.current = e
+      }}
+    />
+  )
 }
 
 export default SearchRefs

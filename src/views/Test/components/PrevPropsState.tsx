@@ -15,7 +15,7 @@ const PrevPropsState = () => {
      */
     countRef.current = count
 
-    console.log(`%c "count": ${count},  "countRef.current": ${countRef.current}.`, 'color: red')
+    console.log(`%c "count": ${count},  "countRef.current": ${countRef.current}.`, 'color: yellow')
   })
 
   console.log(`%c "count": ${count},  "countRef.current": ${countRef.current}.`, 'color: red')

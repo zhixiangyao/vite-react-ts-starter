@@ -3,7 +3,7 @@ import { getLocalStorage, setLocalStorage } from '/@/utils'
 
 class Store {
   @observable
-  count = getLocalStorage('value') ? Number(getLocalStorage('value')) : 0
+  count = getLocalStorage<string>('value') ? Number(getLocalStorage('value')) : 0
 
   constructor() {
     makeObservable(this)

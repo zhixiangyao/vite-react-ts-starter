@@ -19,10 +19,10 @@ function useStateRef<T>(val: T) {
   return result
 }
 
-function useClickOutSide(inSide?: () => void, outSide?: () => void) {
+function useClickOutSide<T extends HTMLElement>(inSide?: () => void, outSide?: () => void) {
   const inSideRef = useStateRef(inSide)
   const outSideRef = useStateRef(outSide)
-  const targetRef = useRef<HTMLHeadingElement>(null)
+  const targetRef = useRef<T>(null)
 
   const handleGlobalClick = useCallback(
     ({ clientX, clientY }: MouseEvent) => {

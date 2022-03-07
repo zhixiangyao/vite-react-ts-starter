@@ -9,7 +9,7 @@ function Users() {
 
   const [text, setText] = useState('undefined')
 
-  const clickRef = useClickOutSide(
+  const clickRef = useClickOutSide<HTMLDivElement>(
     () => setText(() => 'clickOutSide'),
     () => setText(() => 'clickInSide'),
   )

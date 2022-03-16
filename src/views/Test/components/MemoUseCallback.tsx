@@ -24,7 +24,7 @@ const Child = (props: ChildProps) => {
 
 const MemoChild = memo(Child)
 
-const Compo = () => {
+const MemoUseCallback = () => {
   const [a, setA] = useState('')
   const [b, setB] = useState('')
 
@@ -47,4 +47,4 @@ const Compo = () => {
   )
 }
 
-export default Compo
+export default MemoUseCallback

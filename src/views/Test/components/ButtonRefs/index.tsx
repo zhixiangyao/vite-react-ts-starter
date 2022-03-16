@@ -1,4 +1,4 @@
-import React, { forwardRef, createRef } from 'react'
+import React, { forwardRef, createRef, type RefObject } from 'react'
 
 type ButtonProps = JSX.IntrinsicElements['button']
 
@@ -18,15 +18,27 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => (
 ))
 Button.displayName = 'Button'
 
-const button = createRef<HTMLButtonElement>()
+interface ButtonRefsState {
+  button: RefObject<HTMLButtonElement> | null
+}
 
-class ButtonRefs extends React.Component {
+class ButtonRefs extends React.Component<{}, ButtonRefsState> {
+  state: ButtonRefsState = {
+    button: null,
+  }
+
+  constructor(props: {}) {
+    super(props)
+
+    this.state.button = createRef<HTMLButtonElement>()
+  }
+
   override componentDidMount() {
-    console.log('componentDidMount:', button.current)
+    console.log('componentDidMount:', this.state.button?.current)
   }
 
   override render() {
-    return <Button ref={button}>Hello</Button>
+    return <Button ref={this.state.button}>Hello</Button>
   }
 }
 

@@ -1,15 +1,14 @@
 import React from 'react'
-import { Provider } from 'mobx-react'
 
 import { Routes } from '/@/router'
-import { store } from '/@/store'
+import { stores, StoresProvider } from './store'
 
 const App = () => {
   return (
     // <React.StrictMode>
-    <Provider store={store}>
+    <StoresProvider value={stores}>
       <Routes />
-    </Provider>
+    </StoresProvider>
     // </React.StrictMode>
   )
 }

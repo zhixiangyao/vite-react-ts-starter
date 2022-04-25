@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import { Observer } from 'mobx-react'
+import { Observer } from 'mobx-react-lite'
 import styled from 'styled-components'
 
-import { useLocalStore } from '../hooks'
+import { useStore } from '/@/hooks'
 import ReactLogo from '/@/components/ReactLogo'
-import { store } from '/@/store'
 
 const Button = styled.button`
   font-size: calc(10px + 2vmin);
@@ -12,7 +11,7 @@ const Button = styled.button`
 
 function Home() {
   const [count, setCount] = useState(0)
-  const localStore = useLocalStore(store)
+  const counterStore = useStore('counterStore')
 
   // useEffect(() => console.log('componentDidMount!'), [])
 
@@ -37,8 +36,8 @@ function Home() {
             count is: {count}
           </Button>
 
-          <Button type="button" onClick={() => localStore.setCount()}>
-            mobxCount is: {localStore.count}
+          <Button type="button" onClick={() => counterStore.setCount()}>
+            mobxCount is: {counterStore.count}
           </Button>
 
           <p>

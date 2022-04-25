@@ -1,7 +1,11 @@
-import { useCallback, useEffect, useLayoutEffect, useRef } from 'react'
-import { useLocalObservable } from 'mobx-react'
+import { useCallback, useEffect, useLayoutEffect, useRef, useContext } from 'react'
 
-const useLocalStore: <T>(store: T) => T = (store) => useLocalObservable(() => store)
+import { stores, storesContext } from '/@/store'
+
+const useStores = () => useContext(storesContext)
+
+const useStore = <T extends keyof typeof stores>(store: T): typeof stores[T] =>
+  useContext(storesContext)[store]
 
 function usePrevious<T>(val: T) {
   const ref = useRef<T>()
@@ -49,4 +53,4 @@ function useClickOutSide<T extends HTMLElement>(inSide?: () => void, outSide?: (
   return targetRef
 }
 
-export { useLocalStore, usePrevious, useStateRef, useClickOutSide }
+export { useStores, useStore, usePrevious, useStateRef, useClickOutSide }

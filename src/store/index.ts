@@ -1,23 +1,13 @@
-import { action, observable, makeObservable } from 'mobx'
-import { getLocalStorage, setLocalStorage } from '/@/utils'
+import { createContext } from 'react'
 
-class Store {
-  @observable
-  count = getLocalStorage<string>('value') ? Number(getLocalStorage('value')) : 0
+import { CounterStore } from './CounterStore'
 
-  constructor() {
-    makeObservable(this)
-  }
+const stores = Object.freeze({
+  counterStore: new CounterStore(),
+})
 
-  @action
-  setCount = () => {
-    this.count++
-    setLocalStorage('value', this.count)
-  }
-}
+const storesContext = createContext(stores)
 
-const store = new Store()
+const StoresProvider = storesContext.Provider
 
-export { store }
-
-export type { Store }
+export { stores, storesContext, StoresProvider }

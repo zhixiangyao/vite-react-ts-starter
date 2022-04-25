@@ -1,10 +1,9 @@
 import React from 'react'
-import { Observer } from 'mobx-react'
-import { useLocalStore } from '../hooks'
-import { store } from '/@/store'
+import { Observer } from 'mobx-react-lite'
+import { useStore } from '/@/hooks'
 
 function About() {
-  const localStore = useLocalStore(store)
+  const counterStore = useStore('counterStore')
 
   return (
     <Observer>
@@ -13,7 +12,7 @@ function About() {
           <h2>About</h2>
           <h2>
             <span>mobxCount: </span>
-            <span>{localStore.count}</span>
+            <span>{counterStore.count}</span>
           </h2>
         </>
       )}

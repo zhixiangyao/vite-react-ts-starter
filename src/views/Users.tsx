@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
-import { Observer } from 'mobx-react'
+import { Observer } from 'mobx-react-lite'
 
-import { useLocalStore, useClickOutSide } from '../hooks'
-import { store } from '/@/store'
+import { useStore, useClickOutSide } from '../hooks'
 
 function Users() {
-  const localStore = useLocalStore(store)
+  const counterStore = useStore('counterStore')
 
   const [text, setText] = useState('undefined')
 
@@ -30,7 +29,7 @@ function Users() {
           <h2>Users</h2>
           <h2>
             <span>mobxCount: </span>
-            <span>{localStore.count}</span>
+            <span>{counterStore.count}</span>
           </h2>
         </>
       )}

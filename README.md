@@ -1,6 +1,6 @@
-# Vite + React + ReactRouter + ReactMobx + TypeScript + StyledComponents + WindiCss
+# Vite + React + ReactRouter + ReactMobxLite + TypeScript + StyledComponents + WindiCss
 
-This template will help you start developing in Vite using React ReactRouter ReactMobx TypeScript StyledComponents WindiCSS.
+This template will help you start developing in Vite using React ReactRouter ReactMobxLite TypeScript StyledComponents WindiCSS.
 
 **Editor:**
 

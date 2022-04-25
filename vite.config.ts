@@ -1,7 +1,8 @@
 import fs from 'fs'
-import dotenv from 'dotenv' // Dotenv 是一个零依赖的 module, 它能将 env 变量中的变量从 '.env*' file 提取出来
+// dotenv is a "zero-dependent" module that extracts variables in the env variable from the '.env.xxx' file.
+import dotenv from 'dotenv'
 import { defineConfig } from 'vite'
-import reactRefresh from '@vitejs/plugin-react-refresh'
+import React from '@vitejs/plugin-react'
 import WindiCSS from 'vite-plugin-windicss'
 import { resolve } from 'path'
 
@@ -11,7 +12,7 @@ import type { ConfigEnv } from 'vite'
  * https://vitejs.dev/config/
  */
 const baseConfig = {
-  plugins: [reactRefresh(), WindiCSS()],
+  plugins: [React(), WindiCSS()],
   resolve: {
     alias: [
       {

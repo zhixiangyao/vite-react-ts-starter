@@ -1,4 +1,4 @@
-const getElementById = (id: string) => document.getElementById(id)
+const getElementById = (id: string) => document.getElementById(id)!
 
 const keyBefore = 'vite-react-ts-'
 

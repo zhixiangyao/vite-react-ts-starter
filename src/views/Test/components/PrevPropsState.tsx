@@ -1,11 +1,15 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef, useCallback } from 'react'
 
 // import { usePrevious } from '/@/hook'
 
 const PrevPropsState = () => {
   const [count, setCount] = useState(0)
-
   const countRef = useRef<number>()
+
+  const increment = useCallback(() => {
+    console.log(`%c "count": ${count},  "countRef.current": ${countRef.current}.`, 'color: yellow')
+    setCount(count + 1)
+  }, [count])
 
   useEffect(() => {
     /**
@@ -15,10 +19,8 @@ const PrevPropsState = () => {
      */
     countRef.current = count
 
-    console.log(`%c "count": ${count},  "countRef.current": ${countRef.current}.`, 'color: yellow')
-  })
-
-  console.log(`%c "count": ${count},  "countRef.current": ${countRef.current}.`, 'color: red')
+    console.log(`%c "count": ${count},  "countRef.current": ${countRef.current}.`, 'color: red')
+  }, [count])
 
   return (
     <fieldset className="w-300px px-4 py-2 border-4 rounded-md border-red-400 flex flex-col items-center justify-evenly">
@@ -29,7 +31,7 @@ const PrevPropsState = () => {
       </div>
       <button
         className="text-20px font-bold bg-red-400 hover:bg-red-300 text-white flex-shrink-0 px-8 py-2 rounded-md text-sm font-medium"
-        onClick={() => setCount((count) => count + 1)}
+        onClick={increment}
       >
         +
       </button>

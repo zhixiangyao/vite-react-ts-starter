@@ -4,7 +4,7 @@ import { stores, storesContext } from '/@/store'
 
 const useStores = () => useContext(storesContext)
 
-const useStore = <T extends keyof typeof stores>(store: T): typeof stores[T] =>
+const useStore = <T extends keyof typeof stores>(store: T): (typeof stores)[T] =>
   useContext(storesContext)[store]
 
 function usePrevious<T>(val: T) {

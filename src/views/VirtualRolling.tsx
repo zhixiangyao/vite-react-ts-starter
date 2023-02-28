@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { FixedSizeList as List } from 'react-window'
 
-const VirtualRolling = () => {
+const VirtualRolling: React.FC = () => {
   const [content, setContent] = useState('null')
   const [value, setInputValue] = useState('')
 

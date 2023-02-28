@@ -3,7 +3,7 @@ import { Observer } from 'mobx-react-lite'
 
 import { useStore, useClickOutSide } from '../hooks'
 
-function Users() {
+const Users: React.FC = () => {
   const counterStore = useStore('counterStore')
 
   const [text, setText] = useState('undefined')

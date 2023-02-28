@@ -4,7 +4,7 @@ const computeExpensiveValue = (a: number, b: number, c: number) => {
   return a * b + c
 }
 
-const Memo = () => {
+const Memo: React.FC = () => {
   const [a, setA] = useState(1)
   const [b, setB] = useState(0)
   const [c, setC] = useState(0)

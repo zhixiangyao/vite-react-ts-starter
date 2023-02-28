@@ -1,6 +1,6 @@
 import React, { useReducer, useCallback, useMemo } from 'react'
 
-const CounterReducer = () => {
+const CounterReducer: React.FC = () => {
   const initialState = useMemo(() => ({ count: 0 }), [])
 
   const reducer = useCallback(

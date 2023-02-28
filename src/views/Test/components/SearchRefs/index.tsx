@@ -30,7 +30,7 @@ const Search = forwardRef<HTMLInputElement, JSX.IntrinsicElements['button']>((_,
 })
 Search.displayName = 'Search'
 
-const SearchRefs = () => {
+const SearchRefs: React.FC = () => {
   const input = useRef<HTMLInputElement | null>(null)
 
   useEffect(() => {

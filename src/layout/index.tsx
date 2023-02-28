@@ -37,7 +37,7 @@ const navbarList = [
   },
 ]
 
-const Default = () => {
+const Default: React.FC = () => {
   const navigate = useNavigate()
   const { pathname } = useLocation()
 

@@ -21,7 +21,7 @@ export const ThemeContext = createContext({
   toggleTheme: () => {},
 })
 
-const ContextProvider = () => {
+const ContextProvider: React.FC = () => {
   const value = useTheme(themes)
 
   return (

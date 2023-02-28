@@ -9,7 +9,7 @@ const Button = styled.button`
   font-size: calc(10px + 2vmin);
 `
 
-function Home() {
+const Home: React.FC = () => {
   const [count, setCount] = useState(0)
   const counterStore = useStore('counterStore')
 

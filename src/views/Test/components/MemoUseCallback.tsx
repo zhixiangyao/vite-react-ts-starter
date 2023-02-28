@@ -24,7 +24,7 @@ const Child = (props: ChildProps) => {
 
 const MemoChild = memo(Child)
 
-const MemoUseCallback = () => {
+const MemoUseCallback: React.FC = () => {
   const [a, setA] = useState('')
   const [b, setB] = useState('')
 

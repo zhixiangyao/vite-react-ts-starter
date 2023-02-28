@@ -1,13 +1,13 @@
 import React, { Suspense, lazy } from 'react'
 import { BrowserRouter, Routes as Routes_, Route, Navigate } from 'react-router-dom'
 
-const genRoute = (route: Route) => {
+const GenRoute: React.FC<Route> = (route) => {
   if (route.children.length === 0) {
     return <Route key={route.path} path={route.path} element={route.element} />
   } else {
     return (
       <Route key={route.path} path={route.path} element={route.element}>
-        {route.children.map((route) => genRoute(route))}
+        {route.children.map((route) => GenRoute(route))}
       </Route>
     )
   }
@@ -93,8 +93,8 @@ const routes: Route[] = [
   },
 ]
 
-export const Routes = () => (
+export const Routes: React.FC = () => (
   <BrowserRouter>
-    <Routes_>{routes.map((route) => genRoute(route))}</Routes_>
+    <Routes_>{routes.map((route) => GenRoute(route))}</Routes_>
   </BrowserRouter>
 )

@@ -2,7 +2,7 @@ import React from 'react'
 import { Observer } from 'mobx-react-lite'
 import { useStore } from '/@/hooks'
 
-function About() {
+const About: React.FC = () => {
   const counterStore = useStore('counterStore')
 
   return (

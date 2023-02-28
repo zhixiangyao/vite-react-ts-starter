@@ -7,7 +7,7 @@ const useStores = () => useContext(storesContext)
 const useStore = <T extends keyof typeof stores>(store: T): (typeof stores)[T] =>
   useContext(storesContext)[store]
 
-function usePrevious<T>(val: T) {
+const usePrevious = <T>(val: T) => {
   const ref = useRef<T>()
   useEffect(() => {
     ref.current = val
@@ -15,7 +15,7 @@ function usePrevious<T>(val: T) {
   return ref.current
 }
 
-function useStateRef<T>(val: T) {
+const useStateRef = <T>(val: T) => {
   const result = useRef(val)
   useEffect(() => {
     result.current = val
@@ -23,7 +23,7 @@ function useStateRef<T>(val: T) {
   return result
 }
 
-function useClickOutSide<T extends HTMLElement>(inSide?: () => void, outSide?: () => void) {
+const useClickOutSide = <T extends HTMLElement>(inSide?: () => void, outSide?: () => void) => {
   const inSideRef = useStateRef(inSide)
   const outSideRef = useStateRef(outSide)
   const targetRef = useRef<T>(null)

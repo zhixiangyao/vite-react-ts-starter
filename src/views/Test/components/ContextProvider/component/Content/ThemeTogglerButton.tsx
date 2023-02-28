@@ -2,7 +2,7 @@ import React from 'react'
 
 import { ThemeContext } from '../../index'
 
-const ThemeTogglerButton = () => {
+const ThemeTogglerButton: React.FC = () => {
   return (
     <ThemeContext.Consumer>
       {({ theme, toggleTheme }) => (

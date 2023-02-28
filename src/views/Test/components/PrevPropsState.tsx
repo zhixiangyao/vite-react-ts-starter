@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef, useCallback } from 'react'
 
 // import { usePrevious } from '/@/hook'
 
-const PrevPropsState = () => {
+const PrevPropsState: React.FC = () => {
   const [count, setCount] = useState(0)
   const countRef = useRef<number>()
 

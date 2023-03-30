@@ -1,41 +1,54 @@
 {
   "root": true,
-  "plugins": ["stylelint-order"],
-  "extends": ["stylelint-config-standard", "stylelint-config-prettier"],
+  "plugins": [
+    "stylelint-order"
+  ],
+  "extends": [
+    "stylelint-config-standard"
+  ],
   "rules": {
     "selector-class-pattern": null,
     "selector-pseudo-class-no-unknown": [
       true,
       {
-        "ignorePseudoClasses": ["global"]
+        "ignorePseudoClasses": [
+          "global"
+        ]
       }
     ],
     "at-rule-no-unknown": [
       true,
       {
-        "ignoreAtRules": ["function", "if", "each", "include", "mixin"]
+        "ignoreAtRules": [
+          "function",
+          "if",
+          "each",
+          "include",
+          "mixin"
+        ]
       }
     ],
     "no-empty-source": null,
-    "unicode-bom": "never",
     "no-descending-specificity": null,
     "font-family-name-quotes": null,
     "font-family-no-missing-generic-family-keyword": null,
-    "declaration-colon-space-after": "always-single-line",
-    "declaration-colon-space-before": "never",
-    "declaration-block-trailing-semicolon": [
-      "always",
-      {
-        "ignore": ["single-declaration"]
-      }
-    ],
     "rule-empty-line-before": [
       "always",
       {
-        "ignore": ["after-comment", "first-nested"]
+        "ignore": [
+          "after-comment",
+          "first-nested"
+        ]
       }
     ],
-    "unit-no-unknown": [true, { "ignoreUnits": ["rpx"] }],
+    "unit-no-unknown": [
+      true,
+      {
+        "ignoreUnits": [
+          "rpx"
+        ]
+      }
+    ],
     "order/properties-order": [
       "content",
       "position",
@@ -190,5 +203,9 @@
       "speak"
     ]
   },
-  "ignoreFiles": ["**/*.tsx", "**/*.js", "**/*.ts"]
+  "ignoreFiles": [
+    "**/*.tsx",
+    "**/*.js",
+    "**/*.ts"
+  ]
 }

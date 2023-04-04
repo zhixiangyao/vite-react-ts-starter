@@ -1,11 +1,4 @@
-import { useCallback, useEffect, useLayoutEffect, useRef, useContext } from 'react'
-
-import { stores, storesContext } from '/@/store'
-
-const useStores = () => useContext(storesContext)
-
-const useStore = <T extends keyof typeof stores>(store: T): (typeof stores)[T] =>
-  useContext(storesContext)[store]
+import { useCallback, useEffect, useLayoutEffect, useRef } from 'react'
 
 const usePrevious = <T>(val: T) => {
   const ref = useRef<T>()
@@ -53,4 +46,4 @@ const useClickOutSide = <T extends HTMLElement>(inSide?: () => void, outSide?: (
   return targetRef
 }
 
-export { useStores, useStore, usePrevious, useStateRef, useClickOutSide }
+export { usePrevious, useStateRef, useClickOutSide }

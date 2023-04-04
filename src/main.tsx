@@ -8,4 +8,8 @@ const rootElement = getElementById('root')
 
 const app = createRoot(rootElement)
 
-app.render(<App />)
+app.render(
+  // <React.StrictMode>
+  <App />,
+  // </React.StrictMode>
+)

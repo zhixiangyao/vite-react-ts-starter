@@ -1,21 +1,22 @@
-import { action, observable, makeObservable } from 'mobx'
+import { create } from 'zustand'
+import { devtools, persist } from 'zustand/middleware'
 
-import { getLocalStorage, setLocalStorage } from '/@/utils'
-
-class CounterStore {
-  count = getLocalStorage<string>('value') ? Number(getLocalStorage('value')) : 0
-
-  constructor() {
-    makeObservable(this, {
-      count: observable,
-      setCount: action,
-    })
-  }
-
-  setCount = () => {
-    this.count++
-    setLocalStorage('value', this.count)
-  }
+interface CountState {
+  count: number
+  increase: (by: number) => void
 }
 
-export { CounterStore }
+const useCountStore = create<CountState>()(
+  devtools(
+    persist(
+      (set) => ({
+        count: 0,
+        increase: (by) => set((state) => ({ count: state.count + by })),
+      }),
+      {
+        name: 'count-storage',
+      },
+    ),
+  ),
+)
+export { useCountStore }

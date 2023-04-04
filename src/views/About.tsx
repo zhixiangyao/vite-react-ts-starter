@@ -1,22 +1,18 @@
 import React from 'react'
-import { Observer } from 'mobx-react-lite'
-import { useStore } from '/@/hooks'
+
+import { useCountStore } from '/@/store'
 
 const About: React.FC = () => {
-  const counterStore = useStore('counterStore')
+  const zustandCount = useCountStore((state) => state.count)
 
   return (
-    <Observer>
-      {() => (
-        <>
-          <h2>About</h2>
-          <h2>
-            <span>mobxCount: </span>
-            <span>{counterStore.count}</span>
-          </h2>
-        </>
-      )}
-    </Observer>
+    <>
+      <h2>About</h2>
+      <h2>
+        <span>zustandCount: </span>
+        <span>{zustandCount}</span>
+      </h2>
+    </>
   )
 }
 

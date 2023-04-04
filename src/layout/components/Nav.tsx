@@ -1,5 +1,7 @@
 import React from 'react'
 
+import GithubOctopusCat from '/@/components/GithubOctopusCat'
+
 interface NavProps {
   children: {
     title?: React.ReactNode
@@ -27,6 +29,7 @@ const Nav: React.FC<NavProps> = ({ children }) => (
         </div>
       </div>
     </div>
+    <GithubOctopusCat />
   </nav>
 )
 

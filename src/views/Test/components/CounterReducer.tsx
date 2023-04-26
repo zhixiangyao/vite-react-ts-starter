@@ -1,22 +1,21 @@
-import React, { useReducer, useCallback, useMemo } from 'react'
+import React, { useReducer } from 'react'
+
+type Action = { type: 'decrement' | 'increment' }
+type State = { count: number }
+
+const initialState: State = { count: 0 }
+const reducer = (state: State, action: Action) => {
+  switch (action.type) {
+    case 'increment':
+      return { count: state.count + 1 }
+    case 'decrement':
+      return { count: state.count - 1 }
+    default:
+      throw new Error()
+  }
+}
 
 const CounterReducer: React.FC = () => {
-  const initialState = useMemo(() => ({ count: 0 }), [])
-
-  const reducer = useCallback(
-    (state: { count: number }, action: { type: 'decrement' | 'increment' }) => {
-      switch (action.type) {
-        case 'increment':
-          return { count: state.count + 1 }
-        case 'decrement':
-          return { count: state.count - 1 }
-        default:
-          throw new Error()
-      }
-    },
-    [],
-  )
-
   const [state, dispatch] = useReducer(reducer, initialState)
 
   return (

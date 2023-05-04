@@ -1,5 +1,3 @@
-import React from 'react'
-
 import GithubOctopusCat from '/@/components/GithubOctopusCat'
 
 interface NavProps {

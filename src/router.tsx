@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react'
+import { Suspense, lazy } from 'react'
 import { BrowserRouter, Routes as Routes_, Route, Navigate } from 'react-router-dom'
 
 const GenRoute: React.FC<Route> = (route) => {

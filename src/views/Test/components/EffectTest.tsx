@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 
 const EffectTest: React.FC = () => {
   const [inputValue1, setInputValue1] = useState('')

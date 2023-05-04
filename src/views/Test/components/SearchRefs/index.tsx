@@ -1,4 +1,4 @@
-import React, { forwardRef, useRef, useEffect } from 'react'
+import { forwardRef, useRef, useEffect } from 'react'
 
 const Search = forwardRef<HTMLInputElement, JSX.IntrinsicElements['button']>((_, ref) => {
   return (

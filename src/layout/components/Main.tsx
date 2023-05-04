@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Main: React.FC<{ children: React.ReactNode }> = (props) => {
   const { children } = props
 

@@ -1,5 +1,3 @@
-import React from 'react'
-
 import { CounterReducer, ContextProvider, PrevPropsState, EffectTest } from './components'
 import { MemoUseCallback, Memo } from './components'
 

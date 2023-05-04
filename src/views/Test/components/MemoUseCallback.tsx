@@ -1,4 +1,4 @@
-import React, { useState, memo, useCallback } from 'react'
+import { useState, memo, useCallback } from 'react'
 
 interface ChildProps {
   value: string

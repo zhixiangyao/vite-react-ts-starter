@@ -1,4 +1,3 @@
-import React from 'react'
 import { useNavigate, useLocation, Outlet } from 'react-router-dom'
 
 import Nav from './components/Nav'

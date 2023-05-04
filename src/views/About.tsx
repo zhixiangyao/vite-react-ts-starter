@@ -1,5 +1,3 @@
-import React from 'react'
-
 import { useCountStore } from '/@/store'
 
 const About: React.FC = () => {

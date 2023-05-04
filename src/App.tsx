@@ -1,4 +1,3 @@
-import React from 'react'
 import 'virtual:windi.css'
 import 'virtual:windi-devtools'
 

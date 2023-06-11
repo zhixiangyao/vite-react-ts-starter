@@ -18,7 +18,6 @@ const Home = lazy(() => import('/@/views/Home'))
 const About = lazy(() => import('/@/views/About'))
 const Users = lazy(() => import('/@/views/Users'))
 const Test = lazy(() => import('/@/views/Test'))
-const VirtualRolling = lazy(() => import('/@/views/VirtualRolling'))
 
 const routes: Route[] = [
   {
@@ -66,15 +65,6 @@ const routes: Route[] = [
         element: (
           <Suspense fallback={<>loading Test</>}>
             <Test />
-          </Suspense>
-        ),
-        children: [],
-      },
-      {
-        path: '/default/virtual-rolling',
-        element: (
-          <Suspense fallback={<>loading VirtualRolling</>}>
-            <VirtualRolling />
           </Suspense>
         ),
         children: [],

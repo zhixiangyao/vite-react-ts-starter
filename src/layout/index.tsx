@@ -28,12 +28,6 @@ const navbarList = [
     name: 'Test',
     path: '/default/test',
   },
-  {
-    id: 5,
-    label: 'VirtualRolling',
-    name: 'VirtualRolling',
-    path: '/default/virtual-rolling',
-  },
 ]
 
 export default () => {
@@ -57,7 +51,7 @@ export default () => {
         ))}
       </>
     ),
-    info: `当前路由-PATH: "${pathname}"`,
+    info: `Current Routing Path: "${pathname}"`,
   }
 
   return (

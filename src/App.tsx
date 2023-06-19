@@ -1,12 +1,13 @@
+import { RouterProvider } from 'react-router-dom'
+
+import { router } from '/@/router'
+
+import '/@/assets/index.css'
 import 'virtual:windi.css'
 import 'virtual:windi-devtools'
 
-import { Routes } from '/@/router'
-
-import '/@/assets/index.css'
-
 const App: React.FC = () => {
-  return <Routes />
+  return <RouterProvider router={router} />
 }
 
 export default App

@@ -1,7 +1,8 @@
 import { useState } from 'react'
 
 import { useCountStore } from '/@/store'
-import { useClickOutSide } from '/@/hooks'
+
+import { useClickOutSide } from '../hooks/useClickOutSide'
 
 const Users: React.FC = () => {
   const zustandCount = useCountStore((state) => state.count)
@@ -9,8 +10,8 @@ const Users: React.FC = () => {
   const [text, setText] = useState('undefined')
 
   const clickRef = useClickOutSide<HTMLDivElement>(
-    () => setText(() => 'clickOutSide'),
     () => setText(() => 'clickInSide'),
+    () => setText(() => 'clickOutSide'),
   )
 
   return (

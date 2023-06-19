@@ -1,25 +1,11 @@
-import { useCallback, useEffect, useLayoutEffect, useRef } from 'react'
+import { useCallback, useLayoutEffect, useRef } from 'react'
 
-const usePrevious = <T>(val: T) => {
-  const ref = useRef<T>()
-  useEffect(() => {
-    ref.current = val
-  })
-  return ref.current
-}
-
-const useStateRef = <T>(val: T) => {
-  const result = useRef(val)
-  useEffect(() => {
-    result.current = val
-  }, [val])
-  return result
-}
+import { useStateRef } from './useStateRef'
 
 const useClickOutSide = <T extends HTMLElement>(inSide?: () => void, outSide?: () => void) => {
   const inSideRef = useStateRef(inSide)
   const outSideRef = useStateRef(outSide)
-  const targetRef = useRef<T>(null)
+  const targetRef = useRef<T | null>(null)
 
   const handleGlobalClick = useCallback(
     ({ clientX, clientY }: MouseEvent) => {
@@ -28,9 +14,9 @@ const useClickOutSide = <T extends HTMLElement>(inSide?: () => void, outSide?: (
       const { right, left, bottom, top } = targetRef.current.getBoundingClientRect()
 
       if (clientX > right || clientX < left || clientY > bottom || clientY < top) {
-        inSideRef.current && inSideRef.current()
-      } else {
         outSideRef.current && outSideRef.current()
+      } else {
+        inSideRef.current && inSideRef.current()
       }
     },
     [inSideRef, outSideRef],
@@ -46,4 +32,4 @@ const useClickOutSide = <T extends HTMLElement>(inSide?: () => void, outSide?: (
   return targetRef
 }
 
-export { usePrevious, useStateRef, useClickOutSide }
+export { useClickOutSide }

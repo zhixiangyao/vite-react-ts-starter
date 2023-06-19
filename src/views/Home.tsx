@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-
 import styled from 'styled-components'
 
 import ReactLogo from '/@/components/ReactLogo'

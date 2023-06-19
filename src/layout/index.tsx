@@ -1,4 +1,5 @@
 import { useNavigate, useLocation, Outlet } from 'react-router-dom'
+import clsx from 'clsx'
 
 import Nav from './components/Nav'
 import Main from './components/Main'
@@ -41,9 +42,11 @@ export default () => {
         {navbarList.map(({ path, name, label }) => (
           <button
             key={name}
-            className={`hover:bg-gray-700 text-white flex-shrink-0 px-3 py-2 rounded-md text-sm font-medium ${
-              path === pathname && 'bg-gray-900'
-            } ${path !== pathname && 'text-gray-300'}`}
+            className={clsx(
+              'hover:bg-gray-700 text-white flex-shrink-0 px-3 py-2 rounded-md text-sm font-medium',
+              path === pathname && 'bg-gray-900',
+              path !== pathname && 'text-gray-300',
+            )}
             onClick={() => navigate(path)}
           >
             {label}

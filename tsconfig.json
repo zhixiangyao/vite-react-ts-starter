@@ -16,7 +16,7 @@
     "noEmit": true,
     "jsx": "preserve",
     "types": ["vite/client", "node"],
-    "typeRoots": ["./node_modules/@types/"],
+    "typeRoots": ["./node_modules/@types/", "./node_modules/"],
     "baseUrl": ".",
     "paths": {
       "/@/*": ["src/*"]

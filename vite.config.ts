@@ -4,14 +4,13 @@ import { resolve } from 'path' // dotenv is a "zero-dependent" module that extra
 import dotenv from 'dotenv'
 import { defineConfig } from 'vite'
 import React from '@vitejs/plugin-react'
-import WindiCSS from 'vite-plugin-windicss'
 import type { ConfigEnv } from 'vite'
 
 /**
  * https://vitejs.dev/config/
  */
 const baseConfig = {
-  plugins: [React(), WindiCSS()],
+  plugins: [React()],
   resolve: {
     alias: [
       {

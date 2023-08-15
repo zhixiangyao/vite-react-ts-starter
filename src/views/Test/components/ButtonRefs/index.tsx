@@ -8,7 +8,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => (
     <legend className="px-2 font-bold">ButtonRefs(createRef)</legend>
 
     <button
-      className="text-20px font-bold bg-red-400 hover:bg-red-300 text-white flex-shrink-0 px-8 py-2 rounded-md text-sm font-medium"
+      className="text-20px font-bold bg-red-400 hover:bg-red-300 text-white flex-shrink-0 px-8 py-2 rounded-md text-sm"
       type="button"
       {...props}
       ref={ref}

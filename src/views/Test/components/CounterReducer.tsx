@@ -25,14 +25,14 @@ const CounterReducer: React.FC = () => {
       <div>Count: {state.count}</div>
 
       <button
-        className="text-20px font-bold bg-red-400 hover:bg-red-300 text-white flex-shrink-0 px-8 py-2 rounded-md text-sm font-mediumk"
+        className="text-20px font-bold bg-red-400 hover:bg-red-300 text-white flex-shrink-0 px-8 py-2 rounded-md text-sm"
         onClick={() => dispatch({ type: 'increment' })}
       >
         +
       </button>
 
       <button
-        className="text-20px font-bold bg-red-400 hover:bg-red-300 text-white flex-shrink-0 px-8 py-2 rounded-md text-sm font-medium"
+        className="text-20px font-bold bg-red-400 hover:bg-red-300 text-white flex-shrink-0 px-8 py-2 rounded-md text-sm "
         onClick={() => dispatch({ type: 'decrement' })}
       >
         -

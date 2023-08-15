@@ -1,6 +1,6 @@
-# Vite + React + ReactRouter + Zustand + TypeScript + StyledComponents + WindiCss
+# Vite + React + ReactRouter + Zustand + TypeScript + StyledComponents + TailwindCSS
 
-This template will help you start developing in Vite using React ReactRouter Zustand TypeScript StyledComponents WindiCSS.
+This template will help you start developing in Vite using React ReactRouter Zustand TypeScript StyledComponents TailwindCSS.
 
 **Editor:**
 

@@ -30,7 +30,7 @@ const PrevPropsState: React.FC = () => {
         Now: {count} Before: {countRef.current}
       </div>
       <button
-        className="text-20px font-bold bg-red-400 hover:bg-red-300 text-white flex-shrink-0 px-8 py-2 rounded-md text-sm font-medium"
+        className="text-20px font-bold bg-red-400 hover:bg-red-300 text-white flex-shrink-0 px-8 py-2 rounded-md text-sm"
         onClick={increment}
       >
         +

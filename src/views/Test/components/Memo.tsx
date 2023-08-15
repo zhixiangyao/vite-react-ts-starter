@@ -20,7 +20,7 @@ const Memo: React.FC = () => {
         <div className="flex flex-col items-center">
           <div>a: {a}</div>
           <button
-            className="text-20px font-bold bg-red-400 hover:bg-red-300 text-white flex-shrink-0 px-2 py-2 rounded-md text-sm font-medium"
+            className="text-20px font-bold bg-red-400 hover:bg-red-300 text-white flex-shrink-0 px-2 py-2 rounded-md text-sm"
             onClick={() => setA((e) => e + 1)}
           >
             a + 1
@@ -30,7 +30,7 @@ const Memo: React.FC = () => {
         <div className="flex flex-col items-center">
           <div>b: {b}</div>
           <button
-            className="text-20px font-bold bg-red-400 hover:bg-red-300 text-white flex-shrink-0 px-2 py-2 rounded-md text-sm font-medium"
+            className="text-20px font-bold bg-red-400 hover:bg-red-300 text-white flex-shrink-0 px-2 py-2 rounded-md text-sm"
             onClick={() => setB((e) => e + 1)}
           >
             b + 1

@@ -41,7 +41,7 @@ const GithubOctopusCat: React.FC<{ href?: string }> = ({ href }) => {
     <A
       href={href}
       target="_blank"
-      className="fixed top-0 right-0 z-999"
+      className="fixed top-0 right-0 z-50"
       aria-label="View source on GitHub"
     >
       <svg

@@ -27,7 +27,7 @@ const UsersPage: React.FC = () => {
 
       <h2>Users</h2>
       <h2>
-        <span>zustandCount: </span>
+        <span>zustand count: </span>
         <span>{zustandCount}</span>
       </h2>
     </>

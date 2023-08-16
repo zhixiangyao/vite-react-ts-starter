@@ -7,7 +7,7 @@ const AboutPage: React.FC = () => {
     <>
       <h2>About</h2>
       <h2>
-        <span>zustandCount: </span>
+        <span>zustand count: </span>
         <span>{zustandCount}</span>
       </h2>
     </>

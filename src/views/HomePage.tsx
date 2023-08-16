@@ -10,6 +10,7 @@ const Button = styled.button`
 
 const HomePage: React.FC = () => {
   const [count, setCount] = useState(0)
+
   const countStore = useCountStore()
 
   useEffect(() => console.log('componentDidMount and count-Update'), [count])
@@ -25,7 +26,7 @@ const HomePage: React.FC = () => {
       </Button>
 
       <Button type="button" onClick={() => countStore.increase(1)}>
-        zustandCount is: {countStore.count}
+        zustand count is: {countStore.count}
       </Button>
 
       <p>

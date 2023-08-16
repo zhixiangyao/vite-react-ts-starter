@@ -1,73 +1,53 @@
 import { Suspense, lazy } from 'react'
-import { Navigate, createBrowserRouter } from 'react-router-dom'
+import { createBrowserRouter } from 'react-router-dom'
 
-const Layout = lazy(() => import('/@/layout'))
+import Layout from '/@/layout'
+
 const Home = lazy(() => import('/@/views/Home'))
 const About = lazy(() => import('/@/views/About'))
 const Users = lazy(() => import('/@/views/Users'))
 const Test = lazy(() => import('/@/views/Test'))
+const ErrorPage = lazy(() => import('/@/views/ErrorPage'))
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Navigate replace to={'/default/home'} />,
-    children: [],
-  },
-  {
-    path: '/default',
-    element: (
-      <Suspense fallback={<>loading Layout</>}>
-        <Layout />
-      </Suspense>
-    ),
+    element: <Layout />,
+    errorElement: <ErrorPage />,
     children: [
       {
-        path: '/default/home',
+        path: '/home',
         element: (
           <Suspense fallback={<>loading Home</>}>
             <Home />
           </Suspense>
         ),
-        children: [],
       },
       {
-        path: '/default/about',
+        path: '/about',
         element: (
           <Suspense fallback={<>loading About</>}>
             <About />
           </Suspense>
         ),
-        children: [],
       },
       {
-        path: '/default/users',
+        path: '/users',
         element: (
           <Suspense fallback={<>loading Users</>}>
             <Users />
           </Suspense>
         ),
-        children: [],
       },
       {
-        path: '/default/test',
+        path: '/test',
         element: (
           <Suspense fallback={<>loading Test</>}>
             <Test />
           </Suspense>
         ),
-        children: [],
-      },
-      {
-        path: '/default/*',
-        element: <div>Not Found</div>,
-        children: [],
       },
     ],
-  },
-  {
-    path: '/*',
-    element: <div>Not Found</div>,
-    children: [],
   },
 ])
 

@@ -1,4 +1,4 @@
-const Main: React.FC<{ children: React.ReactNode }> = (props) => {
+const Main: React.FC<React.PropsWithChildren> = (props) => {
   const { children } = props
 
   return (

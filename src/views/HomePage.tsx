@@ -23,7 +23,7 @@ const HomePage: React.FC = () => {
         type="button"
         onClick={() => setCount((count) => count + 1)}
       >
-        count is: {count}
+        Add + 1: count is: {count}
       </button>
 
       <button
@@ -31,7 +31,7 @@ const HomePage: React.FC = () => {
         type="button"
         onClick={() => countStore.increase(1)}
       >
-        zustand count is: {countStore.count}
+        Add + 1: zustand count is: {countStore.count}
       </button>
 
       <button
@@ -39,7 +39,15 @@ const HomePage: React.FC = () => {
         type="button"
         onClick={() => dataDispatch({ type: 'ADD' })}
       >
-        mini redux count is: {dataState.data}
+        Add + 1: mini redux count is: {dataState.data}
+      </button>
+
+      <button
+        className="text-2xl py-1 px-4 bg-gray-400 rounded-md my-2"
+        type="button"
+        onClick={() => dataDispatch({ type: 'MULTIPLY', value: 2 })}
+      >
+        Multiply * 2: mini redux count is: {dataState.data}
       </button>
 
       <p>

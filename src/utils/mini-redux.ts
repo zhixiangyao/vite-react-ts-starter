@@ -2,9 +2,9 @@ import { useSyncExternalStore } from 'react'
 
 type Listener = () => void
 
-const createMiniReduxStore = <State extends object, ActionType extends string>(
+const createMiniReduxStore = <Action extends { type: string }, State extends object>(
+  reducer: (state: State, action: Action) => State,
   initialState: State,
-  reducer: (state: State, action: { type: ActionType }) => State,
 ) => {
   let state = initialState
   const listeners = new Set<Listener>()
@@ -20,7 +20,7 @@ const createMiniReduxStore = <State extends object, ActionType extends string>(
     getSnapshot() {
       return state
     },
-    dispatch(action: { type: ActionType }) {
+    dispatch(action: Action) {
       state = reducer(state, action)
 
       listeners.forEach((l) => l())

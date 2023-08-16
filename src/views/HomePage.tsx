@@ -8,7 +8,7 @@ const Button = styled.button`
   font-size: calc(10px + 2vmin);
 `
 
-const Home: React.FC = () => {
+const HomePage: React.FC = () => {
   const [count, setCount] = useState(0)
   const countStore = useCountStore()
 
@@ -35,4 +35,4 @@ const Home: React.FC = () => {
   )
 }
 
-export default Home
+export default HomePage

@@ -4,7 +4,7 @@ import { useCountStore } from '/@/store'
 
 import { useClickOutSide } from '../hooks/useClickOutSide'
 
-const Users: React.FC = () => {
+const UsersPage: React.FC = () => {
   const zustandCount = useCountStore((state) => state.count)
 
   const [text, setText] = useState('undefined')
@@ -34,4 +34,4 @@ const Users: React.FC = () => {
   )
 }
 
-export default Users
+export default UsersPage

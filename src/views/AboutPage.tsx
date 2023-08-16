@@ -1,6 +1,6 @@
 import { useCountStore } from '/@/store'
 
-const About: React.FC = () => {
+const AboutPage: React.FC = () => {
   const zustandCount = useCountStore((state) => state.count)
 
   return (
@@ -14,4 +14,4 @@ const About: React.FC = () => {
   )
 }
 
-export default About
+export default AboutPage

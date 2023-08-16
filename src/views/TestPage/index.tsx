@@ -2,7 +2,7 @@ import { CounterReducer, ContextProvider, PrevPropsState, EffectTest } from './c
 import { MemoUseCallback, Memo } from './components'
 import { SearchRefs, ButtonRefs } from './components'
 
-const Test: React.FC = () => {
+const TestPage: React.FC = () => {
   return (
     <div className="grid grid-rows-7 lg:grid-rows-3 grid-flow-col gap-4">
       <CounterReducer />
@@ -24,4 +24,4 @@ const Test: React.FC = () => {
   )
 }
 
-export default Test
+export default TestPage

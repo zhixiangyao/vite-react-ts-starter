@@ -3,10 +3,10 @@ import { createBrowserRouter } from 'react-router-dom'
 
 import Layout from '/@/layout'
 
-const Home = lazy(() => import('/@/views/Home'))
-const About = lazy(() => import('/@/views/About'))
-const Users = lazy(() => import('/@/views/Users'))
-const Test = lazy(() => import('/@/views/Test'))
+const HomePage = lazy(() => import('./views/HomePage'))
+const AboutPage = lazy(() => import('./views/AboutPage'))
+const UsersPage = lazy(() => import('./views/UsersPage'))
+const TestPage = lazy(() => import('./views/TestPage'))
 const ErrorPage = lazy(() => import('/@/views/ErrorPage'))
 
 const router = createBrowserRouter([
@@ -19,7 +19,7 @@ const router = createBrowserRouter([
         path: '/home',
         element: (
           <Suspense fallback={<>loading Home</>}>
-            <Home />
+            <HomePage />
           </Suspense>
         ),
       },
@@ -27,7 +27,7 @@ const router = createBrowserRouter([
         path: '/about',
         element: (
           <Suspense fallback={<>loading About</>}>
-            <About />
+            <AboutPage />
           </Suspense>
         ),
       },
@@ -35,7 +35,7 @@ const router = createBrowserRouter([
         path: '/users',
         element: (
           <Suspense fallback={<>loading Users</>}>
-            <Users />
+            <UsersPage />
           </Suspense>
         ),
       },
@@ -43,7 +43,7 @@ const router = createBrowserRouter([
         path: '/test',
         element: (
           <Suspense fallback={<>loading Test</>}>
-            <Test />
+            <TestPage />
           </Suspense>
         ),
       },

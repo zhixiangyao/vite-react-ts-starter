@@ -1,17 +1,14 @@
 import { useState, useEffect } from 'react'
-import styled from 'styled-components'
 
 import ReactLogo from '/@/components/ReactLogo'
-import { useCountStore } from '/@/store'
-
-const Button = styled.button`
-  font-size: calc(10px + 2vmin);
-`
+import { useCountStore, useDataDispatch, useDataStore } from '/@/store'
 
 const HomePage: React.FC = () => {
-  const [count, setCount] = useState(0)
-
   const countStore = useCountStore()
+  const dataState = useDataStore()
+  const dataDispatch = useDataDispatch()
+
+  const [count, setCount] = useState(0)
 
   useEffect(() => console.log('componentDidMount and count-Update'), [count])
 
@@ -21,13 +18,29 @@ const HomePage: React.FC = () => {
 
       <ReactLogo />
 
-      <Button type="button" onClick={() => setCount((count) => count + 1)}>
+      <button
+        className="text-2xl py-1 px-4 bg-gray-400 rounded-md my-2"
+        type="button"
+        onClick={() => setCount((count) => count + 1)}
+      >
         count is: {count}
-      </Button>
+      </button>
 
-      <Button type="button" onClick={() => countStore.increase(1)}>
+      <button
+        className="text-2xl py-1 px-4 bg-gray-400 rounded-md my-2"
+        type="button"
+        onClick={() => countStore.increase(1)}
+      >
         zustand count is: {countStore.count}
-      </Button>
+      </button>
+
+      <button
+        className="text-2xl py-1 px-4 bg-gray-400 rounded-md my-2"
+        type="button"
+        onClick={() => dataDispatch({ type: 'ADD' })}
+      >
+        mini redux count is: {dataState.data}
+      </button>
 
       <p>
         Edit <code>Home.tsx</code> and save to test HMR updates.

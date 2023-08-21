@@ -1,5 +1,5 @@
 import { Suspense, lazy } from 'react'
-import { createBrowserRouter } from 'react-router-dom'
+import { Navigate, createBrowserRouter } from 'react-router-dom'
 
 import Layout from '/@/layout'
 
@@ -10,6 +10,11 @@ const TestPage = lazy(() => import('./views/TestPage'))
 const ErrorPage = lazy(() => import('/@/views/ErrorPage'))
 
 const router = createBrowserRouter([
+  {
+    path: '',
+    element: <Navigate replace to={'/home'} />,
+    errorElement: <ErrorPage />,
+  },
   {
     path: '/',
     element: <Layout />,

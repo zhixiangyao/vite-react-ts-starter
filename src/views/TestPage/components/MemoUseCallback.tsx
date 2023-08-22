@@ -13,7 +13,7 @@ const Child = (props: ChildProps) => {
     <>
       <h2>Child: {value}</h2>
       <input
-        className="px-2 my-2"
+        className="focus:border-light-blue-500 focus:ring-1 focus:ring-light-blue-500 focus:outline-none w-full text-sm text-black placeholder-gray-500 border border-gray-200 rounded-md py-2 pl-2"
         value={value}
         placeholder="Child"
         onChange={(e) => onChange(e.target.value)}
@@ -36,7 +36,7 @@ const MemoUseCallback: React.FC = () => {
 
       <h2>Compo: {a}</h2>
       <input
-        className="px-2 my-2"
+        className="focus:border-light-blue-500 focus:ring-1 focus:ring-light-blue-500 focus:outline-none w-full text-sm text-black placeholder-gray-500 border border-gray-200 rounded-md py-2 pl-2"
         placeholder="Compo"
         value={a}
         onChange={(e) => setA(e.target.value)}

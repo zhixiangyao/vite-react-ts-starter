@@ -14,20 +14,20 @@
     "preview": "npm run build && vite preview",
     "preview:dist": "vite preview",
     "lint:all": "npm run lint:eslint && npm run lint:prettier && npm run lint:stylelint",
-    "lint:prettier": "prettier --cache --write --log-level warn \"src/**/*.{js,json,tsx,css,less,scss,html,md}\"",
-    "lint:eslint": "eslint --fix \"{src,mock}/**/*.{ts,tsx}\" --cache --cache-location node_modules/.cache/eslint/",
-    "lint:stylelint": "stylelint --fix \"**/*.{less,postcss,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/",
+    "lint:prettier": "prettier --cache --write --log-level warn \"src/**/*.{js,json,tsx,css,html,md}\"",
+    "lint:eslint": "eslint --fix \"src/**/*.{ts,tsx}\" --cache --cache-location node_modules/.cache/eslint/",
+    "lint:stylelint": "stylelint --fix \"**/*.css\" --cache --cache-location node_modules/.cache/stylelint/",
     "lint-staged": "lint-staged",
     "prepare": "husky install"
   },
   "lint-staged": {
-    "src/**/*.{js,json,tsx,css,less,scss,html,md}": [
+    "src/**/*.{js,json,tsx,css,html,md}": [
       "npx prettier --cache --write --log-level warn"
     ],
     "src/**/*.{js,ts,tsx}": [
       "npx eslint --fix --cache --cache-location node_modules/.cache/eslint/"
     ],
-    "src/**/*.{jsx,tsx,less,postcss,css,scss}": [
+    "src/**/*.{jsx,tsx,css}": [
       "npx stylelint --fix --cache --cache-location node_modules/.cache/stylelint/"
     ]
   },
@@ -37,36 +37,36 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-is": "18.2.0",
-    "react-router": "6.15.0",
-    "react-router-dom": "6.15.0",
-    "styled-components": "6.0.7",
+    "react-router": "6.16.0",
+    "react-router-dom": "6.16.0",
+    "styled-components": "6.0.8",
     "zustand": "4.4.1"
   },
   "devDependencies": {
-    "@types/node": "18.17.5",
-    "@types/react": "18.2.20",
+    "@types/node": "20.6.3",
+    "@types/react": "18.2.22",
     "@types/react-dom": "18.2.7",
     "@types/react-router-dom": "5.3.3",
-    "@typescript-eslint/eslint-plugin": "6.4.0",
-    "@typescript-eslint/parser": "6.4.0",
+    "@typescript-eslint/eslint-plugin": "6.7.2",
+    "@typescript-eslint/parser": "6.7.2",
     "@vitejs/plugin-react": "4.0.4",
-    "autoprefixer": "10.4.15",
+    "autoprefixer": "10.4.16",
     "dotenv": "16.3.1",
-    "eslint": "8.47.0",
+    "eslint": "8.49.0",
     "eslint-config-prettier": "9.0.0",
-    "eslint-plugin-import": "2.28.0",
+    "eslint-plugin-import": "2.28.1",
     "eslint-plugin-prettier": "5.0.0",
     "eslint-plugin-react-hooks": "4.6.0",
     "husky": "8.0.3",
-    "lint-staged": "14.0.0",
+    "lint-staged": "14.0.1",
     "postcss-load-config": "4.0.1",
-    "postcss-styled-syntax": "^0.4.0",
-    "prettier": "3.0.2",
-    "stylelint": "15.10.2",
+    "postcss-styled-syntax": "^0.5.0",
+    "prettier": "3.0.3",
+    "stylelint": "15.10.3",
     "stylelint-config-standard": "34.0.0",
     "stylelint-order": "6.0.3",
     "tailwindcss": "3.3.3",
-    "typescript": "5.1.6",
+    "typescript": "5.2.2",
     "vite": "4.4.9"
   },
   "license": "MIT",

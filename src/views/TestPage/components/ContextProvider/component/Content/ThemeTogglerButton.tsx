@@ -7,7 +7,7 @@ const ThemeTogglerButton: React.FC = () => {
         <button
           onClick={toggleTheme}
           style={{ backgroundColor: theme.background, color: theme.color }}
-          className="p-4 rounded-sm"
+          className="rounded-sm p-4"
         >
           Toggle Theme
         </button>

@@ -32,7 +32,7 @@ const ButtonWithTooltip: React.FC<React.PropsWithChildren<Props>> = ({
     <>
       <button
         ref={buttonRef}
-        className="py-1 px-4 bg-gray-400 rounded-md my-2"
+        className="my-2 rounded-md bg-gray-400 px-4 py-1"
         onPointerEnter={handlePointerEnter}
         onPointerLeave={handlePointerLeave}
         {...rest}
@@ -45,7 +45,7 @@ const ButtonWithTooltip: React.FC<React.PropsWithChildren<Props>> = ({
 
 export default () => {
   return (
-    <fieldset className="w-300px px-4 py-2 border-4 rounded-md border-red-400 flex flex-col items-center justify-evenly">
+    <fieldset className="w-300px flex flex-col items-center justify-evenly rounded-md border-4 border-red-400 px-4 py-2">
       <legend className="px-2 font-bold">ButtonWithTooltip</legend>
 
       <ButtonWithTooltip

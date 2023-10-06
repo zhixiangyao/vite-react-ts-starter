@@ -2,7 +2,7 @@ const Main: React.FC<React.PropsWithChildren> = (props) => {
   const { children } = props
 
   return (
-    <main className="flex text-black items-center justify-center flex-col min-h-full bg-blue-100 pt-16">
+    <main className="flex min-h-full flex-col items-center justify-center bg-blue-100 pt-16 text-black">
       {children}
     </main>
   )

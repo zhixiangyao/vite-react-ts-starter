@@ -19,7 +19,7 @@ const HomePage: React.FC = () => {
       <ReactLogo />
 
       <button
-        className="text-2xl py-1 px-4 bg-gray-400 rounded-md my-2"
+        className="my-2 rounded-md bg-gray-400 px-4 py-1 text-2xl"
         type="button"
         onClick={() => setCount((count) => count + 1)}
       >
@@ -27,7 +27,7 @@ const HomePage: React.FC = () => {
       </button>
 
       <button
-        className="text-2xl py-1 px-4 bg-gray-400 rounded-md my-2"
+        className="my-2 rounded-md bg-gray-400 px-4 py-1 text-2xl"
         type="button"
         onClick={() => countStore.increase(1)}
       >
@@ -35,7 +35,7 @@ const HomePage: React.FC = () => {
       </button>
 
       <button
-        className="text-2xl py-1 px-4 bg-gray-400 rounded-md my-2"
+        className="my-2 rounded-md bg-gray-400 px-4 py-1 text-2xl"
         type="button"
         onClick={() => dataDispatch({ type: 'ADD' })}
       >
@@ -43,7 +43,7 @@ const HomePage: React.FC = () => {
       </button>
 
       <button
-        className="text-2xl py-1 px-4 bg-gray-400 rounded-md my-2"
+        className="my-2 rounded-md bg-gray-400 px-4 py-1 text-2xl"
         type="button"
         onClick={() => dataDispatch({ type: 'MULTIPLY', value: 2 })}
       >

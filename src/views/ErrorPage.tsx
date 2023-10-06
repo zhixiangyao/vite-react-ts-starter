@@ -4,7 +4,7 @@ const ErrorPage: React.FC = () => {
   const error: any = useRouteError()
 
   return (
-    <div className="w-full h-full flex justify-center items-center flex-col">
+    <div className="flex h-full w-full flex-col items-center justify-center">
       <h1 className="text-2xl">Oops!</h1>
 
       <p>Sorry, an unexpected error has occurred.</p>

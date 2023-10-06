@@ -37,22 +37,22 @@ const Nav: React.FC<Props> = () => {
   const { pathname } = useLocation()
 
   return (
-    <nav className="bg-gray-800 fixed top-0 left-0 w-screen z-10">
-      <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-        <div className="relative flex items-center justify-between h-16 overflow-x-auto overflow-y-hidden">
-          <div className="text-green-600 flex-shrink-0 px-3 py-2 rounded-md text-sm font-medium">
+    <nav className="fixed left-0 top-0 z-10 w-screen bg-gray-800">
+      <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        <div className="relative flex h-16 items-center justify-between overflow-x-auto overflow-y-hidden">
+          <div className="flex-shrink-0 rounded-md px-3 py-2 text-sm font-medium text-green-600">
             vite-react-ts
           </div>
 
-          <div className="hidden sm:hidden md:hidden lg:flex xl:flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-            <div className="sm:block sm:ml-6">
-              <div className="flex space-x-4 select-none">
+          <div className="hidden flex-1 items-center justify-center sm:hidden sm:items-stretch sm:justify-start md:hidden lg:flex xl:flex">
+            <div className="sm:ml-6 sm:block">
+              <div className="flex select-none space-x-4">
                 {' '}
                 {navbarList.map(({ path, name, label }) => (
                   <button
                     key={name}
                     className={clsx(
-                      'hover:bg-gray-700 text-white flex-shrink-0 px-3 py-2 rounded-md text-sm font-medium',
+                      'flex-shrink-0 rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-gray-700',
                       path === pathname && 'bg-gray-900',
                       path !== pathname && 'text-gray-300',
                     )}
@@ -65,7 +65,7 @@ const Nav: React.FC<Props> = () => {
             </div>
           </div>
 
-          <div className="hidden sm:hidden md:hidden lg:flex xl:flex text-blue-600 flex-shrink-0 px-3 py-2 rounded-md text-sm font-medium">
+          <div className="hidden flex-shrink-0 rounded-md px-3 py-2 text-sm font-medium text-blue-600 sm:hidden md:hidden lg:flex xl:flex">
             {`Current Routing Path: "${pathname}"`}
           </div>
         </div>

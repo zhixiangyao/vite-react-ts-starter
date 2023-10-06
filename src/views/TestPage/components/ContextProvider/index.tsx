@@ -24,7 +24,7 @@ const ContextProvider: React.FC = () => {
   const value = useTheme(themes)
 
   return (
-    <fieldset className="w-300px px-4 py-2 border-4 rounded-md border-blue-400 flex flex-col items-center justify-evenly">
+    <fieldset className="w-300px flex flex-col items-center justify-evenly rounded-md border-4 border-blue-400 px-4 py-2">
       <legend className="px-2 font-bold">ContextProvider</legend>
 
       <ThemeContext.Provider value={value}>

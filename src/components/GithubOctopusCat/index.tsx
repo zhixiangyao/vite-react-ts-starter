@@ -41,11 +41,11 @@ const GithubOctopusCat: React.FC<{ href?: string }> = ({ href }) => {
     <A
       href={href}
       target="_blank"
-      className="fixed top-0 right-0 z-50"
+      className="fixed right-0 top-0 z-50"
       aria-label="View source on GitHub"
     >
       <svg
-        className="fill-black dark:fill-white dark:text-black text-white w-16 h-16 border-0"
+        className="h-16 w-16 border-0 fill-black text-white dark:fill-white dark:text-black"
         viewBox="0 0 250 250"
         aria-hidden="true"
       >

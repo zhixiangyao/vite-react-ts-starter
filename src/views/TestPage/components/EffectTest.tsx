@@ -15,14 +15,14 @@ const EffectTest: React.FC = () => {
   }, [inputValue2])
 
   return (
-    <fieldset className="w-300px px-4 py-2 border-4 rounded-md border-red-400 flex flex-col items-center justify-evenly">
+    <fieldset className="w-300px flex flex-col items-center justify-evenly rounded-md border-4 border-red-400 px-4 py-2">
       <legend className="px-2 font-bold">EffectTest</legend>
 
       <div>inputValue1: {inputValue1}</div>
 
       <input
         value={inputValue1}
-        className="focus:border-light-blue-500 focus:ring-1 focus:ring-light-blue-500 focus:outline-none w-full text-sm text-black placeholder-gray-500 border border-gray-200 rounded-md py-2 pl-2"
+        className="focus:border-light-blue-500 focus:ring-light-blue-500 w-full rounded-md border border-gray-200 py-2 pl-2 text-sm text-black placeholder-gray-500 focus:outline-none focus:ring-1"
         onChange={(e) => {
           setInputValue1(e.target.value)
         }}
@@ -32,7 +32,7 @@ const EffectTest: React.FC = () => {
 
       <input
         value={inputValue2}
-        className="focus:border-light-blue-500 focus:ring-1 focus:ring-light-blue-500 focus:outline-none w-full text-sm text-black placeholder-gray-500 border border-gray-200 rounded-md py-2 pl-2"
+        className="focus:border-light-blue-500 focus:ring-light-blue-500 w-full rounded-md border border-gray-200 py-2 pl-2 text-sm text-black placeholder-gray-500 focus:outline-none focus:ring-1"
         onChange={(e) => {
           setInputValue2(e.target.value)
         }}

@@ -4,11 +4,11 @@ import { forwardRef, createRef, type RefObject } from 'react'
 type ButtonProps = JSX.IntrinsicElements['button']
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => (
-  <fieldset className="w-300px px-4 py-2 border-4 rounded-md border-blue-400 flex flex-col items-center justify-evenly">
+  <fieldset className="w-300px flex flex-col items-center justify-evenly rounded-md border-4 border-blue-400 px-4 py-2">
     <legend className="px-2 font-bold">ButtonRefs(createRef)</legend>
 
     <button
-      className="text-20px font-bold bg-red-400 hover:bg-red-300 text-white flex-shrink-0 px-8 py-2 rounded-md text-sm"
+      className="text-20px flex-shrink-0 rounded-md bg-red-400 px-8 py-2 text-sm font-bold text-white hover:bg-red-300"
       type="button"
       {...props}
       ref={ref}

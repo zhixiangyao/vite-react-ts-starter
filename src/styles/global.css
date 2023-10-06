@@ -31,7 +31,7 @@ html.dark {
 }
 
 body {
-  @apply overflow-y-scroll overflow-x-hidden;
+  @apply overflow-x-hidden overflow-y-scroll;
 }
 
 body.dark::-webkit-scrollbar {

@@ -1,6 +1,6 @@
 import { createContext } from 'react'
 
-import Content from './component/Content'
+import { Content } from './component/Content'
 import { useTheme } from './hooks'
 import type { Themes } from './type'
 
@@ -20,7 +20,7 @@ export const ThemeContext = createContext({
   toggleTheme: () => {},
 })
 
-const ContextProvider: React.FC = () => {
+export const ContextProvider: React.FC = () => {
   const value = useTheme(themes)
 
   return (
@@ -33,5 +33,3 @@ const ContextProvider: React.FC = () => {
     </fieldset>
   )
 }
-
-export default ContextProvider

@@ -1,6 +1,6 @@
 import { ThemeContext } from '../../index'
 
-const ThemeTogglerButton: React.FC = () => {
+export const ThemeTogglerButton: React.FC = () => {
   return (
     <ThemeContext.Consumer>
       {({ theme, toggleTheme }) => (
@@ -15,5 +15,3 @@ const ThemeTogglerButton: React.FC = () => {
     </ThemeContext.Consumer>
   )
 }
-
-export default ThemeTogglerButton

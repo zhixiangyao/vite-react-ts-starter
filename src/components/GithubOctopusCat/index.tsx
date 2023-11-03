@@ -36,7 +36,7 @@ const A = styled.a`
   }
 `
 
-const GithubOctopusCat: React.FC<{ href?: string }> = ({ href }) => {
+export const GithubOctopusCat: React.FC<{ href?: string }> = ({ href }) => {
   return (
     <A
       href={href}
@@ -64,5 +64,3 @@ const GithubOctopusCat: React.FC<{ href?: string }> = ({ href }) => {
     </A>
   )
 }
-
-export default GithubOctopusCat

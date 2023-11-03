@@ -1,7 +1,7 @@
 import { useNavigate, useLocation } from 'react-router-dom'
 import clsx from 'clsx'
 
-import GithubOctopusCat from '/@/components/GithubOctopusCat'
+import { GithubOctopusCat } from '/@/components/GithubOctopusCat'
 
 const navbarList = [
   {
@@ -32,7 +32,7 @@ const navbarList = [
 
 type Props = {}
 
-const Nav: React.FC<Props> = () => {
+export const Nav: React.FC<Props> = () => {
   const navigate = useNavigate()
   const { pathname } = useLocation()
 
@@ -74,5 +74,3 @@ const Nav: React.FC<Props> = () => {
     </nav>
   )
 }
-
-export default Nav

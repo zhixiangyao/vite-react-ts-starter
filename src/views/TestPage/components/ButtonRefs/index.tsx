@@ -23,7 +23,7 @@ interface ButtonRefsState {
   button: RefObject<HTMLButtonElement> | null
 }
 
-class ButtonRefs extends React.Component<{}, ButtonRefsState> {
+export class ButtonRefs extends React.Component<{}, ButtonRefsState> {
   state: ButtonRefsState = {
     button: null,
   }
@@ -42,5 +42,3 @@ class ButtonRefs extends React.Component<{}, ButtonRefsState> {
     return <Button ref={this.state.button}>Hello</Button>
   }
 }
-
-export default ButtonRefs

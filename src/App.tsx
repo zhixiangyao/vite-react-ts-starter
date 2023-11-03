@@ -4,8 +4,6 @@ import { router } from '/@/router'
 
 import '/@/styles/global.css'
 
-const App: React.FC = () => {
+export const App: React.FC = () => {
   return <RouterProvider router={router} />
 }
-
-export default App

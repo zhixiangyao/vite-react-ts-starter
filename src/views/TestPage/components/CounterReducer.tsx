@@ -15,7 +15,7 @@ const reducer = (state: State, action: Action) => {
   }
 }
 
-const CounterReducer: React.FC = () => {
+export const CounterReducer: React.FC = () => {
   const [state, dispatch] = useReducer(reducer, initialState)
 
   return (
@@ -40,5 +40,3 @@ const CounterReducer: React.FC = () => {
     </fieldset>
   )
 }
-
-export default CounterReducer

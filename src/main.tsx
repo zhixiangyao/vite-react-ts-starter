@@ -2,14 +2,10 @@ import React from 'react'
 import { createRoot } from 'react-dom/client'
 
 import { getElementById } from '/@/utils'
-import App from '/@/App'
+import { App } from '/@/App'
 
 const rootElement = getElementById('root')
 
 const app = createRoot(rootElement)
 
-app.render(
-  // <React.StrictMode>
-  <App />,
-  // </React.StrictMode>
-)
+app.render(<App />)

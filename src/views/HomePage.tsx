@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
 
-import ReactLogo from '/@/components/ReactLogo'
+import { ReactLogo } from '/@/components/ReactLogo'
 import { useCountStore, useDataDispatch, useDataStore } from '/@/store'
 
-const HomePage: React.FC = () => {
+export const HomePage: React.FC = () => {
   const countStore = useCountStore()
   const dataState = useDataStore()
   const dataDispatch = useDataDispatch()
@@ -56,5 +56,3 @@ const HomePage: React.FC = () => {
     </>
   )
 }
-
-export default HomePage

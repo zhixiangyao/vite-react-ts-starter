@@ -8,7 +8,7 @@ import {
 import { MemoUseCallback, Memo } from './components'
 import { SearchRefs, ButtonRefs } from './components'
 
-const TestPage: React.FC = () => {
+export const TestPage: React.FC = () => {
   return (
     <div className="grid-rows-7 grid grid-flow-col gap-4 lg:grid-rows-3">
       <CounterReducer />
@@ -31,5 +31,3 @@ const TestPage: React.FC = () => {
     </div>
   )
 }
-
-export default TestPage

@@ -4,7 +4,7 @@ import { useCountStore, useDataStore } from '/@/store'
 
 import { useClickOutSide } from '../hooks/useClickOutSide'
 
-const UsersPage: React.FC = () => {
+export const UsersPage: React.FC = () => {
   const zustandCount = useCountStore((state) => state.count)
   const dataState = useDataStore()
 
@@ -38,5 +38,3 @@ const UsersPage: React.FC = () => {
     </>
   )
 }
-
-export default UsersPage

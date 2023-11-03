@@ -1,14 +1,14 @@
 import { useRef, useLayoutEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
 
-import TooltipContainer from './TooltipContainer'
+import { TooltipContainer } from './TooltipContainer'
 import type { Rect } from './type'
 
 type Props = {
   targetRect: Rect
 }
 
-const Tooltip: React.FC<React.PropsWithChildren<Props>> = ({ children, targetRect }) => {
+export const Tooltip: React.FC<React.PropsWithChildren<Props>> = ({ children, targetRect }) => {
   const ref = useRef<React.ElementRef<'div'>>(null)
   const [tooltipHeight, setTooltipHeight] = useState(0)
 
@@ -37,5 +37,3 @@ const Tooltip: React.FC<React.PropsWithChildren<Props>> = ({ children, targetRec
     document.body,
   )
 }
-
-export default Tooltip

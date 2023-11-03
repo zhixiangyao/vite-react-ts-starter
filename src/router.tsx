@@ -1,13 +1,23 @@
 import { Suspense, lazy } from 'react'
 import { Navigate, createBrowserRouter } from 'react-router-dom'
 
-import Layout from '/@/layout'
+import { Layout } from '/@/layout'
 
-const HomePage = lazy(() => import('./views/HomePage'))
-const AboutPage = lazy(() => import('./views/AboutPage'))
-const UsersPage = lazy(() => import('./views/UsersPage'))
-const TestPage = lazy(() => import('./views/TestPage'))
-const ErrorPage = lazy(() => import('/@/views/ErrorPage'))
+const HomePage = lazy(() =>
+  import('./views/HomePage').then(({ HomePage }) => ({ default: HomePage })),
+)
+const AboutPage = lazy(() =>
+  import('./views/AboutPage').then(({ AboutPage }) => ({ default: AboutPage })),
+)
+const UsersPage = lazy(() =>
+  import('./views/UsersPage').then(({ UsersPage }) => ({ default: UsersPage })),
+)
+const TestPage = lazy(() =>
+  import('./views/TestPage').then(({ TestPage }) => ({ default: TestPage })),
+)
+const ErrorPage = lazy(() =>
+  import('/@/views/ErrorPage').then(({ ErrorPage }) => ({ default: ErrorPage })),
+)
 
 const router = createBrowserRouter([
   {

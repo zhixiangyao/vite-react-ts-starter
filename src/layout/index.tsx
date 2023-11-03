@@ -1,11 +1,11 @@
 import { Outlet } from 'react-router-dom'
 
-import Nav from './components/Nav'
-import Main from './components/Main'
+import { Nav } from './components/Nav'
+import { Main } from './components/Main'
 
 type Props = {}
 
-const Layout: React.FC<Props> = () => {
+export const Layout: React.FC<Props> = () => {
   return (
     <>
       <Nav />
@@ -13,5 +13,3 @@ const Layout: React.FC<Props> = () => {
     </>
   )
 }
-
-export default Layout

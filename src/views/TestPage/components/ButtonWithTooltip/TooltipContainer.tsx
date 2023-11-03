@@ -4,7 +4,7 @@ type Props = {
   contentRef: React.RefObject<React.ElementRef<'div'>>
 }
 
-const TooltipContainer: React.FC<React.PropsWithChildren<Props>> = (props) => {
+export const TooltipContainer: React.FC<React.PropsWithChildren<Props>> = (props) => {
   const { children, x, y, contentRef } = props
 
   return (
@@ -18,5 +18,3 @@ const TooltipContainer: React.FC<React.PropsWithChildren<Props>> = (props) => {
     </div>
   )
 }
-
-export default TooltipContainer

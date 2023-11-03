@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react'
 
-const EffectTest: React.FC = () => {
+export const EffectTest: React.FC = () => {
   const [inputValue1, setInputValue1] = useState('')
   const [inputValue2, setInputValue2] = useState('')
   const inputValue1Cb = useCallback(() => {
@@ -40,5 +40,3 @@ const EffectTest: React.FC = () => {
     </fieldset>
   )
 }
-
-export default EffectTest

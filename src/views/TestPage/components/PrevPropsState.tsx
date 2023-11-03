@@ -2,7 +2,7 @@ import { useState, useEffect, useRef, useCallback } from 'react'
 
 // import { usePrevious } from '/@/hook/usePrevious'
 
-const PrevPropsState: React.FC = () => {
+export const PrevPropsState: React.FC = () => {
   const [count, setCount] = useState(0)
   const countRef = useRef<number>()
 
@@ -38,5 +38,3 @@ const PrevPropsState: React.FC = () => {
     </fieldset>
   )
 }
-
-export default PrevPropsState

@@ -24,7 +24,7 @@ const Child = (props: ChildProps) => {
 
 const MemoChild = memo(Child)
 
-const MemoUseCallback: React.FC = () => {
+export const MemoUseCallback: React.FC = () => {
   const [a, setA] = useState('')
   const [b, setB] = useState('')
 
@@ -46,5 +46,3 @@ const MemoUseCallback: React.FC = () => {
     </fieldset>
   )
 }
-
-export default MemoUseCallback

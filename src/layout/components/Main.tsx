@@ -1,4 +1,4 @@
-const Main: React.FC<React.PropsWithChildren> = (props) => {
+export const Main: React.FC<React.PropsWithChildren> = (props) => {
   const { children } = props
 
   return (
@@ -7,5 +7,3 @@ const Main: React.FC<React.PropsWithChildren> = (props) => {
     </main>
   )
 }
-
-export default Main

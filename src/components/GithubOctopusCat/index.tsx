@@ -1,10 +1,9 @@
-import styled from 'styled-components'
+import { css } from '@emotion/css'
+import clsx from 'clsx'
 
-const A = styled.a`
-  cursor: point;
-
+const className = css`
   &:hover .octopus-arm {
-    animation: octopus-cat-wave 560ms ease-in-out;
+    animation: octopus-cat-wave 300ms ease-in-out;
     transform-origin: 130px 106px;
   }
 
@@ -24,24 +23,14 @@ const A = styled.a`
       transform: rotate(10deg);
     }
   }
-
-  @media (max-width: 500px) {
-    &:hover .octopus-arm {
-      animation: none;
-    }
-
-    & .octopus-arm {
-      animation: octopus-cat-wave 560ms ease-in-out;
-    }
-  }
 `
 
 export const GithubOctopusCat: React.FC<{ href?: string }> = ({ href }) => {
   return (
-    <A
+    <a
       href={href}
       target="_blank"
-      className="fixed right-0 top-0 z-50"
+      className={clsx('fixed right-0 top-0 z-50 cursor-pointer', className)}
       aria-label="View source on GitHub"
     >
       <svg
@@ -61,6 +50,6 @@ export const GithubOctopusCat: React.FC<{ href?: string }> = ({ href }) => {
           className="octopus-body"
         />
       </svg>
-    </A>
+    </a>
   )
 }

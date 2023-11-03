@@ -8,7 +8,6 @@ This template will help you start developing in Vite using React ReactRouter Zus
 
 **VSCode Extension:**
 
-- [VScode Styled Components](https://marketplace.visualstudio.com/items?itemName=jpoissonnier.vscode-styled-components)
 - [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
 
 **Development ENV:**

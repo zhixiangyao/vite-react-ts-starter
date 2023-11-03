@@ -2,33 +2,13 @@ import { useNavigate, useLocation } from 'react-router-dom'
 import clsx from 'clsx'
 
 import { GithubOctopusCat } from '/@/components/GithubOctopusCat'
+import { routes } from '/@/router'
 
-const navbarList = [
-  {
-    id: 1,
-    label: 'Home',
-    name: 'Home',
-    path: '/home',
-  },
-  {
-    id: 2,
-    label: 'About',
-    name: 'About',
-    path: '/about',
-  },
-  {
-    id: 3,
-    label: 'Users',
-    name: 'Users',
-    path: '/users',
-  },
-  {
-    id: 4,
-    label: 'Test',
-    name: 'Test',
-    path: '/test',
-  },
-]
+const navbarList = routes.map((route) => ({
+  id: route.path,
+  label: route.label,
+  path: route.path,
+}))
 
 type Props = {}
 
@@ -47,10 +27,9 @@ export const Nav: React.FC<Props> = () => {
           <div className="hidden flex-1 items-center justify-center sm:hidden sm:items-stretch sm:justify-start md:hidden lg:flex xl:flex">
             <div className="sm:ml-6 sm:block">
               <div className="flex select-none space-x-4">
-                {' '}
-                {navbarList.map(({ path, name, label }) => (
+                {navbarList.map(({ path, label }) => (
                   <button
-                    key={name}
+                    key={path}
                     className={clsx(
                       'flex-shrink-0 rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-gray-700',
                       path === pathname && 'bg-gray-900',
@@ -70,6 +49,7 @@ export const Nav: React.FC<Props> = () => {
           </div>
         </div>
       </div>
+
       <GithubOctopusCat />
     </nav>
   )

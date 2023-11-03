@@ -1,69 +1,49 @@
-import { Suspense, lazy } from 'react'
-import { Navigate, createBrowserRouter } from 'react-router-dom'
+import React from 'react'
+import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 
-import { Layout } from '/@/layout'
+import { ErrorPage } from '/@/views/ErrorPage'
 
-const HomePage = lazy(() =>
-  import('./views/HomePage').then(({ HomePage }) => ({ default: HomePage })),
-)
-const AboutPage = lazy(() =>
-  import('./views/AboutPage').then(({ AboutPage }) => ({ default: AboutPage })),
-)
-const UsersPage = lazy(() =>
-  import('./views/UsersPage').then(({ UsersPage }) => ({ default: UsersPage })),
-)
-const TestPage = lazy(() =>
-  import('./views/TestPage').then(({ TestPage }) => ({ default: TestPage })),
-)
-const ErrorPage = lazy(() =>
-  import('/@/views/ErrorPage').then(({ ErrorPage }) => ({ default: ErrorPage })),
-)
+type Route = {
+  label: string
+  path: string
+  element: Promise<React.FC>
+}
+
+export const routes: Route[] = [
+  {
+    label: 'Home',
+    path: '/home',
+    element: import('/@/views/HomePage').then(({ HomePage }) => HomePage),
+  },
+  {
+    label: 'About',
+    path: '/about',
+    element: import('/@/views/AboutPage').then(({ AboutPage }) => AboutPage),
+  },
+  {
+    label: 'Users',
+    path: '/users',
+    element: import('/@/views/UsersPage').then(({ UsersPage }) => UsersPage),
+  },
+  {
+    label: 'Test',
+    path: '/test',
+    element: import('/@/views/TestPage').then(({ TestPage }) => TestPage),
+  },
+]
 
 const router = createBrowserRouter([
   {
-    path: '',
-    element: <Navigate replace to={'/home'} />,
-    errorElement: <ErrorPage />,
-  },
-  {
     path: '/',
-    element: <Layout />,
+    lazy: () => import('/@/layout').then(({ Layout }) => ({ Component: Layout })),
     errorElement: <ErrorPage />,
-    children: [
-      {
-        path: '/home',
-        element: (
-          <Suspense fallback={<>loading Home</>}>
-            <HomePage />
-          </Suspense>
-        ),
-      },
-      {
-        path: '/about',
-        element: (
-          <Suspense fallback={<>loading About</>}>
-            <AboutPage />
-          </Suspense>
-        ),
-      },
-      {
-        path: '/users',
-        element: (
-          <Suspense fallback={<>loading Users</>}>
-            <UsersPage />
-          </Suspense>
-        ),
-      },
-      {
-        path: '/test',
-        element: (
-          <Suspense fallback={<>loading Test</>}>
-            <TestPage />
-          </Suspense>
-        ),
-      },
-    ],
+    children: routes.map((route) => ({
+      path: route.path,
+      lazy: () => route.element.then((Component) => ({ Component })),
+    })),
   },
 ])
 
-export { router }
+export const Router = () => {
+  return <RouterProvider router={router} fallbackElement={<h1>Loading...</h1>} />
+}

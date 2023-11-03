@@ -1,7 +1,7 @@
 import React from 'react'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 
-import { ErrorPage } from '/@/views/ErrorPage'
+import { ErrorPage } from '/@/pages/ErrorPage'
 
 type Route = {
   label: string
@@ -13,22 +13,22 @@ export const routes: Route[] = [
   {
     label: 'Home',
     path: '/home',
-    element: import('/@/views/HomePage').then(({ HomePage }) => HomePage),
+    element: import('./pages/HomePage').then(({ HomePage }) => HomePage),
   },
   {
     label: 'About',
     path: '/about',
-    element: import('/@/views/AboutPage').then(({ AboutPage }) => AboutPage),
+    element: import('./pages/AboutPage').then(({ AboutPage }) => AboutPage),
   },
   {
     label: 'Users',
     path: '/users',
-    element: import('/@/views/UsersPage').then(({ UsersPage }) => UsersPage),
+    element: import('./pages/UsersPage').then(({ UsersPage }) => UsersPage),
   },
   {
     label: 'Test',
     path: '/test',
-    element: import('/@/views/TestPage').then(({ TestPage }) => TestPage),
+    element: import('./pages/TestPage').then(({ TestPage }) => TestPage),
   },
 ]
 

@@ -10,7 +10,7 @@ import { SearchRefs, ButtonRefs } from './components'
 
 export const TestPage: React.FC = () => {
   return (
-    <div className="grid-rows-7 grid grid-flow-col gap-4 lg:grid-rows-3">
+    <div className=" grid grid-flow-col grid-rows-7 gap-4 lg:grid-rows-3">
       <CounterReducer />
 
       <ContextProvider />

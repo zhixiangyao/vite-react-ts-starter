@@ -32,7 +32,7 @@ export const CounterReducer: React.FC = () => {
       </button>
 
       <button
-        className="text-20px flex-shrink-0 rounded-md bg-red-400 px-8 py-2 text-sm font-bold text-white hover:bg-red-300 "
+        className="text-20px flex-shrink-0 rounded-md bg-red-400 px-8 py-2 text-sm font-bold text-white hover:bg-red-300"
         onClick={() => dispatch({ type: 'decrement' })}
       >
         -

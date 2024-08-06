@@ -42,18 +42,18 @@ const getEnv = (mode: string) => {
 export default ({ mode, command }: ConfigEnv) => {
   /**
    * Such as:
-   * import.meta.env.MODE: {string}     app runtime 的模式。
-   * import.meta.env.BASE_URL: {string} 部署 app 时的基本 URL 。他由 base 配置项决定。
-   * import.meta.env.PROD: {boolean}    app 是否 runtime 在生产环境。
-   * import.meta.env.DEV: {boolean}     app 是否 runtime 在开发环境 (永远与 import.meta.env.PROD 相反)。
+   * import.meta.env.MODE: {string}     The mode of the app runtime.
+   * import.meta.env.BASE_URL: {string} The base URL for deploying the app. This is determined by the base configuration entry.
+   * import.meta.env.PROD: {boolean}    Whether the app is runtime in the production environment.
+   * import.meta.env.DEV: {boolean}     Whether app runtime is in the development environment (always the opposite of import.meta.env.PROD).
    */
 
   const { VITE_APP_NODE_ENV, VITE_APP_TITLE } = getEnv(mode)
 
   setTimeout(() => {
     console.log()
-    console.log('\x1b[33m%s\x1b[0m', `🏭--NODE 环境 (VITE_APP_NODE_ENV): ${VITE_APP_NODE_ENV}`)
-    console.log('\x1b[36m%s\x1b[0m', `🏠--APP 标题 (VITE_APP_TITLE): ${VITE_APP_TITLE}`)
+    console.log('\x1b[33m%s\x1b[0m', `🏭--NODE ENV (VITE_APP_NODE_ENV): ${VITE_APP_NODE_ENV}`)
+    console.log('\x1b[36m%s\x1b[0m', `🏠--APP TITLE (VITE_APP_TITLE): ${VITE_APP_TITLE}`)
     console.log()
   }, 66)
 

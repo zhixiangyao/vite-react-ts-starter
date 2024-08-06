@@ -14,9 +14,9 @@ const useClickOutSide = <T extends HTMLElement>(inSide?: () => void, outSide?: (
       const { right, left, bottom, top } = targetRef.current.getBoundingClientRect()
 
       if (clientX > right || clientX < left || clientY > bottom || clientY < top) {
-        outSideRef.current && outSideRef.current()
+        outSideRef.current?.()
       } else {
-        inSideRef.current && inSideRef.current()
+        inSideRef.current?.()
       }
     },
     [inSideRef, outSideRef],

@@ -18,7 +18,7 @@
     "lint:prettier": "prettier --cache --write --log-level warn \"./**/*.{json,mjs,ts,tsx,css,html,md}\"",
     "lint:stylelint": "stylelint --fix \"./**/*.css\" --cache --cache-location node_modules/.cache/stylelint/",
     "lint-staged": "lint-staged",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "lint-staged": {
     "./**/*.{json,mjs,ts,tsx,css,html,md}": [

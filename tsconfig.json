@@ -15,12 +15,12 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "preserve",
-    "types": ["vite/client", "node"],
-    "typeRoots": ["./node_modules/@types/", "./node_modules/"],
+    "jsxImportSource": "@emotion/react",
+    "types": ["vite/client", "@emotion/react/types/css-prop", "node"],
     "baseUrl": ".",
     "paths": {
       "/@/*": ["src/*"]
-    },
+    }
   },
   "include": ["./src"],
   "exclude": ["node_modules"]

@@ -1,9 +1,8 @@
-import { css } from '@emotion/css'
-import clsx from 'clsx'
+import { css } from '@emotion/react'
 
 import logo from '/@/assets/logo.svg'
 
-const className = css`
+const style = css`
   @media (prefers-reduced-motion: no-preference) {
     animation: react-logo-spin infinite 20s linear;
   }
@@ -21,7 +20,7 @@ const className = css`
 
 export const ReactLogo: React.FC = () => (
   <>
-    <img src={logo} className={clsx('pointer-events-none h-[40vmin]', className)} alt="logo" />
+    <img src={logo} className="pointer-events-none h-[40vmin]" css={style} alt="logo" />
     <p>Hello Vite + React + ReactRouter + Zustand + TypeScript + Emotion + TailwindCSS!</p>
   </>
 )

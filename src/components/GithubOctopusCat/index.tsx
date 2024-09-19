@@ -1,7 +1,6 @@
-import { css } from '@emotion/css'
-import clsx from 'clsx'
+import { css } from '@emotion/react'
 
-const className = css`
+const style = css`
   &:hover .octopus-arm {
     animation: octopus-cat-wave 300ms ease-in-out;
     transform-origin: 130px 106px;
@@ -28,10 +27,11 @@ const className = css`
 export const GithubOctopusCat: React.FC<{ href?: string }> = ({ href }) => {
   return (
     <a
-      href={href}
       target="_blank"
-      className={clsx('fixed right-0 top-0 z-50 cursor-pointer', className)}
       aria-label="View source on GitHub"
+      className="fixed right-0 top-0 z-50 cursor-pointer"
+      href={href}
+      css={style}
     >
       <svg
         className="h-16 w-16 border-0 fill-black text-white dark:fill-white dark:text-black"

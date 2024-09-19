@@ -36,7 +36,7 @@ export const HomePage: React.FC = () => {
       <button
         className="my-2 rounded-md bg-gray-400 px-4 py-1 text-2xl"
         type="button"
-        onClick={() => setDataState({ type: 'ADD' })}
+        onClick={() => setDataState({ type: 'Add', value: 1 })}
       >
         Add + 1: mini redux count is: {dataState.data}
       </button>
@@ -44,7 +44,7 @@ export const HomePage: React.FC = () => {
       <button
         className="my-2 rounded-md bg-gray-400 px-4 py-1 text-2xl"
         type="button"
-        onClick={() => setDataState({ type: 'MULTIPLY', value: 2 })}
+        onClick={() => setDataState({ type: 'Multiply', value: 2 })}
       >
         Multiply * 2: mini redux count is: {dataState.data}
       </button>

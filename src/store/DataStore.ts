@@ -1,14 +1,17 @@
 import { createMiniReduxStore, useMiniReduxStore } from '../utils/miniRedux'
 
 type State = { data: number }
-type Action = { type: 'ADD' } | { type: 'MULTIPLY'; value: number }
 
-const reducer = (state: State, action: Action) => {
+type Action = { type: 'Add' | 'Multiply'; value: number }
+
+type Reducer = (state: State, action: Action) => State
+
+const reducer: Reducer = (state, action) => {
   switch (action.type) {
-    case 'ADD':
-      return { data: state.data + 1 }
+    case 'Add':
+      return { data: state.data + action.value }
 
-    case 'MULTIPLY':
+    case 'Multiply':
       return { data: state.data * action.value }
 
     default:
@@ -16,7 +19,7 @@ const reducer = (state: State, action: Action) => {
   }
 }
 
-const initialState = { data: 0 }
+const initialState: State = { data: 0 }
 
 const store = createMiniReduxStore<Action, State>(reducer, initialState)
 

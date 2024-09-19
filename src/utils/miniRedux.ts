@@ -3,7 +3,7 @@ import { useSyncExternalStore } from 'react'
 type Listener = () => void
 
 type CreateMiniReduxStore = {
-  <A extends { type: string }, S extends object>(
+  <A extends { type: string | number | symbol }, S extends object>(
     reducer: (state: S, action: A) => S,
     initialState: S,
   ): {

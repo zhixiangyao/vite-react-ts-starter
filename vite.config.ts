@@ -1,9 +1,9 @@
 import fs from 'fs'
-import { resolve } from 'path' // dotenv is a "zero-dependent" module that extracts variables in the env variable from the '.env.xxx' file.
+import { resolve } from 'path'
 
 import dotenv from 'dotenv'
 import { defineConfig } from 'vite'
-import React from '@vitejs/plugin-react'
+import React from '@vitejs/plugin-react-swc'
 import type { ConfigEnv } from 'vite'
 import checker from 'vite-plugin-checker'
 
@@ -11,7 +11,7 @@ import checker from 'vite-plugin-checker'
  * https://vitejs.dev/config/
  */
 const baseConfig = {
-  plugins: [React(), checker({ typescript: true })],
+  plugins: [React({ jsxImportSource: '@emotion/react' }), checker({ typescript: true })],
   resolve: {
     alias: [
       {

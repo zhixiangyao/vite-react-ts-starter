@@ -1,4 +1,4 @@
-import { createMiniReduxStore, useMiniReduxStore } from '/@/utils/mini-redux'
+import { createMiniReduxStore, useMiniReduxStore } from '../utils/miniRedux'
 
 type State = { data: number }
 type Action = { type: 'ADD' } | { type: 'MULTIPLY'; value: number }
@@ -21,11 +21,7 @@ const initialState = { data: 0 }
 const store = createMiniReduxStore<Action, State>(reducer, initialState)
 
 const useDataStore = () => {
-  return useMiniReduxStore(store)
+  return [useMiniReduxStore(store), store.dispatch] as const
 }
 
-const useDataDispatch = () => {
-  return store.dispatch
-}
-
-export { useDataStore, useDataDispatch }
+export { useDataStore }

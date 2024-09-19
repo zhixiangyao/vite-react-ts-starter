@@ -1,12 +1,11 @@
 import { useState, useEffect } from 'react'
 
 import { ReactLogo } from '/@/components/ReactLogo'
-import { useCountStore, useDataDispatch, useDataStore } from '/@/store'
+import { useCountStore, useDataStore } from '/@/store'
 
 export const HomePage: React.FC = () => {
   const countStore = useCountStore()
-  const dataState = useDataStore()
-  const dataDispatch = useDataDispatch()
+  const [dataState, setDataState] = useDataStore()
 
   const [count, setCount] = useState(0)
 
@@ -37,7 +36,7 @@ export const HomePage: React.FC = () => {
       <button
         className="my-2 rounded-md bg-gray-400 px-4 py-1 text-2xl"
         type="button"
-        onClick={() => dataDispatch({ type: 'ADD' })}
+        onClick={() => setDataState({ type: 'ADD' })}
       >
         Add + 1: mini redux count is: {dataState.data}
       </button>
@@ -45,7 +44,7 @@ export const HomePage: React.FC = () => {
       <button
         className="my-2 rounded-md bg-gray-400 px-4 py-1 text-2xl"
         type="button"
-        onClick={() => dataDispatch({ type: 'MULTIPLY', value: 2 })}
+        onClick={() => setDataState({ type: 'MULTIPLY', value: 2 })}
       >
         Multiply * 2: mini redux count is: {dataState.data}
       </button>

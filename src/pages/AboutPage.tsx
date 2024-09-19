@@ -2,7 +2,7 @@ import { useCountStore, useDataStore } from '/@/store'
 
 export const AboutPage: React.FC = () => {
   const zustandCount = useCountStore((state) => state.count)
-  const dataState = useDataStore()
+  const [dataState] = useDataStore()
 
   return (
     <>

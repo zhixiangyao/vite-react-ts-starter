@@ -29,8 +29,8 @@ const createMiniReduxStore: CreateMiniReduxStore = (reducer, initialState) => {
     return state
   }
 
-  const dispatch = (action: Parameters<typeof reducer>['1']) => {
-    state = reducer(state, action)
+  const dispatch = (action: Parameters<typeof reducer>[1]) => {
+    state = { ...state, ...reducer(state, action) }
 
     listeners.forEach((l) => l())
 
@@ -45,7 +45,7 @@ const createMiniReduxStore: CreateMiniReduxStore = (reducer, initialState) => {
 }
 
 const useMiniReduxStore = <T extends ReturnType<CreateMiniReduxStore>>(store: T) => {
-  const state = useSyncExternalStore(store.subscribe, () => store.getSnapshot())
+  const state = useSyncExternalStore(store.subscribe, store.getSnapshot)
 
   return state as ReturnType<T['getSnapshot']>
 }

@@ -37,6 +37,7 @@ const router = createBrowserRouter([
     path: '/',
     lazy: () => import('/@/layout').then(({ Layout }) => ({ Component: Layout })),
     errorElement: <ErrorPage />,
+    hydrateFallbackElement: <h1>Loading...</h1>,
     children: routes.map((route) => ({
       path: route.path,
       lazy: () => route.element.then((Component) => ({ Component })),
@@ -45,5 +46,5 @@ const router = createBrowserRouter([
 ])
 
 export const Router = () => {
-  return <RouterProvider router={router} fallbackElement={<h1>Loading...</h1>} />
+  return <RouterProvider router={router} />
 }

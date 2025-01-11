@@ -1,35 +1,27 @@
 {
   "name": "vite-react-ts-starter",
-  "version": "0.1.0",
   "type": "module",
+  "version": "0.1.0",
   "author": "zhixiangyao <blueskyzx@icloud.com> <https://github.com/zhixiangyao>",
+  "license": "MIT",
+  "homepage": "https://github.com/zhixiangyao/vite-react-ts-starter",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zhixiangyao/vite-react-ts-starter.git"
   },
-  "homepage": "https://github.com/zhixiangyao/vite-react-ts-starter",
+  "engines": {
+    "node": ">=22",
+    "pnpm": ">=9"
+  },
   "scripts": {
     "dev": "vite --host",
     "build": "tsc && vite build",
     "preview": "npm run build && vite preview",
     "preview:dist": "vite preview",
-    "lint": "npm run lint:eslint && npm run lint:prettier && npm run lint:stylelint",
-    "lint:eslint": "eslint --fix \"./**/*.{mjs,ts,tsx}\" --cache --cache-location node_modules/.cache/eslint/",
-    "lint:prettier": "prettier --cache --write --log-level warn \"./**/*.{json,mjs,ts,tsx,css,html,md}\"",
+    "lint": "eslint --cache --cache-location node_modules/.cache/eslint/",
     "lint:stylelint": "stylelint --fix \"./**/*.css\" --cache --cache-location node_modules/.cache/stylelint/",
     "lint-staged": "lint-staged",
-    "prepare": "husky"
-  },
-  "lint-staged": {
-    "./**/*.{json,mjs,ts,tsx,css,html,md}": [
-      "npx prettier --cache --write --log-level warn"
-    ],
-    "./**/*.{mjs,ts,tsx}": [
-      "npx eslint --fix --cache --cache-location node_modules/.cache/eslint/"
-    ],
-    "./**/*.css": [
-      "npx stylelint --fix --cache --cache-location node_modules/.cache/stylelint/"
-    ]
+    "postinstall": "simple-git-hooks"
   },
   "dependencies": {
     "@emotion/react": "11.13.5",
@@ -42,29 +34,21 @@
     "zustand": "5.0.1"
   },
   "devDependencies": {
-    "@eslint/compat": "1.2.3",
-    "@eslint/eslintrc": "3.2.0",
-    "@eslint/js": "9.16.0",
+    "@antfu/eslint-config": "3.12.1",
+    "@eslint-react/eslint-plugin": "1.23.2",
     "@types/node": "22.10.1",
     "@types/react": "18.3.12",
     "@types/react-dom": "18.3.1",
     "@typescript-eslint/eslint-plugin": "8.17.0",
-    "@typescript-eslint/parser": "8.17.0",
     "@vitejs/plugin-react-swc": "3.7.2",
     "autoprefixer": "10.4.20",
     "dotenv": "16.4.7",
     "eslint": "9.16.0",
-    "eslint-config-prettier": "9.1.0",
-    "eslint-plugin-import": "2.31.0",
-    "eslint-plugin-prettier": "5.2.1",
-    "eslint-plugin-react-hooks": "5.0.0",
-    "globals": "15.13.0",
-    "husky": "9.1.7",
+    "eslint-plugin-react-refresh": "0.4.16",
     "lint-staged": "15.2.10",
     "postcss-load-config": "6.0.1",
     "postcss-styled-syntax": "0.7.0",
-    "prettier": "3.4.2",
-    "prettier-plugin-tailwindcss": "0.6.9",
+    "simple-git-hooks": "2.11.1",
     "stylelint": "16.11.0",
     "stylelint-config-standard": "36.0.1",
     "stylelint-order": "6.0.4",
@@ -73,9 +57,15 @@
     "vite": "6.0.2",
     "vite-plugin-checker": "0.8.0"
   },
-  "license": "MIT",
-  "engines": {
-    "node": ">=22",
-    "pnpm": ">=9"
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": [
+      "eslint --cache --cache-location node_modules/.cache/eslint/"
+    ],
+    "./**/*.css": [
+      "stylelint --fix --cache --cache-location node_modules/.cache/stylelint/"
+    ]
   }
 }

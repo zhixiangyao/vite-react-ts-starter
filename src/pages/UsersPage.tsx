@@ -1,11 +1,11 @@
 import { useState } from 'react'
 
-import { useCountStore, useDataStore } from '/@/store'
-
 import { useClickOutSide } from '../hooks/useClickOutSide'
 
+import { useCountStore, useDataStore } from '/@/store'
+
 export const UsersPage: React.FC = () => {
-  const zustandCount = useCountStore((state) => state.count)
+  const zustandCount = useCountStore(state => state.count)
   const [dataState] = useDataStore()
 
   const [text, setText] = useState('undefined')

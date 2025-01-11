@@ -1,5 +1,5 @@
 import React from 'react'
-import { forwardRef, createRef, type RefObject } from 'react'
+import { createRef, forwardRef, type RefObject } from 'react'
 
 type ButtonProps = JSX.IntrinsicElements['button']
 
@@ -23,12 +23,12 @@ interface ButtonRefsState {
   button: RefObject<HTMLButtonElement> | null
 }
 
-export class ButtonRefs extends React.Component<{}, ButtonRefsState> {
+export class ButtonRefs extends React.Component<object, ButtonRefsState> {
   state: ButtonRefsState = {
     button: null,
   }
 
-  constructor(props: {}) {
+  constructor(props: object) {
     super(props)
 
     this.state.button = createRef<HTMLButtonElement>()

@@ -1,12 +1,14 @@
 import {
-  CounterReducer,
-  ContextProvider,
-  PrevPropsState,
-  EffectTest,
+  ButtonRefs,
   ButtonWithTooltip,
+  ContextProvider,
+  CounterReducer,
+  EffectTest,
+  Memo,
+  MemoUseCallback,
+  PrevPropsState,
+  SearchRefs,
 } from './components'
-import { MemoUseCallback, Memo } from './components'
-import { SearchRefs, ButtonRefs } from './components'
 
 export const TestPage: React.FC = () => {
   return (

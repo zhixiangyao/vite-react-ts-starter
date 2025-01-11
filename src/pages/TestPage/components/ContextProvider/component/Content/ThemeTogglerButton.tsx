@@ -5,6 +5,7 @@ export const ThemeTogglerButton: React.FC = () => {
     <ThemeContext.Consumer>
       {({ theme, toggleTheme }) => (
         <button
+          type="button"
           onClick={toggleTheme}
           style={{ backgroundColor: theme.background, color: theme.color }}
           className="rounded-sm p-4"

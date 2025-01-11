@@ -1,8 +1,8 @@
 import React from 'react'
 import { createRoot } from 'react-dom/client'
 
-import { getElementById } from '/@/utils'
 import { App } from '/@/App'
+import { getElementById } from '/@/utils'
 
 const rootElement = getElementById('root')
 

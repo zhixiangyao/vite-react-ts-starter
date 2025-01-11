@@ -2,14 +2,14 @@ import { useSyncExternalStore } from 'react'
 
 type Listener = () => void
 
-type CreateMiniReduxStore = {
+interface CreateMiniReduxStore {
   <A extends { type: string | number | symbol }, S extends object>(
     reducer: (state: S, action: A) => S,
     initialState: S,
   ): {
-    subscribe(listener: Listener): () => void
-    getSnapshot(): S
-    dispatch(action: A): A
+    subscribe: (listener: Listener) => () => void
+    getSnapshot: () => S
+    dispatch: (action: A) => A
   }
 }
 
@@ -32,7 +32,7 @@ const createMiniReduxStore: CreateMiniReduxStore = (reducer, initialState) => {
   const dispatch = (action: Parameters<typeof reducer>[1]) => {
     state = { ...state, ...reducer(state, action) }
 
-    listeners.forEach((l) => l())
+    listeners.forEach(l => l())
 
     return action
   }
@@ -44,7 +44,7 @@ const createMiniReduxStore: CreateMiniReduxStore = (reducer, initialState) => {
   }
 }
 
-const useMiniReduxStore = <T extends ReturnType<CreateMiniReduxStore>>(store: T) => {
+function useMiniReduxStore<T extends ReturnType<CreateMiniReduxStore>>(store: T) {
   const state = useSyncExternalStore(store.subscribe, store.getSnapshot)
 
   return state as ReturnType<T['getSnapshot']>

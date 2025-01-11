@@ -9,9 +9,9 @@ interface CountState {
 const useCountStore = create<CountState>()(
   devtools(
     persist(
-      (set) => ({
+      set => ({
         count: 0,
-        increase: (by) => set((state) => ({ count: state.count + by })),
+        increase: by => set(state => ({ count: state.count + by })),
       }),
       {
         name: 'count-storage',

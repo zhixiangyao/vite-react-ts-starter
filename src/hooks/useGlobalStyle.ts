@@ -1,6 +1,6 @@
 import { useCallback, useEffect } from 'react'
 
-export const useGlobalStyle = (className?: string) => {
+export function useGlobalStyle(className?: string) {
   const remove = useCallback(() => {
     className && document.body.classList.remove(className)
   }, [className])

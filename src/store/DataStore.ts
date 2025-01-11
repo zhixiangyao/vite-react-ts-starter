@@ -1,8 +1,8 @@
 import { createMiniReduxStore, useMiniReduxStore } from '../utils/miniRedux'
 
-type State = { data: number }
+interface State { data: number }
 
-type Action = { type: 'Add' | 'Multiply'; value: number }
+interface Action { type: 'Add' | 'Multiply', value: number }
 
 type Reducer = (state: State, action: Action) => State
 
@@ -23,7 +23,7 @@ const initialState: State = { data: 0 }
 
 const store = createMiniReduxStore<Action, State>(reducer, initialState)
 
-const useDataStore = () => {
+function useDataStore() {
   return [useMiniReduxStore(store), store.dispatch] as const
 }
 

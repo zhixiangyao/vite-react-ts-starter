@@ -1,8 +1,8 @@
-import { createContext } from 'react'
+import type { Themes } from './type'
 
+import { createContext } from 'react'
 import { Content } from './component/Content'
 import { useTheme } from './hooks'
-import type { Themes } from './type'
 
 const themes: Themes = {
   light: {

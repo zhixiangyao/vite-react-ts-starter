@@ -1,10 +1,10 @@
-import fs from 'fs'
-import { resolve } from 'path'
+import type { ConfigEnv } from 'vite'
+import fs from 'node:fs'
 
+import { resolve } from 'node:path'
+import React from '@vitejs/plugin-react-swc'
 import dotenv from 'dotenv'
 import { defineConfig } from 'vite'
-import React from '@vitejs/plugin-react-swc'
-import type { ConfigEnv } from 'vite'
 import checker from 'vite-plugin-checker'
 
 /**
@@ -25,12 +25,13 @@ const baseConfig = {
 export default ({ mode, command }: ConfigEnv) => {
   const { VITE_APP_NODE_ENV, VITE_APP_TITLE } = dotenv.parse(fs.readFileSync(`.env.${mode}`))
 
-  console.log('\x1b[33m%s\x1b[0m', `🏭--NODE ENV (VITE_APP_NODE_ENV): ${VITE_APP_NODE_ENV}`)
-  console.log('\x1b[36m%s\x1b[0m', `🏠--APP TITLE (VITE_APP_TITLE): ${VITE_APP_TITLE}`)
+  console.log('\x1B[33m%s\x1B[0m', `🏭--NODE ENV (VITE_APP_NODE_ENV): ${VITE_APP_NODE_ENV}`)
+  console.log('\x1B[36m%s\x1B[0m', `🏠--APP TITLE (VITE_APP_TITLE): ${VITE_APP_TITLE}`)
 
   if (command === 'serve') {
     return defineConfig({ ...baseConfig })
-  } else {
+  }
+  else {
     return defineConfig({ ...baseConfig })
   }
 }

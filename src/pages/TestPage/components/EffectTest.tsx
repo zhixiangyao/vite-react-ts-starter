@@ -18,7 +18,10 @@ export const EffectTest: React.FC = () => {
     <fieldset className="w-300px flex flex-col items-center justify-evenly rounded-md border-4 border-red-400 px-4 py-2">
       <legend className="px-2 font-bold">EffectTest</legend>
 
-      <div>inputValue1: {inputValue1}</div>
+      <div>
+        inputValue1:
+        {inputValue1}
+      </div>
 
       <input
         value={inputValue1}
@@ -28,7 +31,10 @@ export const EffectTest: React.FC = () => {
         }}
       />
 
-      <div>inputValue2: {inputValue2}</div>
+      <div>
+        inputValue2:
+        {inputValue2}
+      </div>
 
       <input
         value={inputValue2}

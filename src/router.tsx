@@ -1,9 +1,9 @@
 import React from 'react'
-import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import { ErrorPage } from '/@/pages/ErrorPage'
 
-type Route = {
+interface Route {
   label: string
   path: string
   element: Promise<React.FC>
@@ -38,13 +38,13 @@ const router = createBrowserRouter([
     lazy: () => import('/@/layout').then(({ Layout }) => ({ Component: Layout })),
     errorElement: <ErrorPage />,
     hydrateFallbackElement: <h1>Loading...</h1>,
-    children: routes.map((route) => ({
+    children: routes.map(route => ({
       path: route.path,
-      lazy: () => route.element.then((Component) => ({ Component })),
+      lazy: () => route.element.then(Component => ({ Component })),
     })),
   },
 ])
 
-export const Router = () => {
+export function Router() {
   return <RouterProvider router={router} />
 }

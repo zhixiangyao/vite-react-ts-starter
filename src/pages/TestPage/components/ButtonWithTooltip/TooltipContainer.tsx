@@ -1,4 +1,4 @@
-type Props = {
+interface Props {
   x: number
   y: number
   contentRef: React.RefObject<React.ElementRef<'div'>>

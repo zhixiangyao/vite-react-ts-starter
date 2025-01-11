@@ -5,5 +5,6 @@ export default antfu({
   rules: {
     'no-console': ['off'],
     'no-alert': ['off'],
+    'react-refresh/only-export-components': ['off'],
   },
 })

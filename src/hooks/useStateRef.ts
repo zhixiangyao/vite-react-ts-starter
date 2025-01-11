@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 
-const useStateRef = <T>(val: T) => {
+function useStateRef<T>(val: T) {
   const result = useRef(val)
   useEffect(() => {
     result.current = val

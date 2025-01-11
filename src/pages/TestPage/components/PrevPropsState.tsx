@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useCallback } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 
 // import { usePrevious } from '/@/hook/usePrevious'
 
@@ -27,9 +27,16 @@ export const PrevPropsState: React.FC = () => {
       <legend className="px-2 font-bold">PrevPropsState</legend>
 
       <div>
-        Now: {count} Before: {countRef.current}
+        Now:
+        {' '}
+        {count}
+        {' '}
+        Before:
+        {' '}
+        {countRef.current}
       </div>
       <button
+        type="button"
         className="text-20px flex-shrink-0 rounded-md bg-red-400 px-8 py-2 text-sm font-bold text-white hover:bg-red-300"
         onClick={increment}
       >

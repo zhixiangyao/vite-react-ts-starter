@@ -1,8 +1,8 @@
+import type { Themes } from './type'
+
 import { useCallback, useState } from 'react'
 
-import { Themes } from './type'
-
-const useTheme = (themes: Themes) => {
+function useTheme(themes: Themes) {
   const [theme, setTheme] = useState(themes.light)
 
   const toggleTheme = useCallback(

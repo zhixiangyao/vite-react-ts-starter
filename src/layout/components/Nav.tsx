@@ -1,16 +1,16 @@
-import { useNavigate, useLocation } from 'react-router-dom'
 import clsx from 'clsx'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 import { GithubOctopusCat } from '/@/components/GithubOctopusCat'
 import { routes } from '/@/router'
 
-const navbarList = routes.map((route) => ({
+const navbarList = routes.map(route => ({
   id: route.path,
   label: route.label,
   path: route.path,
 }))
 
-type Props = {}
+interface Props {}
 
 export const Nav: React.FC<Props> = () => {
   const navigate = useNavigate()
@@ -29,6 +29,7 @@ export const Nav: React.FC<Props> = () => {
               <div className="flex select-none space-x-4">
                 {navbarList.map(({ path, label }) => (
                   <button
+                    type="button"
                     key={path}
                     className={clsx(
                       'flex-shrink-0 rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-gray-700',

@@ -2,17 +2,16 @@ import { useState } from 'react'
 
 import { useClickOutSide } from '../hooks/useClickOutSide'
 
-import { useCountStore, useDataStore } from '/@/store'
+import { useCountStore } from '/@/store'
 
 export const UsersPage: React.FC = () => {
   const zustandCount = useCountStore(state => state.count)
-  const [dataState] = useDataStore()
 
   const [text, setText] = useState('undefined')
 
   const clickRef = useClickOutSide<HTMLDivElement>(
     () => setText(() => 'clickInSide'),
-    () => setText(() => 'clickOutSide'),
+    () => setText(() => 'clickOutSide')
   )
 
   return (
@@ -21,10 +20,6 @@ export const UsersPage: React.FC = () => {
       <h2>
         <span>zustand count: </span>
         <span>{zustandCount}</span>
-      </h2>
-      <h2>
-        <span>mini redux count: </span>
-        <span>{dataState.data}</span>
       </h2>
 
       <div

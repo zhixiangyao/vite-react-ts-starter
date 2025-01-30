@@ -11,7 +11,7 @@ export const UsersPage: React.FC = () => {
 
   const clickRef = useClickOutSide<HTMLDivElement>(
     () => setText(() => 'clickInSide'),
-    () => setText(() => 'clickOutSide')
+    () => setText(() => 'clickOutSide'),
   )
 
   return (

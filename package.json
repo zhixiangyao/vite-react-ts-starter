@@ -44,6 +44,7 @@
     "autoprefixer": "10.4.20",
     "dotenv": "16.4.7",
     "eslint": "9.19.0",
+    "eslint-plugin-react-hooks": "5.1.0",
     "eslint-plugin-react-refresh": "0.4.18",
     "lint-staged": "15.4.3",
     "postcss-load-config": "6.0.1",

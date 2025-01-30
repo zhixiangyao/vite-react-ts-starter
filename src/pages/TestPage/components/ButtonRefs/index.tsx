@@ -1,5 +1,5 @@
-import React from 'react'
-import { createRef, forwardRef, type RefObject } from 'react'
+import type { RefObject } from 'react'
+import React, { createRef, forwardRef } from 'react'
 
 type ButtonProps = JSX.IntrinsicElements['button']
 

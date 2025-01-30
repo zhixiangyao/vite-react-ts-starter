@@ -4,7 +4,7 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
   },
-  "css.customData": [".vscode/css_custom_data.json"],
+  "css.customData": [".vscode/tailwindcss.json"],
   "files.associations": {
     "*.css": "tailwindcss"
   }

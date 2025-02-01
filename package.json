@@ -19,7 +19,7 @@
     "preview": "npm run build && vite preview",
     "preview:dist": "vite preview",
     "lint": "eslint --cache --cache-location node_modules/.cache/eslint/",
-    "lint:stylelint": "stylelint --fix \"./**/*.css\" --cache --cache-location node_modules/.cache/stylelint/",
+    "lint:stylelint": "stylelint \"./**/*.css\" --cache --cache-location node_modules/.cache/stylelint/",
     "lint-staged": "lint-staged",
     "postinstall": "simple-git-hooks"
   },
@@ -66,7 +66,7 @@
       "eslint --cache --cache-location node_modules/.cache/eslint/"
     ],
     "./**/*.css": [
-      "stylelint --fix --cache --cache-location node_modules/.cache/stylelint/"
+      "stylelint --cache --cache-location node_modules/.cache/stylelint/"
     ]
   }
 }

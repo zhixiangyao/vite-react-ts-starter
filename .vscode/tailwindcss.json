@@ -3,7 +3,27 @@
   "atDirectives": [
     {
       "name": "@tailwind",
-      "description": "Use the @tailwind directive to insert Tailwind's `base`, `components`, `utilities`, and `screens` styles into your CSS."
+      "description": "Use the `@tailwind` directive to insert Tailwind's base, components, utilities, and screens styles into your CSS."
+    },
+    {
+      "name": "@apply",
+      "description": "Use the `@apply` directive to inline any existing utility classes into your own custom CSS."
+    },
+    {
+      "name": "@screen",
+      "description": "The `@screen` directive allows you to create media queries that reference your breakpoints by name instead of duplicating their values in your own CSS."
+    },
+    {
+      "name": "@layer",
+      "description": "Use the `@layer` directive to tell Tailwind which 'bucket' a set of custom styles belong to."
+    },
+    {
+      "name": "@variants",
+      "description": "Generate hover, focus, active, and other variants of your own utilities by wrapping their definitions in the `@variants` directive."
+    },
+    {
+      "name": "@responsive",
+      "description": "Use the `@responsive` directive to generate responsive variants of your own classes."
     }
   ]
 }

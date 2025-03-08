@@ -1,27 +1,7 @@
 {
-  "compilerOptions": {
-    "target": "ESNext",
-    "jsx": "preserve",
-    "jsxImportSource": "@emotion/react",
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "experimentalDecorators": true,
-    "baseUrl": ".",
-    "module": "ESNext",
-    "moduleResolution": "Bundler",
-    "paths": {
-      "/@/*": ["src/*"]
-    },
-    "resolveJsonModule": true,
-    "types": ["vite/client", "@emotion/react/types/css-prop", "node"],
-    "allowJs": false,
-    "strict": true,
-    "noEmit": true,
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": false,
-    "forceConsistentCasingInFileNames": true,
-    "isolatedModules": true,
-    "skipLibCheck": false
-  },
-  "include": ["./src"],
-  "exclude": ["node_modules"]
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ],
+  "files": []
 }

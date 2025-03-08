@@ -15,7 +15,7 @@
   },
   "scripts": {
     "dev": "vite --host",
-    "build": "tsc && vite build",
+    "build": "tsc -b && vite build",
     "preview": "npm run build && vite preview",
     "preview:dist": "vite preview",
     "lint": "eslint --cache --cache-location node_modules/.cache/eslint/",

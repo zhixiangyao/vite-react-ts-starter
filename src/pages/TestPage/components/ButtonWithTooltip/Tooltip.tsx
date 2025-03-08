@@ -31,7 +31,7 @@ export const Tooltip: React.FC<React.PropsWithChildren<Props>> = ({ children, ta
   }
 
   return createPortal(
-    <TooltipContainer x={tooltipX} y={tooltipY} contentRef={ref}>
+    <TooltipContainer x={tooltipX} y={tooltipY} ref={ref}>
       {children}
     </TooltipContainer>,
     document.body,

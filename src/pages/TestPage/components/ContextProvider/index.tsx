@@ -27,9 +27,9 @@ export const ContextProvider: React.FC = () => {
     <fieldset className="w-300px flex flex-col items-center justify-evenly rounded-md border-4 border-blue-400 px-4 py-2">
       <legend className="px-2 font-bold">ContextProvider</legend>
 
-      <ThemeContext.Provider value={value}>
+      <ThemeContext value={value}>
         <Content />
-      </ThemeContext.Provider>
+      </ThemeContext>
     </fieldset>
   )
 }

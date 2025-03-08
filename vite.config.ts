@@ -2,6 +2,7 @@ import type { ConfigEnv } from 'vite'
 import fs from 'node:fs'
 
 import { resolve } from 'node:path'
+import tailwindcss from '@tailwindcss/vite'
 import React from '@vitejs/plugin-react-swc'
 import dotenv from 'dotenv'
 import { defineConfig } from 'vite'
@@ -11,7 +12,7 @@ import checker from 'vite-plugin-checker'
  * https://vitejs.dev/config/
  */
 const baseConfig = {
-  plugins: [React({ jsxImportSource: '@emotion/react' }), checker({ typescript: true })],
+  plugins: [React({ jsxImportSource: '@emotion/react' }), checker({ typescript: true }), tailwindcss()],
   resolve: {
     alias: [
       {

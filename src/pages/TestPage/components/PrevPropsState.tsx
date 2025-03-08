@@ -4,7 +4,7 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 
 export const PrevPropsState: React.FC = () => {
   const [count, setCount] = useState(0)
-  const countRef = useRef<number>()
+  const countRef = useRef<number>(0)
 
   const increment = useCallback(() => {
     console.log(`%c "count": ${count},  "countRef.current": ${countRef.current}.`, 'color: yellow')

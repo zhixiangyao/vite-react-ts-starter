@@ -51,7 +51,7 @@ export const Nav: React.FC<Props> = () => {
         </div>
       </div>
 
-      <GithubOctopusCat />
+      <GithubOctopusCat href="https://github.com/zhixiangyao/vite-react-ts-starter" />
     </nav>
   )
 }

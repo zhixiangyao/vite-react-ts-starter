@@ -10,7 +10,7 @@ function setLocalStorage(key: string, value: any): void {
   )
 }
 
-function getLocalStorage<T>(key: string, isParse = false): T {
+function getLocalStorage<T>(key: string, isParse = false): T | string {
   const cache = localStorage.getItem(`${keyBefore}${key}`) ?? ''
   return isParse ? JSON.parse(cache) : cache
 }
@@ -23,7 +23,7 @@ function setSessionStorage(key: string, value: any): void {
   )
 }
 
-function getSessionStorage<T>(key: string, isParse = false): T {
+function getSessionStorage<T>(key: string, isParse = false): T | string {
   const cache = sessionStorage.getItem(`${keyBefore}${key}`) ?? ''
   return isParse ? JSON.parse(cache) : cache
 }

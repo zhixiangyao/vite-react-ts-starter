@@ -1,6 +1,6 @@
-# Vite + React + ReactRouter + Zustand + TypeScript + StyledComponents + TailwindCSS
+# Vite + React + ReactRouter + Zustand + TypeScript + Emotion + TailwindCSS
 
-This template will help you start developing in Vite using React ReactRouter Zustand TypeScript StyledComponents TailwindCSS.
+This template will help you start developing in Vite using React ReactRouter Zustand TypeScript Emotion TailwindCSS.
 
 **Editor:**
 

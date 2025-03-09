@@ -7,12 +7,15 @@ import React from '@vitejs/plugin-react-swc'
 import dotenv from 'dotenv'
 import { defineConfig } from 'vite'
 import checker from 'vite-plugin-checker'
+import viteCompression from 'vite-plugin-compression'
 
-/**
- * https://vitejs.dev/config/
- */
 const baseConfig = {
-  plugins: [React({ jsxImportSource: '@emotion/react' }), checker({ typescript: true }), tailwindcss()],
+  plugins: [
+    React({ jsxImportSource: '@emotion/react' }),
+    checker({ typescript: true }),
+    viteCompression(),
+    tailwindcss(),
+  ],
   resolve: {
     alias: [
       {

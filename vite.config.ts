@@ -1,6 +1,5 @@
 import type { ConfigEnv } from 'vite'
 import fs from 'node:fs'
-
 import { resolve } from 'node:path'
 import tailwindcss from '@tailwindcss/vite'
 import React from '@vitejs/plugin-react-swc'

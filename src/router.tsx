@@ -1,7 +1,7 @@
 import React from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
-import { ErrorPage } from '/@/pages/ErrorPage'
+import { ErrorPage } from '~/pages/ErrorPage'
 
 interface Route {
   label: string
@@ -35,7 +35,7 @@ export const routes: Route[] = [
 const router = createBrowserRouter([
   {
     path: '/',
-    lazy: () => import('/@/layout').then(({ Layout }) => ({ Component: Layout })),
+    lazy: () => import('~/layout').then(({ Layout }) => ({ Component: Layout })),
     errorElement: <ErrorPage />,
     hydrateFallbackElement: <h1>Loading...</h1>,
     children: routes.map(route => ({

@@ -13,7 +13,7 @@
     "module": "ESNext",
     "moduleResolution": "bundler",
     "paths": {
-      "/@/*": ["src/*"]
+      "~/*": ["src/*"]
     },
     "types": ["vite/client", "@emotion/react/types/css-prop", "node"],
     "allowImportingTsExtensions": true,

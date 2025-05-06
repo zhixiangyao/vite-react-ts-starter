@@ -1,8 +1,8 @@
 import { useState } from 'react'
 
-import { useClickOutSide } from '../hooks/useClickOutSide'
+import { useCountStore } from '~/store'
 
-import { useCountStore } from '/@/store'
+import { useClickOutSide } from '../hooks/useClickOutSide'
 
 export const UsersPage: React.FC = () => {
   const zustandCount = useCountStore(state => state.count)

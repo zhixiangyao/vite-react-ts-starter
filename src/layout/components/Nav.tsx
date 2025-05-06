@@ -1,8 +1,8 @@
 import clsx from 'clsx'
 import { useLocation, useNavigate } from 'react-router-dom'
 
-import { GithubOctopusCat } from '/@/components/GithubOctopusCat'
-import { routes } from '/@/router'
+import { GithubOctopusCat } from '~/components/GithubOctopusCat'
+import { routes } from '~/router'
 
 const navbarList = routes.map(route => ({
   id: route.path,

@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 
-// import { usePrevious } from '/@/hook/usePrevious'
+// import { usePrevious } from '~/hook/usePrevious'
 
 export const PrevPropsState: React.FC = () => {
   const [count, setCount] = useState(0)

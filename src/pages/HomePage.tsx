@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 
-import { ReactLogo } from '/@/components/ReactLogo'
-import { useCountStore } from '/@/store'
+import { ReactLogo } from '~/components/ReactLogo'
+import { useCountStore } from '~/store'
 
 export const HomePage: React.FC = () => {
   const countStore = useCountStore()

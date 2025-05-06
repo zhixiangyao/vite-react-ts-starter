@@ -1,6 +1,6 @@
 import { css } from '@emotion/react'
 
-import logo from '/@/assets/logo.svg'
+import logo from '~/assets/logo.svg'
 
 const style = css`
   @media (prefers-reduced-motion: no-preference) {

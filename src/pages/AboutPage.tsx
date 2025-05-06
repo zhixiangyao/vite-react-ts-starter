@@ -1,4 +1,4 @@
-import { useCountStore } from '/@/store'
+import { useCountStore } from '~/store'
 
 export const AboutPage: React.FC = () => {
   const zustandCount = useCountStore(state => state.count)

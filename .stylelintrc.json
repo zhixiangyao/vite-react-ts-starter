@@ -20,7 +20,7 @@
     "at-rule-no-unknown": [
       true,
       {
-        "ignoreAtRules": ["tailwind", "mixin", "apply"]
+        "ignoreAtRules": ["tailwind", "custom-variant", "mixin", "apply"]
       }
     ],
     "no-empty-source": null,

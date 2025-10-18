@@ -6,5 +6,6 @@ export default antfu({
     'no-console': ['off'],
     'no-alert': ['off'],
     'react-refresh/only-export-components': ['off'],
+    'react-hooks/refs': ['off'],
   },
 })

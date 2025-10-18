@@ -9,11 +9,12 @@ interface Props {
 }
 
 export const Tooltip: React.FC<React.PropsWithChildren<Props>> = ({ children, targetRect }) => {
-  const ref = useRef<React.ElementRef<'div'>>(null)
+  const ref = useRef<React.ComponentRef<'div'>>(null)
   const [tooltipHeight, setTooltipHeight] = useState(0)
 
   useLayoutEffect(() => {
     const { height } = ref.current!.getBoundingClientRect()
+    // eslint-disable-next-line react-hooks-extra/no-direct-set-state-in-use-effect
     setTooltipHeight(height)
   }, [])
 

@@ -9,7 +9,7 @@ interface Props {
 
 const Container: React.FC<React.PropsWithChildren<Props>> = ({ tooltipContent, ...rest }) => {
   const [targetRect, setTargetRect] = useState<Rect | null>(null)
-  const buttonRef = useRef<React.ElementRef<'button'>>(null)
+  const buttonRef = useRef<React.ComponentRef<'button'>>(null)
 
   const handlePointerEnter = useCallback(() => {
     const rect = buttonRef.current!.getBoundingClientRect()

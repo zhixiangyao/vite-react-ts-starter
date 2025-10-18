@@ -1,9 +1,10 @@
-/dist/*
-/dist-ssr/*
-/public/*
-/.vscode/*
-/node_modules/*
+node_modules
+dist
+public
+build
 
 **/*.html
+**/*.ts
+**/*.tsx
 **/*.js
 **/*.mjs

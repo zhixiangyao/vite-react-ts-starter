@@ -1,12 +1,15 @@
 {
-  "css.customData": [".vscode/tailwindcss.json"],
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
   "eslint.useFlatConfig": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
   },
-  "files.associations": {
-    "*.css": "tailwindcss"
+  "files.exclude": {
+    "**/node_modules": true
   },
+  "search.exclude": {},
   "tailwindCSS.experimental.configFile": {
     "src/styles/app.css": "src/**"
   },

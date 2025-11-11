@@ -10,8 +10,8 @@
     "url": "git+https://github.com/zhixiangyao/vite-react-ts-starter.git"
   },
   "engines": {
-    "node": ">=22",
-    "pnpm": ">=10"
+    "node": ">=24.11.0",
+    "pnpm": ">=10.21.0"
   },
   "scripts": {
     "dev": "vite --host",

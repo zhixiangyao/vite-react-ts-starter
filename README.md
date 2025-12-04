@@ -13,15 +13,15 @@ This template will help you start developing in Vite using React ReactRouter Zus
 - **Development ENV:**
 
   - git => 2.39.0
-  - node => 24.11.0
-  - pnpm => 10.21.0
+  - node => 24.11.1
+  - pnpm => 10.24.0
 
 ## Clone
 
 ```shell
 git clone git@github.com:zhixiangyao/vite-react-ts-starter.git
 cd vite-react-ts-starter
-pnpm i # If not install pnpm, please run: npm install -g pnpm
+pnpm i
 ```
 
 ## Usage

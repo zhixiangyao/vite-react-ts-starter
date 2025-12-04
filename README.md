@@ -22,6 +22,8 @@ This template will help you start developing in Vite using React ReactRouter Zus
 
 ```shell
 git clone git@github.com:zhixiangyao/vite-react-ts-starter.git
+# or
+git clone https://github.com/zhixiangyao/vite-react-ts-starter.git
 cd vite-react-ts-starter
 pnpm i
 ```

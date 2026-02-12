@@ -32,13 +32,13 @@ function Search({ ref }: { ref?: Ref<HTMLInputElement> }) {
 Search.displayName = 'Search'
 
 export const SearchRefs: React.FC = () => {
-  const input: Ref<HTMLInputElement> = useRef(null)
+  const inputRef: Ref<HTMLInputElement> = useRef(null)
 
   useEffect(() => {
-    if (input.current) {
-      input.current.focus()
+    if (inputRef.current) {
+      inputRef.current.focus()
     }
   }, [])
 
-  return <Search ref={input} />
+  return <Search ref={inputRef} />
 }

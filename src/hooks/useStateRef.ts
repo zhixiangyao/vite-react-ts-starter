@@ -1,11 +1,11 @@
 import { useEffect, useRef } from 'react'
 
 function useStateRef<T>(val: T) {
-  const result = useRef(val)
+  const resultRef = useRef(val)
   useEffect(() => {
-    result.current = val
+    resultRef.current = val
   }, [val])
-  return result
+  return resultRef
 }
 
 export { useStateRef }

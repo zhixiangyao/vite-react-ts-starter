@@ -1,5 +1,5 @@
 import type { JSX, Ref, RefObject } from 'react'
-import React, { createRef } from 'react'
+import { Component, createRef } from 'react'
 
 type ButtonProps = JSX.IntrinsicElements['button']
 
@@ -9,7 +9,7 @@ function Button({ ref, ...props }: ButtonProps & { ref?: Ref<HTMLButtonElement> 
       <legend className="px-2 font-bold">ButtonRefs(createRef)</legend>
 
       <button
-        className="text-20px flex-shrink-0 rounded-md bg-red-400 px-8 py-2 text-sm font-bold text-white hover:bg-red-300"
+        className="text-20px shrink-0 rounded-md bg-red-400 px-8 py-2 text-sm font-bold text-white hover:bg-red-300"
         type="button"
         {...props}
         ref={ref}
@@ -26,7 +26,7 @@ interface ButtonRefsState {
   // (Ref<HTMLButtonElement> & RefObject<HTMLButtonElement | null>) | undefined
 }
 
-export class ButtonRefs extends React.Component<object, ButtonRefsState> {
+export class ButtonRefs extends Component<object, ButtonRefsState> {
   state: ButtonRefsState = {}
 
   constructor(props: object) {

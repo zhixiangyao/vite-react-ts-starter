@@ -10,8 +10,8 @@
     "url": "git+https://github.com/zhixiangyao/vite-react-ts-starter.git"
   },
   "engines": {
-    "node": ">=24.13.0",
-    "pnpm": ">=10.29.3"
+    "node": ">=24.14.0",
+    "pnpm": ">=10.32.1"
   },
   "scripts": {
     "dev": "vite --host",
@@ -29,30 +29,30 @@
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "react-is": "19.2.4",
-    "react-router": "7.13.0",
-    "react-router-dom": "7.13.0",
-    "zustand": "5.0.11"
+    "react-router": "7.13.1",
+    "react-router-dom": "7.13.1",
+    "zustand": "5.0.12"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "7.4.3",
-    "@eslint-react/eslint-plugin": "2.12.4",
-    "@tailwindcss/vite": "4.1.18",
-    "@types/node": "24.10.13",
+    "@antfu/eslint-config": "7.7.3",
+    "@eslint-react/eslint-plugin": "2.13.0",
+    "@tailwindcss/vite": "4.2.2",
+    "@types/node": "24.12.0",
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
-    "@typescript-eslint/eslint-plugin": "8.55.0",
-    "@vitejs/plugin-react-swc": "4.2.3",
-    "eslint": "10.0.0",
+    "@typescript-eslint/eslint-plugin": "8.57.1",
+    "@vitejs/plugin-react-swc": "4.3.0",
+    "eslint": "9.39.4",
     "eslint-plugin-react-hooks": "7.0.1",
-    "eslint-plugin-react-refresh": "0.5.0",
-    "lint-staged": "16.2.7",
+    "eslint-plugin-react-refresh": "0.5.2",
+    "lint-staged": "16.4.0",
     "simple-git-hooks": "2.13.1",
-    "stylelint": "17.2.0",
+    "stylelint": "17.5.0",
     "stylelint-config-standard": "40.0.0",
-    "stylelint-order": "7.0.1",
-    "tailwindcss": "4.1.18",
+    "stylelint-order": "8.1.1",
+    "tailwindcss": "4.2.2",
     "typescript": "5.9.3",
-    "vite": "7.3.1",
+    "vite": "8.0.1",
     "vite-plugin-checker": "0.12.0",
     "vite-plugin-compression": "0.5.1"
   },

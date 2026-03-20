@@ -1,7 +1,7 @@
 import type { ConfigEnv, UserConfig } from 'vite'
 import { resolve } from 'node:path'
 import tailwindcss from '@tailwindcss/vite'
-import React from '@vitejs/plugin-react-swc'
+import React from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
 import checker from 'vite-plugin-checker'
 import viteCompression from 'vite-plugin-compression'

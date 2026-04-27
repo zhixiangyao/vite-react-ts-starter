@@ -3,11 +3,7 @@ const getElementById = (id: string) => document.getElementById(id)!
 const keyBefore = 'vite-react-ts-'
 
 function setLocalStorage(key: string, value: any): void {
-  value
-  && localStorage.setItem(
-    `${keyBefore}${key}`,
-    typeof value === 'string' ? value : JSON.stringify(value),
-  )
+  value && localStorage.setItem(`${keyBefore}${key}`, typeof value === 'string' ? value : JSON.stringify(value))
 }
 
 function getLocalStorage<T>(key: string, isParse = false): T | string {
@@ -16,11 +12,7 @@ function getLocalStorage<T>(key: string, isParse = false): T | string {
 }
 
 function setSessionStorage(key: string, value: any): void {
-  value
-  && sessionStorage.setItem(
-    `${keyBefore}${key}`,
-    typeof value === 'string' ? value : JSON.stringify(value),
-  )
+  value && sessionStorage.setItem(`${keyBefore}${key}`, typeof value === 'string' ? value : JSON.stringify(value))
 }
 
 function getSessionStorage<T>(key: string, isParse = false): T | string {

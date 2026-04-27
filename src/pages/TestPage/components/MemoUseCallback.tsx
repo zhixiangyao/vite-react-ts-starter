@@ -19,7 +19,7 @@ function Child(props: ChildProps) {
         className="focus:border-light-blue-500 focus:ring-light-blue-500 w-full rounded-md border border-gray-200 py-2 pl-2 text-sm text-black placeholder-gray-500 focus:outline-none focus:ring-1"
         value={value}
         placeholder="Child"
-        onChange={e => onChange(e.target.value)}
+        onChange={(e) => onChange(e.target.value)}
       />
     </>
   )
@@ -45,7 +45,7 @@ export const MemoUseCallback: React.FC = () => {
         className="focus:border-light-blue-500 focus:ring-light-blue-500 w-full rounded-md border border-gray-200 py-2 pl-2 text-sm text-black placeholder-gray-500 focus:outline-none focus:ring-1"
         placeholder="Compo"
         value={a}
-        onChange={e => setA(e.target.value)}
+        onChange={(e) => setA(e.target.value)}
       />
 
       <MemoChild value={b} onChange={onChangeMemoChild} />

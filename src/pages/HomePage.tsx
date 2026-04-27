@@ -18,11 +18,9 @@ export const HomePage: React.FC = () => {
       <button
         className="my-2 rounded-md bg-gray-400 px-4 py-1 text-2xl"
         type="button"
-        onClick={() => setCount(count => count + 1)}
+        onClick={() => setCount((count) => count + 1)}
       >
-        Add + 1: count is:
-        {' '}
-        {count}
+        Add + 1: count is: {count}
       </button>
 
       <button
@@ -30,17 +28,11 @@ export const HomePage: React.FC = () => {
         type="button"
         onClick={() => countStore.increase(1)}
       >
-        Add + 1: zustand count is:
-        {' '}
-        {countStore.count}
+        Add + 1: zustand count is: {countStore.count}
       </button>
 
       <p>
-        Edit
-        {' '}
-        <code>Home.tsx</code>
-        {' '}
-        and save to test HMR updates.
+        Edit <code>Home.tsx</code> and save to test HMR updates.
       </p>
     </>
   )

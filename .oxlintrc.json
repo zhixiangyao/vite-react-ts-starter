@@ -18,6 +18,6 @@
     "no-console": "off",
     "no-alert": "off",
     "no-unused-expressions": "off",
-    "react/only-export-components": "off",
+    "react/only-export-components": "off"
   }
 }

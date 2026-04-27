@@ -5,17 +5,14 @@ English · [中文](./README-zh.md)
 This template will help you start developing in Vite using React ReactRouter Zustand TypeScript Emotion TailwindCSS.
 
 - **Editor:**
-
   - [VSCode](https://code.visualstudio.com/)
 
 - **VSCode Extension:**
-
   - [Oxc](https://marketplace.visualstudio.com/items?itemName=oxc.oxc-vscode)
   - [Stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
   - [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
 
 - **Development ENV:**
-
   - git => 2.39.0
   - node => 24.14.0
   - pnpm => 10.32.1

@@ -5,17 +5,14 @@
 这个模板可以帮助你使用 Vite 快速开始 React + ReactRouter + Zustand + TypeScript + Emotion + TailwindCSS 项目开发。
 
 - **编辑器：**
-
   - [VSCode](https://code.visualstudio.com/)
 
 - **VSCode 扩展：**
-
   - [Oxc](https://marketplace.visualstudio.com/items?itemName=oxc.oxc-vscode)
   - [Stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
   - [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
 
 - **开发环境：**
-
   - git => 2.39.0
   - node => 24.14.0
   - pnpm => 10.32.1

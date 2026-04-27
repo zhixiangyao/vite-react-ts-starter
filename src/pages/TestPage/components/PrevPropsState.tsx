@@ -27,13 +27,7 @@ export const PrevPropsState: React.FC = () => {
       <legend className="px-2 font-bold">PrevPropsState</legend>
 
       <div>
-        Now:
-        {' '}
-        {count}
-        {' '}
-        Before:
-        {' '}
-        {countRef.current}
+        Now: {count} Before: {countRef.current}
       </div>
       <button
         type="button"

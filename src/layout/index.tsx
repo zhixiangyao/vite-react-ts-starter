@@ -16,7 +16,7 @@ export const Layout: React.FC<Props> = () => {
     <>
       <Nav />
 
-      <Main children={<Outlet />} />
+      <Main slot={<Outlet />} />
     </>
   )
 }

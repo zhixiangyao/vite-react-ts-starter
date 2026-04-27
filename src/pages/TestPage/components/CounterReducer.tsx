@@ -1,7 +1,11 @@
 import { useReducer } from 'react'
 
-interface Action { type: 'decrement' | 'increment' }
-interface State { count: number }
+interface Action {
+  type: 'decrement' | 'increment'
+}
+interface State {
+  count: number
+}
 
 const initialState: State = { count: 0 }
 function reducer(state: State, action: Action) {

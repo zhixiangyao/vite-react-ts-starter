@@ -4,7 +4,7 @@ import { useLocation, useNavigate } from 'react-router-dom'
 import { GithubOctopusCat } from '~/components/GithubOctopusCat'
 import { routes } from '~/router'
 
-const navbarList = routes.map(route => ({
+const navbarList = routes.map((route) => ({
   id: route.path,
   label: route.label,
   path: route.path,
@@ -20,9 +20,7 @@ export const Nav: React.FC<Props> = () => {
     <nav className="fixed left-0 top-0 z-10 w-screen bg-gray-800">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between overflow-x-auto overflow-y-hidden">
-          <div className="flex-shrink-0 rounded-md px-3 py-2 text-sm font-medium text-green-600">
-            vite-react-ts
-          </div>
+          <div className="flex-shrink-0 rounded-md px-3 py-2 text-sm font-medium text-green-600">vite-react-ts</div>
 
           <div className="hidden flex-1 items-center justify-center sm:hidden sm:items-stretch sm:justify-start md:hidden lg:flex xl:flex">
             <div className="sm:ml-6 sm:block">

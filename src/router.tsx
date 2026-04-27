@@ -37,9 +37,9 @@ const router = createBrowserRouter([
     lazy: () => import('~/layout').then(({ Layout }) => ({ Component: Layout })),
     errorElement: <ErrorPage />,
     hydrateFallbackElement: <h1>Loading...</h1>,
-    children: routes.map(route => ({
+    children: routes.map((route) => ({
       path: route.path,
-      lazy: () => route.element.then(Component => ({ Component })),
+      lazy: () => route.element.then((Component) => ({ Component })),
     })),
   },
 ])

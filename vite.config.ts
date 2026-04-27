@@ -26,8 +26,7 @@ const baseConfig: UserConfig = {
 export default ({ command }: ConfigEnv) => {
   if (command === 'serve') {
     return defineConfig(baseConfig)
-  }
-  else {
+  } else {
     return defineConfig(baseConfig)
   }
 }

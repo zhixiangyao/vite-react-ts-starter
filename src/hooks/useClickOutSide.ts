@@ -9,15 +9,13 @@ function useClickOutSide<T extends HTMLElement>(inSide?: () => void, outSide?: (
 
   const handleGlobalClick = useCallback(
     ({ clientX, clientY }: MouseEvent) => {
-      if (!targetRef.current?.getBoundingClientRect)
-        return
+      if (!targetRef.current?.getBoundingClientRect) return
 
       const { right, left, bottom, top } = targetRef.current.getBoundingClientRect()
 
       if (clientX > right || clientX < left || clientY > bottom || clientY < top) {
         outSideRef.current?.()
-      }
-      else {
+      } else {
         inSideRef.current?.()
       }
     },

@@ -47,13 +47,13 @@ export function ButtonWithTooltip() {
       <legend className="px-2 font-bold">ButtonWithTooltip</legend>
 
       <Container
-        tooltipContent={(
+        tooltipContent={
           <div>
             This tooltip does not fit above the button.
             <br />
             This is why it's displayed below instead!
           </div>
-        )}
+        }
       >
         Hover over me (tooltip above)
       </Container>

@@ -10,6 +10,8 @@ This template will help you start developing in Vite using React ReactRouter Zus
 
 - **VSCode Extension:**
 
+  - [Oxc](https://marketplace.visualstudio.com/items?itemName=oxc.oxc-vscode)
+  - [Stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
   - [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
 
 - **Development ENV:**
@@ -47,6 +49,8 @@ pnpm build
 ### Check
 
 ```shell
-pnpm lint
+pnpm lint:check
+pnpm fmt
+pnpm fmt:check
 pnpm lint:css
 ```

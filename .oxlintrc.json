@@ -1,0 +1,23 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["typescript", "react", "unicorn", "oxc"],
+  "env": {
+    "builtin": true,
+    "browser": true,
+    "node": true
+  },
+  "ignorePatterns": [
+    "**/node_modules/**",
+    "**/dist/**",
+    "**/build/**",
+    "**/.cache/**",
+    "**/coverage/**",
+    "**/*.tsbuildinfo"
+  ],
+  "rules": {
+    "no-console": "off",
+    "no-alert": "off",
+    "no-unused-expressions": "off",
+    "react/only-export-components": "off",
+  }
+}

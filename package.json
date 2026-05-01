@@ -10,8 +10,8 @@
     "url": "git+https://github.com/zhixiangyao/vite-react-ts-starter.git"
   },
   "engines": {
-    "node": ">=24.15.0",
-    "pnpm": ">=10.33.2"
+    "node": ">=25.9.0",
+    "pnpm": ">=11.0.3"
   },
   "scripts": {
     "dev": "vite --host",
@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "@tailwindcss/vite": "4.2.4",
-    "@types/node": "24.12.0",
+    "@types/node": "25.6.0",
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
     "@vitejs/plugin-react": "6.0.1",

@@ -14,8 +14,8 @@ This template will help you start developing in Vite using React ReactRouter Zus
 
 - **Development ENV:**
   - git => 2.39.0
-  - node => 24.15.0
-  - pnpm => 10.33.2
+  - node => 25.9.0
+  - pnpm => 11.0.3
 
 ## Clone
 

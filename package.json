@@ -9,9 +9,10 @@
     "type": "git",
     "url": "git+https://github.com/zhixiangyao/vite-react-ts-starter.git"
   },
+  "packageManager": "pnpm@11.0.6",
   "engines": {
     "node": ">=25.9.0",
-    "pnpm": ">=11.0.3"
+    "pnpm": ">=11.0.6"
   },
   "scripts": {
     "dev": "vite --host",

@@ -1,5 +1,5 @@
 import clsx from 'clsx'
-import { useLocation, useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router'
 
 import { GithubOctopusCat } from '~/components/GithubOctopusCat'
 import { routes } from '~/router'

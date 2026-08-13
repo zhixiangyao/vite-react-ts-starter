@@ -1,8 +1,8 @@
-import type { Rect } from './type'
 import { useLayoutEffect, useRef, useState } from 'react'
-
 import { createPortal } from 'react-dom'
+
 import { TooltipContainer } from './TooltipContainer'
+import type { Rect } from './type'
 
 interface Props {
   targetRect: Rect

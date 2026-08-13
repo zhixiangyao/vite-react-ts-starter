@@ -11,7 +11,8 @@
   "bracketSpacing": true,
   "endOfLine": "lf",
   "insertFinalNewline": true,
-  "sortPackageJson": false,
+  "sortImports": true,
+  "sortPackageJson": true,
   "ignorePatterns": [
     "**/node_modules/**",
     "**/dist/**",

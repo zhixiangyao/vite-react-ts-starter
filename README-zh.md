@@ -9,13 +9,12 @@
 
 - **VSCode 扩展：**
   - [Oxc](https://marketplace.visualstudio.com/items?itemName=oxc.oxc-vscode)
-  - [Stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
   - [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
 
 - **开发环境：**
   - git => 2.39.0
-  - node => 26.5.0
-  - pnpm => 11.13.0
+  - node => 26.5.1
+  - pnpm => 11.20.0
 
 ## 克隆
 

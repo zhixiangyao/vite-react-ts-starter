@@ -1,19 +1,14 @@
 {
   "name": "vite-react-ts-starter",
-  "type": "module",
   "version": "0.1.0",
-  "author": "zhixiangyao <blueskyzx@icloud.com> <https://github.com/zhixiangyao>",
-  "license": "MIT",
   "homepage": "https://github.com/zhixiangyao/vite-react-ts-starter",
+  "license": "MIT",
+  "author": "zhixiangyao <blueskyzx@icloud.com> <https://github.com/zhixiangyao>",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zhixiangyao/vite-react-ts-starter.git"
   },
-  "packageManager": "pnpm@11.13.0",
-  "engines": {
-    "node": ">=26.5.0",
-    "pnpm": ">=11.13.0"
-  },
+  "type": "module",
   "scripts": {
     "dev": "vite --host",
     "build": "pnpm typecheck && vite build",
@@ -24,36 +19,32 @@
     "fmt:check": "oxfmt --check",
     "lint": "oxlint --fix",
     "lint:check": "oxlint",
-    "lint:css": "stylelint \"./**/*.css\" --cache --cache-location node_modules/.cache/stylelint/",
     "lint-staged": "lint-staged",
     "postinstall": "simple-git-hooks"
   },
   "dependencies": {
     "@emotion/react": "11.14.0",
     "clsx": "2.1.1",
-    "react": "19.2.7",
-    "react-dom": "19.2.7",
-    "react-is": "19.2.7",
-    "react-router": "8.2.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "react-is": "19.2.8",
+    "react-router": "8.3.0",
     "zustand": "5.0.14"
   },
   "devDependencies": {
-    "@tailwindcss/vite": "4.3.2",
-    "@types/node": "26.1.1",
-    "@types/react": "19.2.17",
-    "@types/react-dom": "19.2.3",
-    "@vitejs/plugin-react": "6.0.3",
-    "lint-staged": "17.0.8",
-    "oxfmt": "0.59.0",
-    "oxlint": "1.74.0",
+    "@tailwindcss/vite": "4.3.3",
+    "@types/node": "26.2.0",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.4",
+    "@vitejs/plugin-react": "6.0.5",
+    "lint-staged": "17.3.0",
+    "oxfmt": "0.63.0",
+    "oxlint": "1.78.0",
     "simple-git-hooks": "2.13.1",
-    "stylelint": "17.14.0",
-    "stylelint-config-standard": "40.0.0",
-    "stylelint-order": "8.1.1",
-    "tailwindcss": "4.3.2",
+    "tailwindcss": "4.3.3",
     "typescript": "7.0.2",
-    "vite": "8.1.4",
-    "vite-plugin-checker": "0.14.4",
+    "vite": "8.2.1",
+    "vite-plugin-checker": "0.14.5",
     "vite-plugin-compression": "0.5.1"
   },
   "simple-git-hooks": {
@@ -65,9 +56,11 @@
     ],
     "**/*.{js,cjs,mjs,jsx,ts,mts,tsx,html,md,json,css,yaml,yml}": [
       "pnpm fmt:check"
-    ],
-    "**/*.css": [
-      "stylelint --cache --cache-location node_modules/.cache/stylelint/"
     ]
-  }
+  },
+  "engines": {
+    "node": ">=26.5.1",
+    "pnpm": ">=11.20.0"
+  },
+  "packageManager": "pnpm@11.20.0"
 }

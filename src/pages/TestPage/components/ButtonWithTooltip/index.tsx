@@ -1,7 +1,7 @@
-import type { Rect } from './type'
-
 import { useCallback, useRef, useState } from 'react'
+
 import { Tooltip } from './Tooltip'
+import type { Rect } from './type'
 
 interface Props {
   tooltipContent: React.ReactNode

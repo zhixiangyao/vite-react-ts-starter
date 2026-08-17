@@ -12,8 +12,8 @@ This template will help you start developing in Vite using React ReactRouter Zus
   - [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
 
 - **Development ENV:**
-  - git => 2.39.0
-  - node => 26.5.1
+  - git
+  - node => 26.7.0
   - pnpm => 11.20.0
 
 ## Clone

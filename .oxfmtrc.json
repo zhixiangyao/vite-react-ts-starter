@@ -13,13 +13,5 @@
   "insertFinalNewline": true,
   "sortImports": true,
   "sortPackageJson": true,
-  "ignorePatterns": [
-    "**/node_modules/**",
-    "**/dist/**",
-    "**/build/**",
-    "**/.cache/**",
-    "**/coverage/**",
-    "**/*.tsbuildinfo",
-    "pnpm-lock.yaml"
-  ]
+  "ignorePatterns": ["**/node_modules/**", "**/dist/**", "pnpm-lock.yaml"]
 }

@@ -2,7 +2,7 @@
 
 [English](./README.md) · 中文
 
-这个模板可以帮助你使用 Vite 快速开始 React + ReactRouter + Zustand + TypeScript + Emotion + TailwindCSS 项目开发。
+这个模板可以帮助你使用 Vite 快速开始 React + ReactRouter + Zustand + TypeScript + Emotion + TailwindCSS 项目开发.
 
 - **编辑器：**
   - [VSCode](https://code.visualstudio.com/)
@@ -12,9 +12,8 @@
   - [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
 
 - **开发环境：**
-  - git
-  - node => 26.7.0
-  - pnpm => 11.20.0
+  - node >= 22.19.0 (或 >= 24)
+  - pnpm => 12.3.4
 
 ## 克隆
 

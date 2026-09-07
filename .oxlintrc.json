@@ -6,18 +6,11 @@
     "browser": true,
     "node": true
   },
-  "ignorePatterns": [
-    "**/node_modules/**",
-    "**/dist/**",
-    "**/build/**",
-    "**/.cache/**",
-    "**/coverage/**",
-    "**/*.tsbuildinfo"
-  ],
   "rules": {
     "no-console": "off",
     "no-alert": "off",
     "no-unused-expressions": "off",
     "react/only-export-components": "off"
-  }
+  },
+  "ignorePatterns": ["**/node_modules/**", "**/dist/**", "pnpm-lock.yaml"]
 }

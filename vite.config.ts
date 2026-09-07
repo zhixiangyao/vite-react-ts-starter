@@ -18,7 +18,7 @@ const baseConfig: UserConfig = {
     alias: [
       {
         find: '~',
-        replacement: resolve(__dirname, './src'),
+        replacement: resolve(import.meta.dirname, './src'),
       },
     ],
   },

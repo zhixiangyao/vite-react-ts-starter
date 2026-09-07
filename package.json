@@ -28,27 +28,27 @@
     "react": "19.2.8",
     "react-dom": "19.2.8",
     "react-is": "19.2.8",
-    "react-router": "8.3.0",
+    "react-router": "8.3.1",
     "zustand": "5.0.15"
   },
   "devDependencies": {
     "@tailwindcss/vite": "4.3.3",
-    "@types/node": "26.2.0",
+    "@types/node": "22.20.1",
     "@types/react": "19.2.18",
-    "@types/react-dom": "19.2.4",
-    "@vitejs/plugin-react": "6.0.5",
-    "lint-staged": "17.3.0",
-    "oxfmt": "0.63.0",
-    "oxlint": "1.78.0",
-    "simple-git-hooks": "2.13.1",
+    "@types/react-dom": "19.2.7",
+    "@vitejs/plugin-react": "6.1.1",
+    "lint-staged": "17.5.0",
+    "oxfmt": "0.66.0",
+    "oxlint": "1.81.0",
+    "simple-git-hooks": "2.14.0",
     "tailwindcss": "4.3.3",
     "typescript": "7.0.2",
-    "vite": "8.2.1",
+    "vite": "8.2.2",
     "vite-plugin-checker": "0.14.5",
     "vite-plugin-compression": "0.5.1"
   },
   "simple-git-hooks": {
-    "pre-commit": "pnpm lint-staged"
+    "pre-commit": "pnpm lint-staged && pnpm typecheck"
   },
   "lint-staged": {
     "**/*.{js,cjs,mjs,jsx,ts,mts,tsx}": [
@@ -59,7 +59,7 @@
     ]
   },
   "engines": {
-    "node": ">=26.7.0",
-    "pnpm": ">=11.20.0"
+    "node": "^22.19.0 || >=24.0.0",
+    "pnpm": ">=12.3.4"
   }
 }
